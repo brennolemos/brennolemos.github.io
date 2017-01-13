@@ -1,0 +1,37 @@
+body {
+	background-color: #F5F0DC;
+	font-family: Helvetica, Arial, sans-serif;
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+h2 {
+	background-color: #B3A742;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	color: #FFFFFF;
+}
+#tb-nutrientes {
+	width: 40%;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid black;
+}
+#tb-nutrientes th {
+	background-color: #B3A742;
+	color: #FFFFFF;
+
+}
+
+nav ul li{
+	display: inline;
+	margin-right: 50px;
+}
+
+#topo {
+	text-align: center;
+}
