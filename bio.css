@@ -98,8 +98,8 @@ nav li {
 aside, img {
     float: right;
     width: 15%;
-    border-bottom: 10px solid black;
-    border-left: 10px solid black;
+    border-bottom: 10px solid #333;
+    border-left: 10px solid #333;
     box-sizing: border-box;
 }
 aside {
