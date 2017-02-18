@@ -20,6 +20,7 @@ img {
     line-height: 20px;
     letter-spacing: .1em;
     margin: 0 auto;
+    transition: all .5s ease;
 }
 .btn:hover {
     color: #fff;
@@ -72,7 +73,7 @@ img {
     letter-spacing: .1em;
     font-size: 14px;
     line-height: 20px;
-    transition: 0.2s;
+    transition: all 0.3s ease;
 }
 .header_menu ul li a:hover {
     color: #00315a;
@@ -214,11 +215,17 @@ img {
   font-size: 20px;
   position: absolute;
   overflow: hidden;
-  top: 50%;
-  left: 50%;
+  top: 25%;
+  left: 30%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+    max-width: 500px;
 }
+.text2 p {
+    overflow: visible;
+    margin-top: 20px;
+}
+
 .formphp label.nao-aparece, .formphp input.nao-aparece {
 	display: none !important;
 }
