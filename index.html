@@ -1,128 +1,211 @@
-<!Doctype html>
+<!DOCTYPE html>
+<html>
 
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>Breno Lemos | Desenvolvedor Web</title>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/grid.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsivo.css">
-        <link rel="icon" href="favicon.ico">
-    </head>
-    
-    <body>
-        <header class="header">
-            <div class="container">
-                <nav class="grid-16 header_menu">
-                    <ul>
-                        <li><a href="#intro">Home</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+  <head>
+    <title>Breno Lemos | Desenvolvedor Web</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Breno Lemos | Desenvolvedor Web">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-        <section class="introducao" id="intro">
-            <div class="container">
-                <h1>Desenvolvimento Web</h1>
-                <blockquote class="quote-externo">
-                    <p>"Não é o mais forte que sobrevive, nem o mais inteligente. Quem sobrevive é o mais disposto à mudança"</p>
-                    <cite>CHARLES DARWIN</cite>
-                </blockquote>
-                <a href="#portfolio" class="btn btn-branco">Portfolio</a>
-            
-            </div>
-        </section>
-
-        <section class="sobre container" id="sobre">
-            <h2 class="subtitulo subtitulo-fundo animar">Sobre mim</h2>
-            <div class="grid-8">
-                <figure class="animar">
-                    <img src="img/sobre.jpg" alt="Programando-Sobre">
-                </figure>
-            </div>
-            <div class="grid-8 animar">
-                <p>Moro em Fortaleza, tenho 21 anos, sou graduando em engenharia de telecomunicações e apaixonado por desenvolvimento web.</p>
-                <p>Por isso, estou o tempo todo estudando e desenvolvendo sites e plataformas relacionados às tecnologias HTML5, CSS3 e JavaScript, ou seja, respiro front-end.</p>
-            </div>
-            
-        </section>
-
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <h2 class="subtitulo">Portfólio</h2>
-                <div class="imagens grid-8 cont1">
-                    <img src="img/cinza.jpg" alt="Projeto Futuro" class="img">
-                    <div class="overlay1">
-                        <div class="text1">Hello World</div>
-                    </div>
-                </div>
-                <div class="imagens grid-8 cont1">
-                    <img src="img/cinza.jpg" alt="Projeto Futuro">
-                    <div class="overlay1">
-                        <div class="text1">Hello World</div>
-                    </div>
-                </div>
-                <div class="imagens grid-16 cont2">
-                    <a href="http://bikcraft.tk/" target="_blank"><img src="img/bikcraft.jpg" alt="Projeto Bikcraft">
-                    <div class="overlay2">
-                      
-                        <div class="text2">
-                            <h4>bikcraft</h4>
-                            <p>Projeto baseado no curso de Web Design da Origamid. Nesse projeto, <br>desenvolvemos o site institucional da bikcraft, uma empresa fictícia <br>especializada na criação de bicicletas feitas a mão.</p>
-                        </div>
-                    </div></a>
-                </div>
-            </div>
-            
-        </section>
-        
-        <section class="contato container" id="contato">
-          <h2 class="subtitulo subtitulo-fundo">Contato</h2>
-          <form action="enviar.php" method="post" name="form" class="formphp">
-            <div class="grid-8">
-              <label for="nome">Nome</label>
-              <input id="nome" name="nome" type="text">
-            </div>
-            <div class="grid-8">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="text">
-            </div>
-
-            <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
-            <input type="text" class="nao-aparece" name="leaveblank">
-            <label class="nao-aparece">Se você não é um robô, não mude este campo.</label>
-            <input type="text" class="nao-aparece" name="dontchange" value="http://" >
-
-            <label for="mensagem" class="grid-16">Mensagem</label>
-            <textarea name="mensagem" id="mensagem" class="grid-16"></textarea>
-
-            <button id="enviar" name="enviar" type="submit" class="btn">Enviar</button>
-          </form>
-
-        </section>
-        
-        <footer>
-          <div class="container">
-            <p class="grid-10">Breno Lemos 2017 - Alguns direitos reservados.</p>
-            <div class="grid-3 redes">
-              <h3>Redes Sociais</h3>
-              <ul>
-                  <li><a href="https://www.behance.net/brenolemos" target="_blank"><img src="img/behance.png" alt="Behance Breno Lemos"></a></li>
-                  <li><a href="https://www.linkedin.com/in/breno-lemos-049374104" target="_blank"><img src="img/linkedin.png" alt="Linkedin Breno Lemos"></a></li>
-                  <li><a href="http://github.com/brennolemos" target="_blank"><img src="img/github.png" alt="Github Breno Lemos"></a></li>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <nav class="header_menu col-xl-7">
+              <ul class="nav">
+                <li class="nav-item"><a href="#intro" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
               </ul>
-            </div>
-		  </div>
-        </footer>
-        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-    </body>
+          </nav>
 
+          <div class="redes offset-2 col-xl-3">
+            <ul class="nav">
+              <li class="nav-item"><a href="https://www.behance.net/brenolemos" class="nav-link" target="_blank"><img src="img/behance-logo (1).png" alt="Behance de Breno" class="img-fluid mx-auto d-block"></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><img src="img/message-closed-envelope.png" alt="Email de Breno" class="img-fluid mx-auto d-block"></a></li>
+              <li class="nav-item"><a href="http://github.com/brennolemos" class="nav-link" target="_blank"><img src="img/github-branco.png" alt="Github de Breno" class="img-fluid mx-auto d-block"></a></li>
+              <li class="nav-item"><a href="https://www.linkedin.com/in/breno-lemos-049374104" class="nav-link" target="_blank"><img src="img/linkedin-logo (2).png" alt="Linkedin de Breno" class="img-fluid mx-auto d-block"></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="container">
+        <h1>Desenvolvimento Web</h1>
+        <h2>HTML | CSS | JavaScript | WordPress | UX/UI</h2>
+        <a href="#contato" class="botao">Peça um Orçamento</a>
+        <div class="botao-port">
+          <a href="#portfolio">Conheça meu Portfolio
+            <img src="img/down-button.png" alt="Botão para baixo" class="img-fluid mx-auto d-block">
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <h2 class="subtitulo col-12">Sobre</h2>
+        <div class="row">
+            <div class="texto-sobre col-8">
+              <p class="text">Meu nome é Breno Lemos, moro em Fortaleza, tenho 22 anos, sou graduando em engenharia de telecomunicações e um apaixonado por desenvolvimento web. Atualmente trabalho como Desenvolvedor Front-end Freelancer, e estou disponível para contratação.</p>
+              <p class="text">Por isso, estou sempre atento às tecnologias que surgem e são relacionadas ao desenvolvimento front-end. A minha paixão pelo que faço me leva a prestar um serviço de excelência, em que procuro atender às demandas de meus clientes de forma eficiente e inovadora.</p>
+              <p>Como desenvolvedor, possuo sólidos conhecimentos em HTML5, CSS3, JavaScript, jQuery, Design Responsivo, SEO, Bootstrap, Wordpress e UX/UI, que podem ser reconhecidos nos trabalhos que já desenvolvi. Ao desenvolver um site, procuro sempre deixá-lo o mais intuitivo possível, responsivo e manter as boas práticas semânticas.</p>
+            </div>
+
+            <img src="img/foto-sobre.png" alt="Foto de Breno Lemos" class="img-fluid d-block mx-auto col-4">
+          </div>
+      </div>
+    </section>
+
+    <section class="servicos" id="servicos">
+      <div class="container">
+        <h2 class="subtitulo">Serviços</h2>
+        <div class="row">
+          <div class="col-4">
+            <img src="img/website-design-symbol.png" alt="Design de Website" class="img-fluid d-block mx-auto">
+            <h3 class="text-center">Design de Website</h3>
+            <p class="text-center">Crio todo o layout do seu website, passando desde a arquitetura da informação até o design final.</p>
+          </div>
+          <div class="col-4">
+            <img src="img/programming.png" alt="Desenvolvimento do Website" class="img-fluid d-block mx-auto">
+            <h3 class="text-center">Desenvolvimento do Website</h3>
+            <p class="text-center">Faço o código do site em HTML e CSS, ou seja, transformo o layout em um website de verdade.</p>
+          </div>
+          <div class="col-4">
+            <img src="img/responsive-design-symbol.png" alt="Site Responsivo" class="img-fluid d-block mx-auto">
+            <h3 class="text-center">Site Responsivo</h3>
+            <p class="text-center">Desenvolvimento de sites adaptáveis aos principais tamnhos de tela, como tablets e celulares.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img src="img/photoshop-file-format.png" alt="PSD para HTML" class="img-fluid d-block mx-auto">
+            <h3 class="text-center">PSD para HTML</h3>
+            <p class="text-center">Faço a conversão do layout do seu site em PSD para HTML e CSS. Transformando seu layout em um site.</p>
+          </div>
+          <div class="col-4">
+            <img src="img/wordpress-logo-of-a-letter-in-a-circle.png" alt="Tema de WordPress" class="img-fluid d-block mx-auto">
+            <h3 class="text-center">Tema de WordPress</h3>
+            <p class="text-center">Desenvolvimento de tema personalizável para o CMS mais utilizado, o WordPress.</p>
+          </div>
+          <div class="col-4">
+            <img src="img/line-chart.png" alt="SEO" class="img-fluid d-block mx-auto">
+            <h3 class="text-center">SEO</h3>
+            <p class="text-center">Aplicação de técnicas que aumentam a visibilidade do seu site em ferramentas de pesquisa, como Google.</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="subtitulo">Portfolio</h2>
+
+        <div class="row bottom">
+          <div class="col-6">
+            <h3>Bikcraft</h3>
+            <p>Projeto do curso de Web Design da Origamid. Nesse projeto, desenvolvemos o site institucional da bikcraft, uma empresa fictícia focada na ciração de bicicletas feitas a mão, com o intuito de aplicarmos os conceitos de HTML, CSS e JavaScript.</p>
+            <a href="http://bikcraft.tk/" class="botao" target="_blank">Conheça Mais</a>
+          </div>
+          <div class="offset-1 col-5">
+            <img src="img/bikcraft.png" alt="Site Bikcraft">
+          </div>
+        </div>
+
+        <div class="row bottom">
+          <div class="col-6">
+            <img src="img/lescone.png" alt="Site Bikcraft">
+          </div>
+          <div class="col-6">
+            <h3>Le Scone</h3>
+            <p>Projeto do curso de CSS com SASS da Origamid. Nesse projeto, desenvolvemos o site institucional da Le Scone, um restaurante fictício no Rio de Janeiro, com o intuito de aplicarmos os conceitos de SASS e CSS.</p>
+            <a href="https://www.origamid.com/projetos/lescone/" class="botao" target="_blank">Conheça Mais</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <h3>Nature</h3>
+            <p>Projeto do curso de JavaScript e jQuery da Origamid. Nesse projeto, desenvolvemos um site sobre natureza, o Nature, com o intuito de aplicarmos os conceitos de JavaScript e jQuery.</p>
+            <a href="https://www.origamid.com/projetos/nature" class="botao" target="_blank">Conheça Mais</a>
+          </div>
+          <div class="offset-1 col-5">
+            <img src="img/nature.png" alt="Site Bikcraft">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <div class="container">
+        <h2 class="subtitulo">Contato</h2>
+        <div class="col-8 offset-2">
+          <form  method="post" name="form">
+
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text">
+
+                <label for="empresa">Empresa</label>
+                <input id="empresa" name="empresa" type="text">
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="text">
+
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="text">
+
+
+              <label for="mensagem">Mensagem</label>
+              <textarea name="mensagem" id="mensagem"></textarea>
+
+              <button id="enviar" name="enviar" type="submit" class="botao">Enviar</button>
+            </form>
+        </div>
+
+
+      </div>
+
+    </section>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <p>&copy; Breno Lemos 2017 - Todos os direitos reservados</p>
+          </div>
+          
+          <div class="redes offset-3 col-3">
+            <ul class="nav">
+              <li class="nav-item"><a href="https://www.behance.net/brenolemos" class="nav-link" target="_blank"><img src="img/behance-logo (1).png" alt="Behance de Breno" class="img-fluid mx-auto d-block"></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><img src="img/message-closed-envelope.png" alt="Email de Breno" class="img-fluid mx-auto d-block"></a></li>
+              <li class="nav-item"><a href="http://github.com/brennolemos" class="nav-link" target="_blank"><img src="img/github-branco.png" alt="Github de Breno" class="img-fluid mx-auto d-block"></a></li>
+              <li class="nav-item"><a href="https://www.linkedin.com/in/breno-lemos-049374104" class="nav-link" target="_blank"><img src="img/linkedin-logo (2).png" alt="Linkedin de Breno" class="img-fluid mx-auto d-block"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+  	<script src="js/tether.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/app.js"></script>
+  </body>
 
 </html>
