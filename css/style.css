@@ -4,6 +4,9 @@ a {
 a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
 
 ul {
   padding: 0;
@@ -20,6 +23,7 @@ h3 {
   font-size: 24px;
   margin: 20px 0;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -49,9 +53,10 @@ h3 {
   background: #fff;
   color: #31b4b4;
 }
-.redes .nav {
+.redes .navbar-nav {
   margin-top: -15px;
 }
+
 
 .intro {
   width: 100%;
@@ -111,6 +116,9 @@ h3 {
 .sobre {
   padding: 60px 0;
 }
+.sobre .foto-sobre {
+  max-width: 300px;
+}
 .subtitulo {
   font-family: 'Play', sans-serif;
   color: #00315a;
@@ -131,7 +139,7 @@ h3 {
   margin-top: 15px;
 }
 .sobre .subtitulo:after {
-  width: 970px;
+  width: 80%;
 }
 .texto-sobre p {
   font-family: 'Roboto', sans-serif;
@@ -145,7 +153,7 @@ h3 {
   background: #ddd;
 }
 .servicos .subtitulo:after {
-  width: 910px;
+  width: 70%;
 }
 
 .servicos p {
@@ -162,7 +170,7 @@ h3 {
   padding: 60px 0;
 }
 .portfolio .subtitulo:after {
-  width: 880px;
+  width: 70%;
 }
 .portfolio h3 {
   margin-top: 0;
@@ -184,6 +192,9 @@ h3 {
 .contato {
   background: #ddd;
   padding: 60px 0;
+}
+.contato .subtitulo:after {
+  width: 70%;
 }
 .contato label {
   display: block;
@@ -242,3 +253,93 @@ h3 {
   color: #fff;
   background: #00315a;
 }
+@media (max-width: 768px) {
+  .subtitulo:after {
+    max-width: 60%;
+  }
+  .sobre .subtitulo:after {
+    max-width: 60%;
+  }
+   .portfolio .subtitulo:after {
+    max-width: 50%;
+  }
+  .sobre img {
+    max-width: 300px;
+  }
+  
+  .servicos img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .botao-port {
+    margin-top: 100px;
+  }
+ 
+
+}
+
+@media (max-width: 480px) {
+  html, body {
+    max-width: 480px;
+  }
+  .subtitulo:after {
+    max-width: 45%;
+  }
+  .sobre .subtitulo:after {
+    max-width: 45%;
+  }
+  .portfolio .subtitulo:after, .servicos .subtitulo:after {
+    max-width: 30%;
+  }
+  .intro h1 {
+    font-size: 36px;
+  }
+  .intro h2 {
+    font-size: 18px;
+  }
+  .container {
+    max-width: 480px;
+  }
+  .portfolio {
+    width: 100%;
+  }
+  .portfolio h3{
+    text-align: center;
+  }
+  .port-img {
+    position: relative;
+    top: -200px;
+    
+  }
+  .port-texto {
+    position: relative;
+    top: 320px;
+    text-align: center;
+    z-index: 10;
+  }
+  .nature-img {
+    position: relative;
+    top: -175px;
+    
+  }
+  .nature-texto {
+    position: relative;
+    top: 345px;
+    text-align: center;
+    z-index: 10;
+  }
+  .lescone-texto {
+    text-align: center;
+  }
+  .lescone-h3 {
+    position: relative;
+    top: -345px;
+  }
+  .lescone-img {
+    position: relative;
+    top: 20px;
+  }
+}
+
+
