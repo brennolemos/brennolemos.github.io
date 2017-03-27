@@ -254,6 +254,11 @@ h3 {
   background: #00315a;
 }
 @media (max-width: 768px) {
+  .intro {
+    height: auto;
+    padding-top: 180px;
+    padding-bottom: 60px;
+  }
   .subtitulo:after {
     max-width: 60%;
   }
@@ -292,6 +297,11 @@ h3 {
   .portfolio .subtitulo:after, .servicos .subtitulo:after {
     max-width: 30%;
   }
+  .intro {
+    height: auto;
+    padding-top: 180px;
+    padding-bottom: 60px;
+  }
   .intro h1 {
     font-size: 36px;
   }
@@ -304,7 +314,7 @@ h3 {
   .portfolio {
     width: 100%;
   }
-  .portfolio h3{
+  .portfolio h3, .portfolio p{
     text-align: center;
   }
   .port-img {
@@ -316,7 +326,6 @@ h3 {
     position: relative;
     top: 320px;
     text-align: center;
-    z-index: 10;
   }
   .nature-img {
     position: relative;
@@ -327,7 +336,6 @@ h3 {
     position: relative;
     top: 345px;
     text-align: center;
-    z-index: 10;
   }
   .lescone-texto {
     text-align: center;

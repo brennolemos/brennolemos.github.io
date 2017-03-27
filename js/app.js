@@ -43,7 +43,7 @@ $(document).ready(function(){
   if ($target) {
   var targetOffset = $target.offset().top;
   $(this).click(function() {
-  $('html, body').animate({scrollTop: targetOffset}, 300);
+  $('html, body').animate({scrollTop: targetOffset}, 400);
   return false;
   });
   }
