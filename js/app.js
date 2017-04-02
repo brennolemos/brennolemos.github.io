@@ -22,8 +22,10 @@ $(document).ready(function(){
       var topo = $(window).scrollTop();
       if (topo > 100) {
           $('.header').css({"background-color": "#00315a"});
+          $('.nav.mobile-menu.active').css({"background-color": "#00315a"});
       } else {
         $('.header').css({"background-color": "transparent"});
+        $('.nav.mobile-menu.active').css({"background-color": "transparent"});
       }
   });
 
@@ -52,5 +54,9 @@ $(document).ready(function(){
 
 
   // Mudar para active o menu de acordo com a área
+  $('.mobile-btn').click(function(){
+    $(this).toggleClass('active');
+    $('.mobile-menu').toggleClass('active');
+  });
 
 });
