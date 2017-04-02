@@ -53,10 +53,20 @@ h3 {
   background: #fff;
   color: #31b4b4;
 }
-.redes .navbar-nav {
+.redes .nav {
   margin-top: -0.9375rem;
 }
-
+.redes {
+  display: flex;
+  justify-content: flex-end;
+}
+.fa {
+  color: #fff;
+  transition: all .3s ease;
+}
+.fa:hover {
+  color: #31b4b4;
+}
 
 .intro {
   width: 100%;
