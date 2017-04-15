@@ -54,18 +54,22 @@ h3 {
   color: #31b4b4;
 }
 .redes .nav {
-  margin-top: -0.9375rem;
+  margin-top: -0.5rem;
 }
 .redes {
   display: flex;
   justify-content: flex-end;
 }
-.fa {
+.redes .fa {
   color: #fff;
+  border-radius: 50%;
+  padding: 3px;
   transition: all .3s ease;
 }
-.fa:hover {
+.redes .fa:hover {
   color: #31b4b4;
+  background: #fff;
+  padding: 3px;
 }
 
 .intro {
@@ -120,8 +124,14 @@ h3 {
   letter-spacing: .1em;
   color: #fff;
 }
-.botao-port a img {
-  margin: 0.75rem auto;
+.botao-port i {
+  color: #fff;
+  display: block;
+  transition: all .3s ease;
+}
+.botao-port i:hover {
+  color: #31b4b4;
+  background: transparent;
 }
 .sobre {
   padding: 3.75rem 0;
@@ -160,21 +170,22 @@ h3 {
 }
 .servicos {
   padding: 3.75rem 0;
-  background: #ddd;
+  background: #ebebeb;
 }
 .servicos .subtitulo:after {
   width: 70%;
 }
-
+.servicos h3 {
+  margin-left: 5rem;
+}
 .servicos p {
   color: #00315a;
   max-width: 15.25rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-left: 5rem;
 }
-.servicos img {
-  width: 6.25rem;
-  height: 6.25rem;
+.servicos .fa {
+  color: #31b4b4;
+  position: absolute;
 }
 .portfolio {
   padding: 3.75rem 0;
@@ -200,7 +211,7 @@ h3 {
   margin-bottom: 2.5rem;
 }
 .contato {
-  background: #ddd;
+  background: #ebebeb;
   padding: 3.75rem 0;
 }
 .contato .subtitulo:after {
