@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  /*$('nav a').click(function(e){
+  $('.header a').click(function(e){
       e.preventDefault();
       var id = $(this).attr('href'),
           targetOffset = $(id).offset().top,
-          menuHeight = $('nav').innerHeight();
+          menuHeight = $('.header').innerHeight();
       $('html, body').animate({
           scrollTop: targetOffset - menuHeight
       }, 500)
@@ -13,12 +13,13 @@ $(document).ready(function(){
       e.preventDefault();
       var id = $(this).attr('href'),
           targetOffset = $(id).offset().top,
-          menuHeight = $('nav').innerHeight();
+          menuHeight = $('.header').innerHeight();
       $('html, body').animate({
           scrollTop: targetOffset - menuHeight
       }, 500)
-  });*/
-  $(window).scroll(function() {
+  });
+  
+  /*$(window).scroll(function() {
       var topo = $(window).scrollTop();
       if (topo > 100) {
           $('.header').css({"background-color": "#00315a"});
@@ -27,10 +28,10 @@ $(document).ready(function(){
         $('.header').css({"background-color": "transparent"});
         $('.nav.mobile-menu.active').css({"background-color": "transparent"});
       }
-  });
+  });*/
 
 
-  function filterPath(string) {
+  /*function filterPath(string) {
       return string
       .replace(/^\//,'')
       .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
@@ -50,7 +51,7 @@ $(document).ready(function(){
           });
         }
       }
-  });
+  });*/
 
 
   // Mudar para active o menu de acordo com a área
@@ -58,5 +59,21 @@ $(document).ready(function(){
     $(this).toggleClass('active');
     $('.mobile-menu').toggleClass('active');
   });
+  
+  
+  
+  $(window).on('scroll', _.debounce(function() {
+    var $nav = $('.header'),
+        navHeight = $nav.outerHeight(),
+        windowTop = $(this).scrollTop();
+    
+    if (windowTop > navHeight) {
+        $nav.addClass('small');
+        $('.nav.mobile-menu.active').addClass('small');
+    } else {
+        $nav.removeClass('small');
+        $('.nav.mobile-menu.active').removeClass('small');
+    }
+}, 100));
 
 });
