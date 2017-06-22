@@ -87,6 +87,9 @@ h3 {
   background-size: cover;
   text-align: center;
   padding-top: 16.5rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .intro h1 {
   font-family: 'Play', sans-serif;
