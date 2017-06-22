@@ -75,5 +75,13 @@ $(document).ready(function(){
         $('.nav.mobile-menu.active').removeClass('small');
     }
 }, 100));
+  
+  
+  
+  $("html").niceScroll({
+    cursorcolor:"#0088cb",
+    background:"rgba(20,20,20,0.3)",
+    cursorborder:"1px solid #0088cb"
+  });  // a world full of color!
 
 });
