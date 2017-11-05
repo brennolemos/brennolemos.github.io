@@ -2,14 +2,14 @@ $(window).scroll(function() {
       var topo = $(window).scrollTop();
       if (topo > 30) {
           $('.header').css({"background-color": "#131e28"});
-          $('.header').css({"box-shadow": "3px 3px 6px 0 rgba(141,174,201,.16), 3px 3px 6px 0 rgba(141,174,201,.23)"});
+          $('.header').css({"border-bottom": "1px solid #999"});
           $('.nav.mobile-menu.active').css({"background-color": "#131e28"});
-           $('.nav.mobile-menu.active').css({"box-shadow": "3px 3px 6px 0 rgba(141,174,201,.16), 3px 3px 6px 0 rgba(141,174,201,.23)"});
+           $('.nav.mobile-menu.active').css({"border-bottom": "1px solid #999"});
       } else {
         $('.header').css({"background-color": "transparent"});
         // $('.menu-nav.mobile-menu.active').css({"background-color": "transparent"});
 
-         $('.header').css({"box-shadow": "none"});
+         $('.header').css({"border": "none"});
         //  $('.menu-nav.mobile-menu.active').css({"box-shadow": "none"});
       }
   });

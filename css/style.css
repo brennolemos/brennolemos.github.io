@@ -207,26 +207,25 @@ img {
     padding: 10px 20px;
     width: 200px;
     text-align: center;
-     background: #f15922; 
+    background: linear-gradient(108.31deg, #F15922 0%, #CC3914 100%); 
     border-radius: 4px;
-     box-shadow: 3px 3px 6px 0 rgba(141,174,201,.16), 3px 3px 6px 0 rgba(141,174,201,.23); 
-    transition: all .8s ease;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+     /* box-shadow: 3px 3px 6px 0 rgba(141,174,201,.16), 3px 3px 6px 0 rgba(141,174,201,.23);  */
+    transition: all .3s ease;
     /* border: 1px solid #f15922; */
-    box-shadow: inset 0 0 0 0 #f15922;
+    /* box-shadow: inset 0 0 0 0 #f15922; */
 }
 .btn:hover {
-    /* border: 2px solid #f7f7f7; */
-    /* background: transparent; */
-    box-shadow: inset 0 -100px 0 0 #f6f9f6;
-    color: #131e28;
-    /* color: #f7f7f7; */
+   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.14);
+   margin-top: 55px;
+   margin-bottom: 5px;
 }
-.btn.white:hover {
-    /* border: 2px solid #f15922; */
+/* .btn.white:hover {
+     border: 2px solid #f15922; 
     box-shadow: inset 0 -100px 0 0 #131e28;
-    /* background: #131e28; */
+     background: #131e28; 
     color: #f6f9f6;
-}
+} */
 .intro .imagem {
     margin-top: -70px;
     z-index: 95;
@@ -652,6 +651,7 @@ img {
     outline: none;
     width: 470px;
     max-width: 470px;
+    border-radius: 4px;
 }
 .newsletter-form .btn {
     border: none;
