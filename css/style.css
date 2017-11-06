@@ -292,6 +292,7 @@ img {
     background-size: cover;
     text-align: center;
       padding-top: 130px;  
+      width: 100%;
 }
 .intro-interna h1 {
     font-family: 'Continuum Light', sans-serif;
@@ -561,6 +562,9 @@ img {
 }
 .blog .post {
     flex: 1;
+}
+.blog .post img {
+    max-height: 245px;
 }
 .blog .text {
     background: #f7f7f7;

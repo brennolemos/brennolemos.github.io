@@ -1,5 +1,6 @@
 .about-intro {
     background: url(../img/about-bg.jpg) no-repeat center center;
+    background-size: cover; 
 }
 
 .about-interno {

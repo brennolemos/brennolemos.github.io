@@ -1,5 +1,6 @@
 .solutions-intro {
     background: url(../img/solutions-bg.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 .delfos-im {
@@ -7,6 +8,7 @@
     margin: 0 auto;
      padding: 60px 0;
      /* display: flex; */
+     border-bottom: 1px solid #8daec9;
 }
 .subtitle:after {
     margin-bottom: 20px;
@@ -116,6 +118,7 @@
     background: #131e28;
     padding: 60px 0;
     color: #f7f7f7;
+    display: none;
 }
 .delfos-qi .container {
     max-width: 1200px;
@@ -204,7 +207,7 @@
     font-size: 1em;
     color: #131e28;
     max-width: 160px;
-    /* margin-left: 60px; */
+    margin-left: 60px;
     position: absolute;
     left: 250px;
     text-align: left; 

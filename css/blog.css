@@ -1,5 +1,6 @@
 .blog-intro {
     background: url(../img/blog-bg.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 .blog-interno {

@@ -1,5 +1,6 @@
 .contato-intro {
     background: url(../img/contato-bg.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 /* Contato */
@@ -66,14 +67,14 @@ h3 {
 .br {
     margin-top: 60px;
 }
-.text {
+.contato .text {
     /* margin-top: 20px; */
     font-family: 'Montserrat', sans-serif;
     /* font-weight: 600; */
     font-size: 1em;
     color: #131e28;
     max-width: 160px;
-    /* margin-left: 60px; */
+    margin-left: 60px;
     position: absolute;
     left: 250px;
     text-align: left; 
