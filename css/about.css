@@ -75,7 +75,7 @@
 /* Values */
 .values {
     background: #131e28;
-    padding: 60px 0;
+    padding-top: 60px;
 }
 .values .container {
     max-width: 1200px;

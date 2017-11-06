@@ -45,7 +45,7 @@ img {
     /* box-shadow: 5px 5px 5px 5px rgba(19,30,40,.16); */
 }
 .menu {
-    padding: 15px 0;
+    padding: 10px 0;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -58,6 +58,9 @@ img {
 }
 .header .logo {
     margin: 0 10px;
+}
+.logo img {
+    max-height: 55px;
 }
 .menu-nav ul {
     display: flex;
@@ -99,7 +102,13 @@ img {
     width: 100%;
     margin-top: 5px;
 }
+.login {
+    margin-left: 30px;
+}
 @media only screen and (max-width: 768px) {
+    .login {
+        margin: 0;
+    }
     .mobile-btn {
         display: block;
         color: #f7f7f7;
@@ -348,10 +357,11 @@ img {
 }
 .about p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.125em;
+    font-size: 1em;
     max-width: 470px;
     color: #131e28;
     font-weight: 300;
+    line-height: 1.4em;
 }
 .about iframe {
     width: 480px;
@@ -415,7 +425,7 @@ img {
 }
 .features .item .text {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-top: 40px;
     flex-wrap: wrap;
@@ -425,7 +435,7 @@ img {
     font-size: 2em;
     letter-spacing: 0.025em;
     color: #f7f7f7;
-    padding-right: 10px;
+    padding-right: 15px;
     /* flex: 1; */
 }
 .features .sep {
@@ -437,10 +447,11 @@ img {
 .features .item p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 1.125em;
+    font-size: 1em;
     color: #f7f7f7;
-    padding-left: 10px;
+    padding-left: 15px;
     max-width: 375px;
+    line-height: 1.4em;
     /* flex: 1; */
 }
 .center-btn {
