@@ -104,6 +104,7 @@ img {
 }
 .login {
     margin-left: 30px;
+    display: none;
 }
 @media only screen and (max-width: 768px) {
     .login {
@@ -450,7 +451,7 @@ img {
     font-size: 1em;
     color: #f7f7f7;
     padding-left: 15px;
-    max-width: 375px;
+    max-width: 400px;
     line-height: 1.4em;
     /* flex: 1; */
 }
@@ -519,6 +520,7 @@ img {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4em;
     color: #131e28;
+    max-width: 350px;
 }
 .benefits .item2 {
     margin-top: 40px;
@@ -735,7 +737,7 @@ img {
 	filter: none;	
 }
 .partners .support-img img {
-    flex: 1;
+    /* flex: 1; */
     margin: 0 20px;
 }
 @media only screen and (max-width: 450px) {

@@ -93,7 +93,7 @@
 }
 .values p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.125em;
+    font-size: 1em;
     color: #f7f7f7;
     line-height: 1.4em;
     margin: 20px 0;
@@ -143,16 +143,21 @@
 .team .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .team .persona {
-    margin: 0 10px 20px 10px;
+     margin: 0 10px 20px 10px; 
     max-width: 280px; 
 }
+.team .persona img {
+    margin: 0 auto;
+}
 .team .persona .text {
-    background: #131e28;
-    color: #f7f7f7;
+    /* background: #131e28; */
+    /* color: #f7f7f7; */
+     color: #131e28; 
     text-align: center;
-    padding: 10px;
+     padding: 10px; 
 }
 .team .text h3 {
     font-size: 1.5em;
@@ -163,6 +168,7 @@
 .team .text p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+    max-width: 200px;
 }
 
 @media only screen and (max-width: 450px) {
