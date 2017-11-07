@@ -91,7 +91,7 @@
 
             <div class="formulario" id="form_mensagem">
                 <h2>Speak Us</h2>
-                <form action="">
+                <form action="enviar.php" method="post" name="form" class="formphp">
                     <!-- <label for="nome">Nome</label> -->
                     <input type="text" id="nome" placeholder="Name">
 
@@ -104,7 +104,12 @@
                     <!-- <label for="mensagem">Mensagem</label> -->
                     <textarea id="mensagem" placeholder="Message"></textarea>
 
-                    <button type="submit" class="btn white">send</button>
+                    <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
+                    <input type="text" class="nao-aparece" name="leaveblank">
+                    <label class="nao-aparece">Se você não é um robô, não mude este campo.</label>
+                    <input type="text" class="nao-aparece" name="dontchange" value="http://" >
+
+                    <button type="submit"  id="enviar" name="enviar"  class="btn white">send</button>
                 </form>
             </div>
         </div>
