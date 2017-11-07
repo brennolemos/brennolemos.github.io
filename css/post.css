@@ -1,0 +1,41 @@
+.header {
+    background: #131e28 !important; 
+}
+.post {
+    padding: 60px 0;
+    position: relative;
+    top: 77px;
+    max-width: 960px;
+    margin: 0 auto 77px auto;
+}
+.post h1 {
+    font-size: 2.5em;
+    font-family: 'Continuum Light', sans-serif;
+    letter-spacing: 0.025em;
+    color: #131e28;
+    margin-bottom: 5px;
+    
+}
+.post .date {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+    font-style: italic;
+    color: #131e28;
+    
+}
+.post p {
+        margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    color: #131e28;
+}
+.post p a {
+    text-decoration: underline;
+}
+.post .sep {
+    height: 1px;
+    background: #131e28;
+    margin-top: 5px;
+}

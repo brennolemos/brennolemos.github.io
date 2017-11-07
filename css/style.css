@@ -587,6 +587,12 @@ img {
     color: #131e28;
     letter-spacing: 0.025em;
 }
+.blog .post h3 a {
+    color: #131e28;
+}
+.blog .post h3 a:hover {
+    text-decoration: underline;
+}
 .blog .post p {
     margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
