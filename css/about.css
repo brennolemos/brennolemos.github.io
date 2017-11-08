@@ -52,7 +52,7 @@
 }
 .numbers .item:nth-child(4) {
    bottom: 50px;
-    right: 100px;
+    right: 50px;
 }
 @media only screen and (max-width: 450px) {
     .delfos img {
