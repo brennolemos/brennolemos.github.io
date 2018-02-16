@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <title>Breno Lemos | Criação de sites e sistemas em Fortaleza</title>
@@ -16,62 +17,77 @@
     <meta property="og:image" content=""/>
 
 </head>
-<body>
-   <main class="main-container">
-        <nav class="side-nav">
-            <div class="fixed">
-                <img src="img/foto.png" class="foto" alt="Breno Lemos">
-                <ul class="itens-paginas">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="#">Portfólio</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-                <ul class="redes-sociais">
-                    <li><a href="#"> <img src="img/linkedin-logo.svg" alt="Linkedin"> </a></li>
-                    <li><a href="#"> <img src="img/behance-logo.svg" alt="Behance"> </a></li>
-                    <li><a href="#"> <img src="img/github-logo.svg" alt="Github"> </a></li>
-                </ul>
-                <img src="img/logo.png" class="logo" alt="Logo Breno Lemos">    
-            </div> 
-        </nav>
+<body class="body-home">
+   <main class="main-container container-fluid">
+        <div class="row">
+            <nav class="side-nav col-md-3 col-12">
+               
+                <div class="fixed">
+                    <img src="img/foto.png" class="foto" alt="Breno Lemos">
+                    
+                        <ul class="itens-paginas navbar-nav">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="#">Portfólio</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                        <ul class="redes-sociais">
+                            <li><a href="#"> <img src="img/linkedin-logo.svg" alt="Linkedin"> </a></li>
+                            <li><a href="#"> <img src="img/behance-logo.svg" alt="Behance"> </a></li>
+                            <li><a href="#"> <img src="img/github-logo.svg" alt="Github"> </a></li>
+                        </ul>
+                    <img src="img/logo.svg" class="logo" alt="Logo Breno Lemos">    
+                </div> 
 
-        <section class="content">
-            <h1 class="title-tag">Breno Lemos</h1>
-            <p>Olá, sou Breno Lemos, moro em Fortaleza, tenho 23 anos, sou Engenheiro de formação e um apaixonado por negócios digitais. Atualmente trabalho como UX/UI Designer e Desenvolvedor Front-end.</p>
+                
+            </nav>
 
-            <h2 class="title-tag">Trabalhos</h2>
-            <ul>
-                <li class="portfolio-item">
-                    <img src="img/delfosim.png" alt="Delfos IM">
-                    <div class="item-info">
-                        <h3>Delfos IM</h3>
-                        <span class="tag">UX, UI, HTML, CSS, JavaScript e WordPress.</span>
-                        <div class="botoes">
-                            <a href="#" class="btn-live">Ver Site</a>
-                            <a href="#" class="btn-project">Ver Projeto</a>
+            <section class="content col-md-9">
+                <h1 class="title-tag">Breno Lemos</h1>
+                <p>Olá, sou Breno Lemos, moro em Fortaleza, tenho 23 anos, sou Engenheiro de formação e um apaixonado por negócios digitais. Atualmente trabalho como UX/UI Designer e Desenvolvedor Front-end.</p>
+
+                <h2 class="title-tag">Trabalhos</h2>
+                <ul>
+                    <li class="portfolio-item">
+                        <div class="media">
+                             <img src="img/delfosim.png" alt="Delfos IM">
+                            <div class="item-info media-body">
+                                <h3>Delfos IM</h3>
+                                <span class="tag">UX, UI, HTML, CSS, JavaScript e WordPress.</span>
+                                <div class="botoes">
+                                    <a href="#" class="btn-live">Ver Site</a>
+                                    <a href="#" class="btn-project">Ver Projeto</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                 <li class="portfolio-item">
-                     <img src="img/delfosim.png" alt="Delfos IM">
-                    <div class="item-info">
-                        <h3>Delfos IM</h3>
-                        <span class="tag">UX, UI, HTML, CSS, JavaScript e WordPress.</span>
-                        <div class="botoes">
-                            <a href="#" class="btn-live">Ver Site</a>
-                            <a href="#" class="btn-project">Ver Projeto</a>
+                       
+                    </li>
+                     <li class="portfolio-item">
+                        <div class="media">
+                             <img src="img/delfosim.png" alt="Delfos IM">
+                            <div class="item-info media-body">
+                                <h3>Delfos IM</h3>
+                                <span class="tag">UX, UI, HTML, CSS, JavaScript e WordPress.</span>
+                                <div class="botoes">
+                                    <a href="#" class="btn-live">Ver Site</a>
+                                    <a href="#" class="btn-project">Ver Projeto</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-            <a href="#" class="btn-white">Meus Trabalhos</a>
-        </section>
+                       
+                    </li>
+                </ul>
+                <a href="#" class="btn-white">Meus Trabalhos</a>
+            </section>
+        </div>
    </main>
 
 
 
 
    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
