@@ -1,0 +1,151 @@
+/* Internas */
+body.interna {
+  background: #fff;
+}
+.content.interna {
+  padding: 0 0 30px 0;
+}
+.header-interna {
+  padding: 30px 60px;
+  background: linear-gradient(130.48deg, #22A5E6 0%, #0068B3 100%); 
+}
+.header-interna h1 {
+  font-size: 36px;
+}
+.header-interna h1::after {
+  margin-bottom: 0;
+}
+.conteudo {
+  padding: 45px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.conteudo h2 {
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #2D3940;
+  margin-left: 15px;
+}
+.sobre {
+  flex: 1;
+}
+.sobre p {
+  line-height: 1.4em;
+  font-size: 18px;
+  color: #626D73;
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+.curriculo {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.experiencia, .educacao {
+  flex: 1;
+}
+.d-flex {
+  display: flex;
+}
+.d-flex.wrap {
+  flex-wrap: wrap;
+}
+.sobre .d-flex {
+  align-items: center;
+  margin-bottom: 15px;
+}
+.timeline {
+  margin: 0 auto;
+  padding: 15px;
+}
+.timeline li {
+  position: relative;
+}
+.timeline li .item {
+  position: relative;
+  padding: 5px 15px 15px 30px;
+  margin-left: 15px;
+  border-left: 2px solid #626D73;
+}
+.timeline li .item .imagem {
+  position: absolute;
+  top: 5px;
+  left: -15px;
+}
+.timeline li .item .tempo, .timeline li .item .local {
+  font-style: italic;
+  font-size: 14px;
+  color: #95A0A6;
+}
+.timeline li .item .tempo::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(94.76deg, #DEEB52 0%, #AFBF30 100%);
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.timeline li .item h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #626D73;
+  margin-bottom: 5px;
+  max-width: 180px;
+}
+
+@media (max-width: 739px) {
+  .conteudo {
+    padding: 30px 15px;
+  }
+}
+
+
+/* Portfólio */
+.portfolio.interna h2 {
+  margin: 0;
+}
+.portfolio.interna h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(94.76deg, #DEEB52 0%, #AFBF30 100%);
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+
+}
+
+.portfolio.interna p {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4em;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #626D73;
+}
+.portfolio.interna .tag {
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #95A0A6;
+  display: inline-block;
+}
+
+/* Contato */
+.contato.interna .item {
+  display: flex;
+  align-items: center;
+}
+.contato.interna p {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4em;
+  font-size: 18px;
+  color: #626D73;
+  margin: 0;
+}
