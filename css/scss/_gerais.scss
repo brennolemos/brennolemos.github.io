@@ -17,10 +17,7 @@ a, a:hover {
 * {
   box-sizing: border-box
 }
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(130.48deg, #22A5E6 0%, #0068B3 100%);
-}
+
 
 .full-height {
   min-height: 100vh; 
@@ -28,3 +25,12 @@ body {
 
 //Cores
 $branco: #fff;
+$azul-claro: #22A5E6;
+$azul-escuro: #0068B3;
+
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(130.48deg, $azul-claro 0%, $azul-escuro 100%);
+}
