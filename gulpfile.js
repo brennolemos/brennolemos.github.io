@@ -49,7 +49,7 @@ gulp.task('mainjs', gulpJS);
 // Função para iniciar o browser
 function browser() {
   browserSync.init({
-    baseDir: './'
+    baseDir: '/'
   });
 }
 
@@ -67,4 +67,4 @@ function watch() {
 gulp.task('watch', watch);
 
 // Tarefa padrão do gulp, que inicia o watch e o browser-sync
-gulp.task('default', gulp.parallel('watch', 'browser-sync', 'sass', 'mainjs'));
+gulp.task('default', gulp.parallel('watch', 'sass', 'mainjs'));
