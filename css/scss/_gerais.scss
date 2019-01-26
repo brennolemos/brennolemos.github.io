@@ -1,4 +1,8 @@
 /* Geral */
+html, body, .main-container, .row {
+  height: 100%;
+}
+
 body, p, h1, h2, h3, h4, p, ul, li {
   padding: 0;
   margin: 0;
