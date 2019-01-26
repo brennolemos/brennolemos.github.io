@@ -25,9 +25,9 @@ gulp.task('sass', compilaSass);
 // Função para juntar o JS
 function gulpJS() {
   return gulp.src('js/main/*.js')
-  .pipe(concat('main.js'))
+  .pipe(concat('main.min.js'))
   .pipe(babel({
-    presets: ['env']
+    presets: ['@babel/preset-env']
   }))
   .pipe(uglify())
   .pipe(gulp.dest('js/'))

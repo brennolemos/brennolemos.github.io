@@ -86,6 +86,7 @@
   z-index: 300;
   color: #626D73;
   width: 36px;
+  height: 24px;
   border-top: 4px solid;
   border-radius: 2px;
   position: relative;
@@ -98,7 +99,7 @@
     background: currentColor;
     position: relative;
     transition: transform .3s ease;
-    margin-top: 6px;
+    top: 6px;
     border-radius: 2px;
   }
   &::after {
@@ -108,33 +109,49 @@
     background: currentColor;
     position: relative;
     transition: transform .3s ease;
-    margin-top: 6px;
+    top: 12px;
     border-radius: 2px;
   }
 }
 
 .menu-mobile-btn.active {
   border-top-color: transparent;
+  // margin-bottom: 6px;
   &::before {
-    margin-top: 0;
+    // margin-top: 0;
     top: 6px;
     transform: rotate(135deg);
   }
   &::after {
-    margin-top: 0;
+    // margin-top: 0;
     top: 2px;
     transform: rotate(45deg);
   }
 }
 
 .itens-paginas.mobile {
-  // display: none;
+  display: none;
   position: absolute;
   background: $branco;
   width: 120px;
   z-index: 200;
   right: 15px;
   top: 0;
-  padding: 60px 10px 10px 10px;
+  padding: 66px 10px 10px 10px;
   text-align: right;
+}
+.itens-paginas.mobile.active {
+  display: block;
+  animation: show-right .5s forwards;
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
