@@ -1,9 +1,16 @@
+// Header
+.header {
+  width: 240px;
+}
+
 /* Side Nav */
 .side-nav {
   background: $branco;
   padding: 30px 0;
   flex: 1;
   max-width: 240px; 
+  width: 100%;
+  height: 100%;
 }
 .fixed {
   position: fixed;
@@ -64,4 +71,70 @@
 }
 .side-nav img {
   margin: 0 auto;
+}
+
+// Header Mobile
+.header-mobile {
+  width: 100%;
+  background: $branco;
+  padding: 15px;
+}
+
+
+.menu-mobile-btn {
+  display: block;
+  z-index: 300;
+  color: #626D73;
+  width: 36px;
+  border-top: 4px solid;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  &::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: currentColor;
+    position: relative;
+    transition: transform .3s ease;
+    margin-top: 6px;
+    border-radius: 2px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: currentColor;
+    position: relative;
+    transition: transform .3s ease;
+    margin-top: 6px;
+    border-radius: 2px;
+  }
+}
+
+.menu-mobile-btn.active {
+  border-top-color: transparent;
+  &::before {
+    margin-top: 0;
+    top: 6px;
+    transform: rotate(135deg);
+  }
+  &::after {
+    margin-top: 0;
+    top: 2px;
+    transform: rotate(45deg);
+  }
+}
+
+.itens-paginas.mobile {
+  // display: none;
+  position: absolute;
+  background: $branco;
+  width: 120px;
+  z-index: 200;
+  right: 15px;
+  top: 0;
+  padding: 60px 10px 10px 10px;
+  text-align: right;
 }
