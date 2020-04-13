@@ -12,7 +12,7 @@
   max-width: 240px; 
   width: 100%;
   height: 100%;
-  
+  box-shadow: 7px 5px 21px 0 rgba(93,94,99,0.18);
 }
 .fixed {
   position: fixed;
@@ -47,14 +47,14 @@
 }
 .side-nav .itens-paginas li a:hover {
   color: #AFBF30;
-  font-weight: bold;
+  // font-weight: bold;
 }
 .side-nav .itens-paginas li a.active {
   color: #AFBF30;
   font-weight: bold;
 }
 .side-nav .itens-paginas li a.active::after {
-  content: '';
+  // content: '';
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -64,10 +64,18 @@
 }
 .side-nav .redes-sociais {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
     align-items: flex-end;
     max-width: 150px;
     margin: 0 auto 30px auto;
+}
+.side-nav .redes-sociais a, .sidenav-mobile .redes-sociais a {
+  font-size: 24px;
+  color: #626D73;
+  transition: all .3s ease;
+  &:hover {
+    color: #2D3940;
+  }
 }
 .side-nav img {
   margin: 0 auto;
