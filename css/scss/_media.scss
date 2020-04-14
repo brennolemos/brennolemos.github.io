@@ -1,4 +1,4 @@
-@media (max-width: 739px) {
+@media (max-width: 767px) {
   .side-nav {
     max-width: 100%;
   }
@@ -47,10 +47,15 @@
     .btn-live {
       margin-bottom: 15px;
     }
+    .conteudo {
+      padding: 30px 15px;
+    }
+
+    .header-interna {
+      padding: 20px;
+    }
+    .header-interna h1 {
+      font-size: 32px;
+    }
 }
 
-@media (max-width: 739px) {
-  .conteudo {
-    padding: 30px 15px;
-  }
-}

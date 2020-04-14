@@ -3,7 +3,7 @@
   min-width: 100%;
 }
 .content {
-  padding: 30px 60px;
+  padding: 30px;
   flex: 1;
 }
 .title-tag {
@@ -65,6 +65,13 @@
   color: #95A0A6;
   display: inline-block;
 }
+
+.badge-secondary {
+  background-color: #DCE2E6;
+  color: #626d73;
+  // font-weight: 00;
+}
+
 .botoes {
   display: flex;
   flex-wrap: wrap;

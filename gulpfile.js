@@ -25,26 +25,29 @@ gulp.task('sass', compilaSass);
 // Função para juntar o JS
 function gulpJS() {
   return gulp.src('js/main/*.js')
-  .pipe(concat('main.min.js'))
-  .pipe(babel({
-    presets: ['@babel/preset-env']
-  }))
-  .pipe(uglify())
-  .pipe(gulp.dest('js/'))
-  .pipe(browserSync.stream());
+    .pipe(concat('main.min.js'))
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('js/'))
+    .pipe(browserSync.stream());
 }
 
 gulp.task('mainjs', gulpJS);
 
 // JS Plugins
-// function pluginJS() {
-//   return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
-//   .pipe(concat('plugins.js'))
-//   .pipe(gulp.dest('js/'))
-//   .pipe(browserSync.stream())
-// }
+function pluginJS() {
+  return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
+    // 'node_modules/@glidejs/glide/dist/glide.min.js'
+  ])
+    .pipe(concat('plugins.js'))
+    .pipe(gulp.dest('js/'))
+    .pipe(browserSync.stream())
+}
 
-// gulp.task('pluginjs', pluginJS);
+gulp.task('pluginjs', pluginJS);
 
 // Função para iniciar o browser
 function browser() {
@@ -67,4 +70,4 @@ function watch() {
 gulp.task('watch', watch);
 
 // Tarefa padrão do gulp, que inicia o watch e o browser-sync
-gulp.task('default', gulp.parallel('watch', 'sass', 'mainjs'));
+gulp.task('default', gulp.parallel('watch', 'sass', 'pluginjs', 'mainjs'));
