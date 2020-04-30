@@ -1,0 +1,13 @@
+/* Contato */
+.contato.interna .item {
+   display: flex;
+   align-items: center;
+ }
+ .contato.interna p {
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1.4em;
+   font-size: 18px;
+   color: #626d73;
+   margin: 0;
+ }

@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./header.css";
+import logo from "./logo.svg";
+import foto from "./foto.png";
 
 const Header = () => {
   return (
-    <div>
+    <>
       <header className="header-mobile d-md-none d-block col-md">
         <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center">
           <ul className="redes-sociais d-flex">
@@ -25,9 +28,7 @@ const Header = () => {
               <div className="menu-mobile-btn"></div>
               <ul className="itens-paginas mobile navbar-nav">
                 <li>
-                  <Link to="/" className="active">
-                    Home
-                  </Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <Link to="/sobre">Sobre</Link>
@@ -43,25 +44,23 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      {/* <header className="header d-md-block d-none">
+      <header className="header d-md-block d-none">
         <nav className="side-nav col-md-3 col-12">
           <div className="fixed">
-            <img src="img/foto.png" className="foto" alt="Breno Lemos" />
+            <img src={foto} className="foto" alt="Breno Lemos" />
 
             <ul className="itens-paginas navbar-nav">
               <li>
-                <a href="index.html" className="active">
-                  Home
-                </a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="sobre.html">Sobre</a>
+                <Link to="/sobre">Sobre</Link>
               </li>
               <li>
-                <a href="portfolio.html">Portfólio</a>
+                <Link to="/portfolio">Portfólio</Link>
               </li>
               <li>
-                <a href="contato.html">Contato</a>
+                <Link to="/contato">Contato</Link>
               </li>
             </ul>
             <ul className="redes-sociais">
@@ -80,11 +79,11 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <img src="img/logo.svg" className="logo" alt="Logo Breno Lemos" />
+            <img src={logo} className="logo" alt="Logo Breno Lemos" />
           </div>
         </nav>
-      </header> */}
-    </div>
+      </header>
+    </>
   );
 };
 
