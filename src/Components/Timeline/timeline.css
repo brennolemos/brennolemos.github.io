@@ -5,13 +5,13 @@
 .timeline li {
   position: relative;
 }
-.timeline li .item {
+.timeline__item {
   position: relative;
   padding: 5px 15px 15px 30px;
   margin-left: 15px;
   border-left: 2px solid #626d73;
 }
-.timeline li .item .imagem {
+.timeline__icon {
   position: absolute;
   top: 5px;
   left: -15px;
@@ -26,13 +26,13 @@
   font-size: 20px;
   color: #2d3940;
 }
-.timeline li .item .tempo,
-.timeline li .item .local {
+.timeline__period,
+.timeline__place {
   font-style: italic;
   font-size: 14px;
   color: #95a0a6;
 }
-.timeline li .item .tempo::after {
+.timeline__period::after {
   content: "";
   display: block;
   width: 60px;
@@ -42,7 +42,7 @@
   margin-top: 5px;
   margin-bottom: 15px;
 }
-.timeline li .item h3 {
+.timeline__title {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

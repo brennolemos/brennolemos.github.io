@@ -8,14 +8,14 @@ const Timeline = (props) => {
       <ul className="timeline">
         {props.infos.list.map((item) => (
           <li key={item.id}>
-            <div className="item">
-              <span className="imagem">
+            <div className="timeline__item">
+              <span className="timeline__icon">
                 <i className={props.infos.icon}></i>
               </span>
-              <div className="infos">
-                <span className="tempo">{item.periodo}</span>
-                <h3>{item.cargo}</h3>
-                <span className="local">{item.titulo}</span>
+              <div className="timeline__infos">
+                <span className="timeline__period">{item.periodo}</span>
+                <h3 className="timeline__title">{item.ocupacao}</h3>
+                <span className="timeline__place">{item.titulo}</span>
               </div>
             </div>
           </li>

@@ -1,0 +1,117 @@
+/* Content */
+.home {
+  background: linear-gradient(
+    135deg,
+    var(--azul-claro) 0%,
+    var(--azul-escuro) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.body-home {
+  min-width: 100%;
+}
+
+.content {
+  padding: 30px;
+  flex: 1;
+}
+
+.title-tag {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--branco);
+}
+
+.title-tag::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(94.76deg, #deeb52 0%, #afbf30 100%);
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.content p {
+  font-size: 36px;
+  color: var(--branco);
+  line-height: 1.3em;
+  margin-bottom: 60px;
+}
+
+.btn-live {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-block;
+  color: var(--branco);
+  background-color: var(--verde-escuro);
+  border: 2px solid var(--verde-escuro);
+  box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);
+  border-radius: 10px;
+  padding: 10px 35px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-live:hover {
+  background-color: transparent;
+  color: #2d3940;
+  border-color: #2d3940;
+}
+
+.btn-project {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #afbf30;
+  border: 2px solid #afbf30;
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+  border: 2px solid var(--azul-escuro);
+  color: var(--azul-escuro);
+}
+
+.btn-white {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--branco);
+  background: linear-gradient(101.31deg, #deeb52 0%, #afbf30 100%);
+  box-shadow: 0px 1px 5px rgba(45, 57, 64, 0.2),
+    0px 3px 4px rgba(45, 57, 64, 0.12), 0px 2px 4px rgba(45, 57, 64, 0.14);
+  border-radius: 10px;
+  padding: 10px 35px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+  color: #afbf30;
+  background: var(--branco);
+}

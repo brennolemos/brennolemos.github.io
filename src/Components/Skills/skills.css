@@ -1,0 +1,12 @@
+/* Skills */
+.icon-skill {
+  background-color: #cbdc3d;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* // font-size: 28px; */
+  color: #2d3940;
+}

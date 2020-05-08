@@ -2,10 +2,14 @@ import React from "react";
 import "./portfolioList.css";
 
 const PortfolioList = (props) => {
+  // const handleModal = (text) => {
+  //   props.onHandleModal(text);
+  // };
+
   return (
-    <div className="row">
+    <div className="row justify-content-center">
       {props.jobs.map((job) => (
-        <div className="col-md-4" key={job.id}>
+        <div className="col-lg-4 col-md-6 d-flex" key={job.id}>
           <div className="portfolio-item">
             <img src={job.image} alt="Delfos IM" />
             <div className="item-info media-body">
@@ -19,9 +23,9 @@ const PortfolioList = (props) => {
               </div>
 
               <div className="text-center">
-                <a href="#" className="btn-live">
-                  Saiba Mais
-                </a>
+                <button onClick={() => props.onHandleModal(job)} className="btn-live">
+                  Ver Mais
+                </button>
               </div>
             </div>
           </div>
