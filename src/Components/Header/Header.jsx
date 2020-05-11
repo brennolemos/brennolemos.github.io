@@ -5,11 +5,9 @@ import logo from "../logo.svg";
 import foto from "../foto.png";
 
 const Header = () => {
-  const [btnActive, setBtnActive] = useState("");
+  const [menuMobileIsActive, setMenuMobileIsActive] = useState(false);
 
-  const activeMenu = () => {
-    btnActive === "" ? setBtnActive("active") : setBtnActive("");
-  };
+  const toggleMenuMobile = () => setMenuMobileIsActive(!menuMobileIsActive);
 
   return (
     <>
@@ -31,10 +29,16 @@ const Header = () => {
 
           <div className="menu-mobile-container position-relative">
             <div
-              onClick={activeMenu}
-              className={"menu-mobile-btn " + btnActive}
+              onClick={toggleMenuMobile}
+              className={`menu-mobile-btn ${
+                (menuMobileIsActive && "active") || ""
+              }`}
             ></div>
-            <ul className={"menu-mobile navbar-nav " + btnActive}>
+            <ul
+              className={`menu-mobile navbar-nav ${
+                (menuMobileIsActive && "active") || ""
+              }`}
+            >
               <li>
                 <NavLink
                   className="menu__link"
