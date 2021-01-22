@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../logo.svg';
 import './footer.css';
 
 const Footer = () => {
@@ -18,6 +19,7 @@ const Footer = () => {
         </li>
       </ul>
       <p>Made with ❤️ and React</p>
+      <img src={logo} className="logo" alt="Logo Breno Lemos" />
     </footer>
   );
 };

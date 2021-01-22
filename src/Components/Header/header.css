@@ -58,21 +58,6 @@
   font-weight: bold;
 }
 
-.socials {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  max-width: 150px;
-  margin: 0 auto 30px auto;
-}
-
-.social,
-.sidenav-mobile .redes-sociais a {
-  font-size: 24px;
-  color: #626d73;
-  transition: all 0.3s ease;
-}
-
 .sidenav img {
   margin: 0 auto;
 }
