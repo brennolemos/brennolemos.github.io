@@ -22,7 +22,7 @@
 
 .menu::before,
 .menu::after {
-  content: "";
+  content: '';
   display: block;
   height: 5px;
   width: 150px;
@@ -44,7 +44,7 @@
   color: #626d73;
   font-size: 18px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 1rem 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -77,11 +77,27 @@
   margin: 0 auto;
 }
 
+.picture {
+  max-width: 60px;
+}
+
+.header__title {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #2d3940;
+  margin-left: 10px;
+}
+
 /* Header Mobile */
 .header-mobile {
   width: 100%;
   background: var(--branco);
-  padding: 15px;
+  padding: 5px 15px;
+  box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);
 }
 
 .menu-mobile-btn {
@@ -98,7 +114,7 @@
 }
 
 .menu-mobile-btn::before {
-  content: "";
+  content: '';
   display: block;
   height: 4px;
   background: currentColor;
@@ -109,7 +125,7 @@
 }
 
 .menu-mobile-btn::after {
-  content: "";
+  content: '';
   display: block;
   height: 4px;
   background: currentColor;
@@ -153,7 +169,7 @@
 .menu-mobile .menu__link {
   padding: 10px 0;
   text-align: center;
-  border-bottom: 1px solid #B9C1C5;
+  border-bottom: 1px solid #b9c1c5;
 }
 
 .menu-mobile li:last-child .menu__link {

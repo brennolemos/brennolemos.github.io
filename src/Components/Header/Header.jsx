@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import "./header.css";
-import logo from "../logo.svg";
-import foto from "../foto.png";
+import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import './header.css';
+import logo from '../logo.svg';
+import foto from '../foto.png';
 
 const Header = () => {
   const [menuMobileIsActive, setMenuMobileIsActive] = useState(false);
@@ -11,32 +11,62 @@ const Header = () => {
 
   return (
     <>
-      <header className="header-mobile d-md-none d-block col-md">
-        <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center">
-          <ul className="redes-sociais d-flex">
-            <li className="mr-3">
-              <a target="_blank" href="https://www.linkedin.com/in/brenolemos/">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </li>
+      <header className="header-mobile">
+        <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center navbar navbar-expand-lg">
+          <div className="d-flex align-items-center">
+            <img src={foto} className="picture" alt="Breno Lemos" />
+            <h2 className="header__title">Breno Lemos</h2>
+          </div>
 
+          <ul className="navbar-nav d-md-flex d-none">
             <li>
-              <a target="_blank" href="https://github.com/brennolemos">
-                <i className="fab fa-github"></i>
-              </a>
+              <NavLink
+                className="menu__link"
+                activeClassName="active"
+                exact
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="menu__link"
+                activeClassName="active"
+                to="/sobre"
+              >
+                Sobre
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="menu__link"
+                activeClassName="active"
+                to="/portfolio"
+              >
+                Portfólio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="menu__link"
+                activeClassName="active"
+                to="/contato"
+              >
+                Contato
+              </NavLink>
             </li>
           </ul>
-
-          <div className="menu-mobile-container position-relative">
+          <div className="d-md-none d-block menu-mobile-container position-relative">
             <div
               onClick={toggleMenuMobile}
               className={`menu-mobile-btn ${
-                (menuMobileIsActive && "active") || ""
+                (menuMobileIsActive && 'active') || ''
               }`}
             ></div>
             <ul
               className={`menu-mobile navbar-nav ${
-                (menuMobileIsActive && "active") || ""
+                (menuMobileIsActive && 'active') || ''
               }`}
             >
               <li>
@@ -81,7 +111,7 @@ const Header = () => {
         </nav>
       </header>
 
-      <header className="header d-md-block d-none">
+      {/* <header className="header d-md-block d-none">
         <nav className="sidenav col-md-3">
           <img src={foto} className="picture" alt="Breno Lemos" />
           <ul className="menu navbar-nav align-items-center">
@@ -147,7 +177,7 @@ const Header = () => {
           </ul>
           <img src={logo} className="logo" alt="Logo Breno Lemos" />
         </nav>
-      </header>
+      </header> */}
     </>
   );
 };
