@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+import { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap');
 
 /* Geral */
@@ -41,6 +44,8 @@ a:hover {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background: ${(props) => props.theme.colors.backgroundSecundary};
+
 }
 
 .full-height {
@@ -49,17 +54,19 @@ body {
 
 /* Internas */
 body.interna {
-  background: var(--branco);
+  background: ${(props) => props.theme.colors.backgroundSecundary};
 }
 
 .content.interna {
   padding: 0 0 30px 0;
-  background: #f5f5f5;
+  background: ${(props) => props.theme.colors.backgroundSecundary};
+  color: ${(props) => props.theme.colors.text};
 }
 
 .header-interna {
   padding: 30px;
   background: #fff;
+  background: ${(props) => props.theme.colors.backgroundPrimary};
   /* background: linear-gradient(
     135deg,
     var(--azul-claro) 0%,
@@ -132,3 +139,5 @@ body.interna {
     opacity: initial;
   }
 }
+
+`;

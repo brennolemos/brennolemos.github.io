@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import './header.css';
+import { ThemeContext } from 'styled-components';
+// import './header.css';
 import foto from '../foto.png';
 import Switch from '../Switch/Switch';
 
-const Header = () => {
+import { Header } from './Header-styles';
+
+export default ({ toggleTheme }) => {
   const [menuMobileIsActive, setMenuMobileIsActive] = useState(false);
+  const { colors, title } = useContext(ThemeContext);
 
   const toggleMenuMobile = () => setMenuMobileIsActive(!menuMobileIsActive);
 
   return (
     <>
-      <header className="header-mobile">
+      <Header>
         <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center navbar navbar-expand-lg">
           <div className="d-flex align-items-center">
             <img src={foto} className="picture" alt="Breno Lemos" />
@@ -58,7 +62,7 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <Switch />
+            <Switch toggleTheme={toggleTheme} checked={title === 'dark'} />
           </div>
           <div className="d-md-none d-block menu-mobile-container position-relative">
             <div
@@ -112,7 +116,7 @@ const Header = () => {
             </ul>
           </div>
         </nav>
-      </header>
+      </Header>
 
       {/* <header className="header d-md-block d-none">
         <nav className="sidenav col-md-3">
@@ -184,5 +188,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

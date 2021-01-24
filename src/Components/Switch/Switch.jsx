@@ -1,10 +1,18 @@
 import React from 'react';
 import styles from './Switch.module.css';
 
-const Switch = () => {
+const Switch = ({ toggleTheme, checked }) => {
   return (
-    <div class={styles.wrapper}>
-      <input type="checkbox" name="checkbox" class={styles.switch} />
+    <div className={styles.wrapper}>
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={() => {
+          toggleTheme();
+        }}
+        name="checkbox"
+        className={styles.switch}
+      />
     </div>
   );
 };
