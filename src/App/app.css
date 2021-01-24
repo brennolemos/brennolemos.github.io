@@ -54,10 +54,12 @@ body.interna {
 
 .content.interna {
   padding: 0 0 30px 0;
+  background: #f5f5f5;
 }
 
 .header-interna {
   padding: 30px;
+  background: #fff;
   /* background: linear-gradient(
     135deg,
     var(--azul-claro) 0%,

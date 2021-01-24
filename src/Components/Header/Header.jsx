@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './header.css';
 import foto from '../foto.png';
+import Switch from '../Switch/Switch';
 
 const Header = () => {
   const [menuMobileIsActive, setMenuMobileIsActive] = useState(false);
@@ -17,45 +18,48 @@ const Header = () => {
             <h2 className="header__title">Breno Lemos</h2>
           </div>
 
-          <ul className="navbar-nav d-md-flex d-none">
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                exact
-                to="/"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                to="/sobre"
-              >
-                Sobre
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                to="/portfolio"
-              >
-                Portfólio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                to="/contato"
-              >
-                Contato
-              </NavLink>
-            </li>
-          </ul>
+          <div className="d-flex align-items-center">
+            <ul className="navbar-nav d-md-flex d-none">
+              <li>
+                <NavLink
+                  className="menu__link"
+                  activeClassName="active"
+                  exact
+                  to="/"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="menu__link"
+                  activeClassName="active"
+                  to="/sobre"
+                >
+                  Sobre
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="menu__link"
+                  activeClassName="active"
+                  to="/portfolio"
+                >
+                  Portfólio
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="menu__link"
+                  activeClassName="active"
+                  to="/contato"
+                >
+                  Contato
+                </NavLink>
+              </li>
+            </ul>
+            <Switch />
+          </div>
           <div className="d-md-none d-block menu-mobile-container position-relative">
             <div
               onClick={toggleMenuMobile}
