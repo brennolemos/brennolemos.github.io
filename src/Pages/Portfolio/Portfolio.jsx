@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Loading from "../../Components/Loading/Loading";
-import Modal from "../../Components/Modal/Modal";
-import "./portfolio.css";
+import React, { useState, useEffect } from 'react';
+import Loading from '../../Components/Loading/Loading';
+import Modal from '../../Components/Modal/Modal';
+import './portfolio.css';
 
 const Portfolio = () => {
   const [data, setData] = useState(null);
   const [modal, setModal] = useState(null);
 
   useEffect(() => {
-    fetch("/api/api.json")
+    fetch('/api/api.json')
       .then((response) => response.json())
       .then((data) => setData(data.portfolio));
   });
@@ -17,7 +17,7 @@ const Portfolio = () => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -31,7 +31,7 @@ const Portfolio = () => {
         <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
       ) : null}
 
-      <section className="content interna portfolio">
+      <section className="content interna portfolio animeUp">
         <header className="header-interna">
           <h1 className="title-tag">Portfólio</h1>
         </header>

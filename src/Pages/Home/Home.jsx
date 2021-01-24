@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import PortfolioList from "../../Components/PortfolioList/PortfolioList";
-import Loading from "../../Components/Loading/Loading";
-import Modal from "../../Components/Modal/Modal";
-import "./home.css";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import PortfolioList from '../../Components/PortfolioList/PortfolioList';
+import Loading from '../../Components/Loading/Loading';
+import Modal from '../../Components/Modal/Modal';
+import './home.css';
 
 const Home = () => {
   const [data, setData] = useState(null);
   const [modal, setModal] = useState(null);
 
   useEffect(() => {
-    fetch("/api/api.json")
+    fetch('/api/api.json')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -19,8 +19,8 @@ const Home = () => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    })
+      behavior: 'smooth',
+    });
   };
 
   const closeModal = (event) => {
@@ -29,10 +29,12 @@ const Home = () => {
 
   return (
     <>
-      {modal ? <Modal infos={modal} setModal={setModal} closeModal={closeModal} /> : null}
-      <section className="content home">
-        <h1 className="title-tag">{data ? data.home.titulo : ""}</h1>
-        <p>{data ? data.home.descricao : ""}</p>
+      {modal ? (
+        <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
+      ) : null}
+      <section className="content home animeUp">
+        <h1 className="title-tag">{data ? data.home.titulo : ''}</h1>
+        <p>{data ? data.home.descricao : ''}</p>
 
         <h2 className="title-tag">Trabalhos</h2>
 

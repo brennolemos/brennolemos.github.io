@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
-import Loading from "../../Components/Loading/Loading";
-import Timeline from "../../Components/Timeline/Timeline";
-import Skills from "../../Components/Skills/Skills";
-import "./about.css";
+import React, { useState, useEffect } from 'react';
+import Loading from '../../Components/Loading/Loading';
+import Timeline from '../../Components/Timeline/Timeline';
+import Skills from '../../Components/Skills/Skills';
+import './about.css';
 
 const About = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("/api/api.json")
+    fetch('/api/api.json')
       .then((response) => response.json())
       .then((json) => setData(json.sobre));
   }, []);
 
   return (
-    <section className="content interna">
+    <section className="content interna animeUp">
       <header className="header-interna">
-        <h1 className="title-tag">{data ? data.titulo : ""}</h1>
+        <h1 className="title-tag">{data ? data.titulo : ''}</h1>
       </header>
 
       {data ? (

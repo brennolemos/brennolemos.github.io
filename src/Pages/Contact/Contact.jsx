@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import Loading from "../../Components/Loading/Loading";
-import "./contact.css";
+import React, { useState, useEffect } from 'react';
+import Loading from '../../Components/Loading/Loading';
+import './contact.css';
 
 const Contact = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("/api/api.json")
+    fetch('/api/api.json')
       .then((response) => response.json())
       .then((json) => setData(json.contato));
-  },[]);
+  }, []);
 
   return (
-    <section className="content interna contato">
+    <section className="content interna contato animeUp">
       <header className="header-interna">
-        <h1 className="title-tag">{data ? data.titulo : ""}</h1>
+        <h1 className="title-tag">{data ? data.titulo : ''}</h1>
       </header>
       <div className="conteudo">
         <div className="row">

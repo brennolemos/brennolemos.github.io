@@ -1,13 +1,10 @@
-import React from "react";
-import "./loading.css";
+import React from 'react';
+import './Loading.css';
 
 const Loading = () => {
   return (
-    <div className="loading">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <div className="wrapper">
+      <div className="loading"></div>
     </div>
   );
 };

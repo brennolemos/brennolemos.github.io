@@ -117,3 +117,16 @@ body.interna {
   font-size: 28px;
   color: #2d3940;
 }
+
+.animeUp {
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: animeUp 0.3s forwards;
+}
+
+@keyframes animeUp {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
