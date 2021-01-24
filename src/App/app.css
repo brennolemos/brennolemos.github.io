@@ -58,13 +58,13 @@ body.interna {
 
 .header-interna {
   padding: 30px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     var(--azul-claro) 0%,
     var(--azul-escuro) 100%
   );
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 10s ease infinite; */
 }
 
 .header-interna h1 {

@@ -1,12 +1,13 @@
 /* Content */
 .home {
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     var(--azul-claro) 0%,
     var(--azul-escuro) 100%
   );
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 10s ease infinite; */
+  background: #fff;
 }
 
 @keyframes gradient {
@@ -35,7 +36,9 @@
   font-size: 14px;
   letter-spacing: 0.05em;
   /* text-transform: uppercase; */
-  color: var(--branco);
+  /* color: var(--branco); */
+  color: #2d3940;
+
   font-family: Dosis;
 }
 
@@ -53,7 +56,9 @@
 
 .content p {
   font-size: 36px;
-  color: var(--branco);
+  /* color: var(--branco); */
+  color: #2d3940;
+
   line-height: 1.3em;
   margin-bottom: 60px;
 }
