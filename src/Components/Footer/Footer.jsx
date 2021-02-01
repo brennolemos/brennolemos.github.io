@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../logo.svg';
-import './footer.css';
+import { Footer } from './Footer-styles.js';
 
-const Footer = () => {
+export default () => {
   return (
-    <footer className="footer">
+    <Footer>
       <ul className="redes-sociais d-flex">
         <li className="mr-3">
           <a target="_blank" href="https://www.linkedin.com/in/brenolemos/">
@@ -20,8 +20,6 @@ const Footer = () => {
       </ul>
       <p>Made with ❤️ and React</p>
       <img src={logo} className="logo" alt="Logo Breno Lemos" />
-    </footer>
+    </Footer>
   );
 };
-
-export default Footer;

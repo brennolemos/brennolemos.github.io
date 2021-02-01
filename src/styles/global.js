@@ -146,6 +146,7 @@ body.interna {
   padding: 0 0 30px 0;
   background: ${(props) => props.theme.colors.backgroundPrimary};
   color: ${(props) => props.theme.colors.text};
+  flex: 1;
 }
 
 .header-interna {
