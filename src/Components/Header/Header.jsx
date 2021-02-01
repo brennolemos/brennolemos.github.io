@@ -17,13 +17,15 @@ export default ({ toggleTheme }) => {
     <>
       <Header>
         <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center navbar navbar-expand-lg">
-          <div className="d-flex align-items-center">
-            <img src={foto} className="picture" alt="Breno Lemos" />
-            <h2 className="header__title">Breno Lemos</h2>
-          </div>
+          <NavLink exact to="/">
+            <div className="d-flex align-items-center">
+              <img src={foto} className="picture" alt="Breno Lemos" />
+              <h2 className="header__title">Breno Lemos</h2>
+            </div>
+          </NavLink>
 
           <div className="d-flex align-items-center">
-            <ul className="navbar-nav d-md-flex d-none">
+            <ul className="navbar-nav d-md-flex d-none mr-3">
               <li>
                 <NavLink
                   className="menu__link"

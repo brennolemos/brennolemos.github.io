@@ -78,8 +78,9 @@ export const Header = styled.header`
     font-size: 24px;
     line-height: 30px;
 
-    color: #2d3940;
     margin-left: 10px;
+    color: ${(props) => props.theme.colors.color};
+    transition: all 0.3s ease;
   }
   .menu-mobile-btn {
     display: block;

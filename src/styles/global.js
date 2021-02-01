@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap');
 
 /* Geral */
@@ -45,8 +45,8 @@ a:hover {
 body {
   font-family: 'Montserrat', sans-serif;
   background: ${(props) => props.theme.colors.backgroundSecundary};
-transition: all .3s ease;
-color: ${(props) => props.theme.colors.color}
+  transition: all .3s ease;
+  color: ${(props) => props.theme.colors.color}
 }
 
 .full-height {
