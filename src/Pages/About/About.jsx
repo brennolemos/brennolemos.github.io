@@ -3,6 +3,7 @@ import Loading from '../../components/Loading/Loading';
 import Timeline from '../../components/Timeline/Timeline';
 import Skills from '../../components/Skills/Skills';
 import './about.css';
+import Head from '../../components/Head';
 
 const About = () => {
   const [data, setData] = useState(null);
@@ -15,6 +16,7 @@ const About = () => {
 
   return (
     <section className="content interna animeUp">
+      <Head title="Sobre" />
       <header className="header-interna">
         <h1 className="title-tag">{data ? data.titulo : ''}</h1>
       </header>

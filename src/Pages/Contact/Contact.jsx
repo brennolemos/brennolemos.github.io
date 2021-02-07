@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
 import './contact.css';
 
@@ -13,6 +14,7 @@ const Contact = () => {
 
   return (
     <section className="content interna contato animeUp">
+      <Head title="Contato" />
       <header className="header-interna">
         <h1 className="title-tag">{data ? data.titulo : ''}</h1>
       </header>

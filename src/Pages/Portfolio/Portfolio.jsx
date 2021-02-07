@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
 import './portfolio.css';
@@ -30,6 +31,8 @@ const Portfolio = () => {
       {modal ? (
         <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
       ) : null}
+
+      <Head title="Portfólio" />
 
       <section className="content interna portfolio animeUp">
         <header className="header-interna">
