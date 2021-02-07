@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Loading from '../../Components/Loading/Loading';
+import Loading from '../../components/Loading/Loading';
 import './contact.css';
 
 const Contact = () => {

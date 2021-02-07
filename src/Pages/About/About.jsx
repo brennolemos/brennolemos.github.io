@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Loading from '../../Components/Loading/Loading';
-import Timeline from '../../Components/Timeline/Timeline';
-import Skills from '../../Components/Skills/Skills';
+import Loading from '../../components/Loading/Loading';
+import Timeline from '../../components/Timeline/Timeline';
+import Skills from '../../components/Skills/Skills';
 import './about.css';
 
 const About = () => {

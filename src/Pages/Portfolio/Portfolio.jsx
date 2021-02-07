@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Loading from '../../Components/Loading/Loading';
-import Modal from '../../Components/Modal/Modal';
+import Loading from '../../components/Loading/Loading';
+import Modal from '../../components/Modal/Modal';
 import './portfolio.css';
 
 const Portfolio = () => {

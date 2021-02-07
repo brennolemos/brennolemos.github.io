@@ -1,23 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import usePersistedState from '../utils/usePersistedState';
-import light from '../styles/themes/light';
-import dark from '../styles/themes/dark';
+import usePersistedState from './utils/usePersistedState';
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import GlobalStyle from '../styles/global';
+import GlobalStyle from './styles/global';
 // import "./app.css";
 
-import Header from '../Components/Header/Header';
-import Home from '../Pages/Home/Home';
-import Portfolio from '../Pages/Portfolio/Portfolio';
-import About from '../Pages/About/About';
-import Contact from '../Pages/Contact/Contact';
-import Footer from '../Components/Footer/Footer';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Portfolio from './pages/Portfolio/Portfolio';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [theme, setTheme] = usePersistedState('theme', light);
