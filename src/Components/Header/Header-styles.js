@@ -79,7 +79,7 @@ export const Header = styled.header`
     line-height: 30px;
 
     margin-left: 10px;
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.textSecondary};
     transition: all 0.3s ease;
   }
   .menu-mobile-btn {

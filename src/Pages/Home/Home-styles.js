@@ -37,8 +37,8 @@ export const Home = styled.section`
   .content p {
     font-size: 36px;
     /* color: var(--branco); */
-    color: #2d3940;
-    color: ${(props) => props.theme.colors.color};
+    /* color: #2d3940; */
+    color: ${(props) => props.theme.colors.textSecondary};
 
     line-height: 1.3em;
     margin-bottom: 60px;

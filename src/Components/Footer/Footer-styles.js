@@ -9,7 +9,7 @@ export const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${(props) => props.theme.colors.color};
+  color: ${(props) => props.theme.colors.textPrimary};
   transition: all 0.3s ease;
 
   .socials {

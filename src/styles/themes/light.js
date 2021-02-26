@@ -5,6 +5,7 @@ export default {
     backgroundPrimary: '#fff',
     backgroundSecundary: '#f5f5f5',
 
-    color: '#2d3940',
+    textPrimary: '#111',
+    textSecondary: '#2d3940',
   },
 };

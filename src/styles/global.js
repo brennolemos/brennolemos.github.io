@@ -46,7 +46,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: ${(props) => props.theme.colors.backgroundSecundary};
   transition: all .3s ease;
-  color: ${(props) => props.theme.colors.color}
+  color: ${(props) => props.theme.colors.textSecondary}
 }
 
 .full-height {
@@ -60,7 +60,7 @@ body {
     /* text-transform: uppercase; */
     /* color: var(--branco); */
     color: #2d3940;
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.textSecondary};
 
     font-family: Dosis;
   }
@@ -145,7 +145,7 @@ body.interna {
 .content.interna {
   padding: 0 0 30px 0;
   background: ${(props) => props.theme.colors.backgroundPrimary};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.textSecondary};
   flex: 1;
 }
 
