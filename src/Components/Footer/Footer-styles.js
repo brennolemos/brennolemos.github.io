@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Footer = styled.footer`
   padding: 10px 30px;
+
   background: ${(props) => props.theme.colors.backgroundPrimary};
 
   box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);

@@ -180,7 +180,7 @@ body.interna {
   font-weight: bold;
   font-size: 24px;
   text-transform: uppercase;
-  color: #2d3940;
+  color: ${(props) => props.theme.colors.textSecondary};
   margin-left: 15px;
 }
 
