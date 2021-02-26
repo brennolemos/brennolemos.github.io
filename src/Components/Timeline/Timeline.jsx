@@ -1,9 +1,9 @@
-import React from "react";
-import "./timeline.css";
+import React from 'react';
+import { Timeline } from './Timeline-styles';
 
-const Timeline = (props) => {
+export default (props) => {
   return (
-    <>
+    <Timeline>
       <h2>{props.infos.titulo}</h2>
       <ul className="timeline">
         {props.infos.list.map((item) => (
@@ -21,8 +21,6 @@ const Timeline = (props) => {
           </li>
         ))}
       </ul>
-    </>
+    </Timeline>
   );
 };
-
-export default Timeline;

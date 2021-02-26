@@ -7,7 +7,7 @@ export const About = styled.section`
     line-height: 1.4em;
     font-size: 18px;
     /* color: #626d73; */
-    color: ${({ theme }) => theme.colors.text3};
+    color: ${({ theme }) => theme.colors.textContent};
     margin-bottom: 30px;
     max-width: 520px;
   }

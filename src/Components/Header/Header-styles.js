@@ -46,7 +46,7 @@ export const Header = styled.header`
 
   .menu__link {
     display: block;
-    color: ${(props) => props.theme.colors.text3};
+    color: ${(props) => props.theme.colors.textContent};
     font-size: 18px;
     margin: 0 auto;
     padding: 1rem 0.5rem;

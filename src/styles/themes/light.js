@@ -7,6 +7,6 @@ export default {
 
     textPrimary: '#111314',
     textSecondary: '#2d3940',
-    text3: '#626D73',
+    textContent: '#626D73',
   },
 };
