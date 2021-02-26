@@ -4,6 +4,7 @@ import PortfolioList from '../../components/PortfolioList/PortfolioList';
 import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
 import { Home } from './Home-styles';
+import Head from '../../components/Head';
 
 export default () => {
   const [data, setData] = useState(null);
@@ -33,6 +34,7 @@ export default () => {
         <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
       ) : null}
       <Home>
+        <Head title="" />
         <div className="content home animeUp">
           <h1 className="title-tag">{data ? data.home.titulo : ''}</h1>
           <p>{data ? data.home.descricao : ''}</p>
