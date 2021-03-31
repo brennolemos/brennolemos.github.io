@@ -7,13 +7,21 @@ export default () => {
     <Footer>
       <ul className="redes-sociais d-flex">
         <li className="mr-3">
-          <a target="_blank" href="https://www.linkedin.com/in/brenolemos/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/brenolemos/"
+          >
             <i className="fab fa-linkedin-in"></i>
           </a>
         </li>
 
         <li>
-          <a target="_blank" href="https://github.com/brennolemos">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/brennolemos"
+          >
             <i className="fab fa-github"></i>
           </a>
         </li>
