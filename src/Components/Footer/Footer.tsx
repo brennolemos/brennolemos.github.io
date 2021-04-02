@@ -26,7 +26,7 @@ export default () => {
           </a>
         </li>
       </ul>
-      <p>Made with ❤️ and React</p>
+      <p>Made with <span role="img" aria-label="Heart">❤️</span> and React</p>
       <img src={logo} className="logo" alt="Logo Breno Lemos" />
     </Footer>
   );

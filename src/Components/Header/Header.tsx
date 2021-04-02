@@ -1,15 +1,18 @@
 import React, { useState, useContext } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
-// import './header.css';
+
+import { Header } from './Header-styles';
 import foto from '../foto.png';
 import Switch from '../Switch/Switch';
 
-import { Header } from './Header-styles';
+interface Props {
+  toggleTheme: () => void
+}
 
-export default ({ toggleTheme }) => {
+export default ({ toggleTheme }: Props) => {
   const [menuMobileIsActive, setMenuMobileIsActive] = useState(false);
-  const { colors, title } = useContext(ThemeContext);
+  const { title } = useContext(ThemeContext);
 
   const toggleMenuMobile = () => setMenuMobileIsActive(!menuMobileIsActive);
 
@@ -119,74 +122,6 @@ export default ({ toggleTheme }) => {
           </div>
         </nav>
       </Header>
-
-      {/* <header className="header d-md-block d-none">
-        <nav className="sidenav col-md-3">
-          <img src={foto} className="picture" alt="Breno Lemos" />
-          <ul className="menu navbar-nav align-items-center">
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                exact
-                to="/"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                to="/sobre"
-              >
-                Sobre
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                to="/portfolio"
-              >
-                Portfólio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="menu__link"
-                activeClassName="active"
-                to="/contato"
-              >
-                Contato
-              </NavLink>
-            </li>
-          </ul>
-
-          <ul className="socials">
-            <li className="mr-3">
-              <a
-                className="social"
-                target="_blank"
-                href="https://www.linkedin.com/in/brenolemos/"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="social"
-                target="_blank"
-                href="https://github.com/brennolemos"
-              >
-                <i className="fab fa-github"></i>
-              </a>
-            </li>
-          </ul>
-          <img src={logo} className="logo" alt="Logo Breno Lemos" />
-        </nav>
-      </header> */}
     </>
   );
 };
