@@ -1,11 +1,12 @@
 import React from 'react';
-import './Loading.css';
+
+import * as S from './styles';
 
 const Loading = () => {
   return (
-    <div className="wrapper">
-      <div className="loading"></div>
-    </div>
+    <S.Wrapper>
+      <S.Loading></S.Loading>
+    </S.Wrapper>
   );
 };
 
