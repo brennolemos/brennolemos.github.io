@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../logo.svg';
-import { Footer } from './Footer-styles.js';
+import * as S from './styles';
 
 export default () => {
   return (
-    <Footer>
+    <S.Footer>
       <ul className="redes-sociais d-flex">
         <li className="mr-3">
           <a
@@ -26,8 +26,14 @@ export default () => {
           </a>
         </li>
       </ul>
-      <p>Made with <span role="img" aria-label="Heart">❤️</span> and React</p>
+      <p>
+        Made with{' '}
+        <span role="img" aria-label="Heart">
+          ❤️
+        </span>{' '}
+        and React
+      </p>
       <img src={logo} className="logo" alt="Logo Breno Lemos" />
-    </Footer>
+    </S.Footer>
   );
 };

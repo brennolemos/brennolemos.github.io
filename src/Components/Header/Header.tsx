@@ -2,12 +2,12 @@ import React, { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 
-import { Header } from './Header-styles';
+import * as S from './styles';
 import foto from '../foto.png';
 import Switch from '../Switch/Switch';
 
 interface Props {
-  toggleTheme: () => void
+  toggleTheme: () => void;
 }
 
 export default ({ toggleTheme }: Props) => {
@@ -18,7 +18,7 @@ export default ({ toggleTheme }: Props) => {
 
   return (
     <>
-      <Header>
+      <S.Header>
         <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center navbar navbar-expand-lg">
           <NavLink exact to="/">
             <div className="d-flex align-items-center">
@@ -121,7 +121,7 @@ export default ({ toggleTheme }: Props) => {
             </ul>
           </div>
         </nav>
-      </Header>
+      </S.Header>
     </>
   );
 };
