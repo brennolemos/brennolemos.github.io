@@ -38,8 +38,8 @@ export default () => {
       <S.Home>
         <Head title="" />
         <div className="content home animeUp">
-          <h1 className="title-tag">{data ? data.home.titulo : ''}</h1>
-          <p>{data ? data.home.descricao : ''}</p>
+          <h1 className="title-tag">{data?.home.titulo}</h1>
+          <p>{data?.home.descricao}</p>
 
           <h2 className="title-tag">Trabalhos</h2>
 
