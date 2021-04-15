@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import PortfolioList from '../../components/PortfolioList/PortfolioList';
 import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
-import { Home } from './Home-styles';
 import Head from '../../components/Head';
+
+import * as S from './styles';
 
 export default () => {
   const [data, setData] = useState(null);
@@ -33,7 +35,7 @@ export default () => {
       {modal ? (
         <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
       ) : null}
-      <Home>
+      <S.Home>
         <Head title="" />
         <div className="content home animeUp">
           <h1 className="title-tag">{data ? data.home.titulo : ''}</h1>
@@ -53,7 +55,7 @@ export default () => {
             </Link>
           </div>
         </div>
-      </Home>
+      </S.Home>
     </>
   );
 };
