@@ -1,50 +1,83 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
+import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
 import Timeline from '../../components/Timeline/Timeline';
 import Skills from '../../components/Skills/Skills';
-import './about.css';
-import Head from '../../components/Head';
-import { About } from './About-styles';
+
+import * as S from './styles';
+
+type Content = {
+  titulo: string;
+  descricao: string[];
+  experiencia: Infos;
+  educacao: Infos;
+  skills: Skills[];
+};
+
+type Infos = {
+  titulo: string;
+  icon: string;
+  list: Timeline[];
+};
+
+type Timeline = {
+  id: string;
+  titulo: string;
+  ocupacao: string;
+  periodo: string;
+};
+
+type Skills = {
+  id: string;
+  name: string;
+  icon: string;
+};
 
 export default () => {
-  const [data, setData] = useState(null);
+  const [content, setContent] = React.useState<Content | null>(null);
 
-  useEffect(() => {
-    fetch('/api/api.json')
-      .then((response) => response.json())
-      .then((json) => setData(json.sobre));
+  const loadData = async () => {
+    const response = await fetch('/api/api.json');
+    const data = await response.json();
+
+    setContent(data.sobre);
+  };
+
+  React.useEffect(() => {
+    loadData();
   }, []);
 
   return (
-    <About>
+    <S.About>
       <div className="content interna animeUp">
         <Head title="Sobre" />
         <header className="header-interna">
-          <h1 className="title-tag">{data ? data.titulo : ''}</h1>
+          <h1 className="title-tag">{content?.titulo}</h1>
         </header>
 
-        {data ? (
+        {content ? (
           <div className="conteudo">
             <div className="row">
               <article className="sobre col-lg-6">
                 <div className="d-flex">
                   <div className="icon-subtitle">
-                    <i className="fas fa-torii-gate"></i>
+                    <i className="fas fa-road"></i>
                   </div>
-                  <h2>Um Samurai</h2>
+                  <h2>Trajetória</h2>
                 </div>
-                {data.descricao.map((text, index) => (
-                  <p key={index}>{text}</p>
+                {content.descricao.map((text: string, index: number) => (
+                  <S.Text key={index}>{text}</S.Text>
                 ))}
               </article>
 
               <article className="curriculo col-lg-6">
                 <div className="row">
                   <div className="col-md-6">
-                    <Timeline infos={data.experiencia} />
+                    <Timeline infos={content.experiencia} />
                   </div>
                   <div className="col-md-6">
-                    <Timeline infos={data.educacao} />
+                    <Timeline infos={content.educacao} />
                   </div>
                 </div>
               </article>
@@ -57,13 +90,13 @@ export default () => {
                 </div>
                 <h2>Skills</h2>
               </div>
-              <Skills skills={data.skills} />
+              <Skills skills={content.skills} />
             </article>
           </div>
         ) : (
           <Loading />
         )}
       </div>
-    </About>
+    </S.About>
   );
 };
