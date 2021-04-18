@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
-import './contact.css';
+
+import * as S from './styles';
 
 const Contact = () => {
   const [data, setData] = useState(null);
@@ -16,17 +18,17 @@ const Contact = () => {
     <section className="content interna contato animeUp">
       <Head title="Contato" />
       <header className="header-interna">
-        <h1 className="title-tag">{data ? data.titulo : ''}</h1>
+        <h1 className="title-tag">{data?.titulo}</h1>
       </header>
       <div className="conteudo">
         <div className="row">
           <div className="col-md-12">
             {data ? (
               data.infos.map((info) => (
-                <div className="item mb-4" key={info.id}>
+                <S.Item key={info.id}>
                   <i className={info.icon}></i>
-                  <p className="ml-2">{info.content}</p>
-                </div>
+                  <S.Text>{info.content}</S.Text>
+                </S.Item>
               ))
             ) : (
               <Loading />
