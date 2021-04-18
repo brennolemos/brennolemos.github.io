@@ -1,30 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
 
 import * as S from './styles';
 
-const Contact = () => {
-  const [data, setData] = useState(null);
+type Content = {
+  titulo: string;
+  infos: Info[];
+};
 
-  useEffect(() => {
-    fetch('/api/api.json')
-      .then((response) => response.json())
-      .then((json) => setData(json.contato));
+type Info = {
+  id: string;
+  icon: string;
+  content: string;
+};
+
+const Contact = () => {
+  const [content, setContent] = React.useState<Content | null>(null);
+
+  const loadData = async () => {
+    const response = await fetch('/api/api.json');
+    const data = await response.json();
+
+    setContent(data.contato);
+  };
+
+  React.useEffect(() => {
+    loadData();
   }, []);
 
   return (
     <section className="content interna contato animeUp">
       <Head title="Contato" />
       <header className="header-interna">
-        <h1 className="title-tag">{data?.titulo}</h1>
+        <h1 className="title-tag">{content?.titulo}</h1>
       </header>
       <div className="conteudo">
         <div className="row">
           <div className="col-md-12">
-            {data ? (
-              data.infos.map((info) => (
+            {content ? (
+              content.infos.map((info) => (
                 <S.Item key={info.id}>
                   <i className={info.icon}></i>
                   <S.Text>{info.content}</S.Text>
