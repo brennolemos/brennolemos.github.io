@@ -1,26 +1,25 @@
 import React from 'react';
-import { Timeline } from './Timeline-styles';
+
+import * as S from './styles';
 
 export default (props) => {
   return (
-    <Timeline>
+    <>
       <h2>{props.infos.titulo}</h2>
-      <ul className="timeline">
+      <S.Timeline>
         {props.infos.list.map((item) => (
-          <li key={item.id}>
-            <div className="timeline__item">
-              <span className="timeline__icon">
-                <i className={props.infos.icon}></i>
-              </span>
-              <div className="timeline__infos">
-                <span className="timeline__period">{item.periodo}</span>
-                <h3 className="timeline__title">{item.ocupacao}</h3>
-                <span className="timeline__place">{item.titulo}</span>
-              </div>
+          <S.Item key={item.id}>
+            <S.Icon>
+              <i className={props.infos.icon}></i>
+            </S.Icon>
+            <div className="timeline__infos">
+              <S.Period>{item.periodo}</S.Period>
+              <S.Title>{item.ocupacao}</S.Title>
+              <S.Place>{item.titulo}</S.Place>
             </div>
-          </li>
+          </S.Item>
         ))}
-      </ul>
-    </Timeline>
+      </S.Timeline>
+    </>
   );
 };
