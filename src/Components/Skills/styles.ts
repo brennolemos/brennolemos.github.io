@@ -1,5 +1,6 @@
-/* Skills */
-.icon-skill {
+import styled from 'styled-components';
+
+export const IconContainer = styled.div`
   background-color: #cbdc3d;
   width: 120px;
   height: 120px;
@@ -7,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* // font-size: 28px; */
   color: #2d3940;
-}
+  margin-left: auto;
+  margin-right: auto;
+`;
