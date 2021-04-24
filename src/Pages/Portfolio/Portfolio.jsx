@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
-import './portfolio.css';
+
+import * as S from './styles';
 
 const Portfolio = () => {
   const [data, setData] = useState(null);
@@ -47,7 +49,7 @@ const Portfolio = () => {
                     <img src={item.image} alt={item.name} />
                   </div>
                   <div className="col-md-6">
-                    <h2>{item.name}</h2>
+                    <S.Subtitle>{item.name}</S.Subtitle>
 
                     <div className="my-3">
                       {item.tags.map((tag) => (
@@ -56,7 +58,7 @@ const Portfolio = () => {
                         </span>
                       ))}
                     </div>
-                    <p>{item.description}</p>
+                    <S.Text>{item.description}</S.Text>
 
                     <button
                       onClick={() => handleModal(item)}

@@ -17,9 +17,11 @@ li {
   padding: 0;
   margin: 0;
 }
+
 li {
   list-style: none;
 }
+
 img {
   display: block;
   max-width: 100%;

@@ -1,11 +1,7 @@
-import React from "react";
-import "./portfolioList.css";
+import React from 'react';
+import './portfolioList.css';
 
 const PortfolioList = (props) => {
-  // const handleModal = (text) => {
-  //   props.onHandleModal(text);
-  // };
-
   return (
     <div className="row justify-content-center">
       {props.jobs.map((job) => (
@@ -23,7 +19,10 @@ const PortfolioList = (props) => {
               </div>
 
               <div className="text-center">
-                <button onClick={() => props.onHandleModal(job)} className="btn-live">
+                <button
+                  onClick={() => props.onHandleModal(job)}
+                  className="btn-live"
+                >
                   Ver Mais
                 </button>
               </div>
