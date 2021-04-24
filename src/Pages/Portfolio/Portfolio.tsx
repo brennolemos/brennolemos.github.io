@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
@@ -6,17 +6,30 @@ import Modal from '../../components/Modal/Modal';
 
 import * as S from './styles';
 
+type Infos = {
+  name: string;
+  image: string;
+  tags: Tags[];
+  description: string;
+  imageXg?: string;
+};
+
+type Tags = {
+  name: string;
+};
+
 const Portfolio = () => {
-  const [data, setData] = useState(null);
-  const [modal, setModal] = useState(null);
+  const [content, setContent] = React.useState<Infos[] | null>(null);
+  const [modal, setModal] = React.useState<Infos | null>(null);
 
-  useEffect(() => {
-    fetch('/api/api.json')
-      .then((response) => response.json())
-      .then((data) => setData(data.portfolio));
-  });
+  const loadData = async () => {
+    const response = await fetch('/api/api.json');
+    const data = await response.json();
 
-  const handleModal = (modalInfos) => {
+    setContent(data.portfolio);
+  };
+
+  const handleModal = (modalInfos: Infos) => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
@@ -24,25 +37,27 @@ const Portfolio = () => {
     });
   };
 
-  const closeModal = (event) => {
+  const closeModal = (event: MouseEvent) => {
     if (event.target === event.currentTarget) setModal(null);
   };
+
+  React.useEffect(() => {
+    loadData();
+  }, []);
 
   return (
     <>
       {modal ? (
         <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
       ) : null}
-
       <Head title="Portfólio" />
-
       <section className="content interna portfolio animeUp">
         <header className="header-interna">
           <h1 className="title-tag">Portfólio</h1>
         </header>
         <div className="conteudo">
-          {data ? (
-            data.map((item) => (
+          {content ? (
+            content.map((item) => (
               <div key={item.name}>
                 <div className="row">
                   <div className="col-md-6">
