@@ -1,5 +1,5 @@
 import React from 'react';
-import './modal.css';
+import * as S from './styles';
 
 type ModalProps = {
   infos: ModalInfos;
@@ -21,31 +21,30 @@ type Tags = {
 
 const Modal = (props: ModalProps) => {
   return (
-    <section className="modal-custom" onClick={() => props.closeModal}>
-      <div className="modal-custom__container">
-        <div className="modal-custom__img">
+    <S.Modal onClick={() => props.closeModal}>
+      <S.Container>
+        <S.Image>
           <img src={props.infos.imageXg} alt="" />
-        </div>
-        <div className="modal-custom__infos">
-          <button
-            className="modal-custom__close"
+        </S.Image>
+        <S.Infos>
+          <S.Close
             onClick={() => {
               props.setModal(null);
             }}
           >
             <i className="far fa-2x fa-times-circle"></i>
-          </button>
+          </S.Close>
 
-          <h2 className="modal-custom__title">{props.infos.name}</h2>
+          <S.Title>{props.infos.name}</S.Title>
           {props.infos.tags.map((tag) => (
             <span key={tag.name} className="badge badge-secondary">
               {tag.name}
             </span>
           ))}
-          <p className="modal-custom__content">{props.infos.description}</p>
-        </div>
-      </div>
-    </section>
+          <S.Content>{props.infos.description}</S.Content>
+        </S.Infos>
+      </S.Container>
+    </S.Modal>
   );
 };
 
