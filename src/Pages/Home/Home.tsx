@@ -8,17 +8,52 @@ import Head from '../../components/Head';
 
 import * as S from './styles';
 
+type ContentProps = {
+  home: {
+    id: string;
+    titulo: string;
+    descricao: string;
+  };
+  portfolio: Jobs[];
+};
+
+type Jobs = {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  imageXg: string;
+  tags: Tags[];
+};
+
+type ModalProps = {
+  name: string;
+  image: string;
+  tags: Tags[];
+  description: string;
+  imageXg?: string;
+};
+
+type Tags = {
+  name: string;
+};
+
 export default () => {
-  const [data, setData] = useState(null);
-  const [modal, setModal] = useState(null);
+  const [content, setContent] = useState<ContentProps | null>(null);
+  const [modal, setModal] = useState<ModalProps | null>(null);
+
+  const loadData = async () => {
+    const response = await fetch('/api/api.json');
+    const data = await response.json();
+
+    setContent(data);
+  };
 
   useEffect(() => {
-    fetch('/api/api.json')
-      .then((response) => response.json())
-      .then((json) => setData(json));
+    loadData();
   }, []);
 
-  const handleModal = (modalInfos) => {
+  const handleModal = (modalInfos: ModalProps) => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
@@ -26,7 +61,7 @@ export default () => {
     });
   };
 
-  const closeModal = (event) => {
+  const closeModal = (event: MouseEvent) => {
     if (event.target === event.currentTarget) setModal(null);
   };
 
@@ -38,13 +73,16 @@ export default () => {
       <S.Home>
         <Head title="" />
         <div className="content home animeUp">
-          <h1 className="title-tag">{data?.home.titulo}</h1>
-          <p>{data?.home.descricao}</p>
+          <h1 className="title-tag">{content?.home.titulo}</h1>
+          <p>{content?.home.descricao}</p>
 
           <h2 className="title-tag">Trabalhos</h2>
 
-          {data && data.portfolio.length ? (
-            <PortfolioList onHandleModal={handleModal} jobs={data.portfolio} />
+          {content && content.portfolio.length ? (
+            <PortfolioList
+              onHandleModal={handleModal}
+              jobs={content.portfolio}
+            />
           ) : (
             <Loading />
           )}
