@@ -30,7 +30,7 @@ type ModalProps = {
   name: string;
   image: string;
   tags: Tags[];
-  description: string;
+  description?: string;
   imageXg?: string;
 };
 

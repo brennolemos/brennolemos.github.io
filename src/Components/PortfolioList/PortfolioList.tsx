@@ -1,15 +1,39 @@
 import React from 'react';
-import './portfolioList.css';
+import * as S from './styles';
 
-const PortfolioList = (props) => {
+type PortfolioListProps = {
+  jobs: Jobs[];
+  onHandleModal: (job: ModalProps) => void;
+};
+
+type ModalProps = {
+  name: string;
+  image: string;
+  tags: Tags[];
+  description?: string;
+  imageXg?: string;
+};
+
+type Jobs = {
+  id: string;
+  image: string;
+  name: string;
+  tags: Tags[];
+};
+
+type Tags = {
+  name: string;
+};
+
+const PortfolioList = (props: PortfolioListProps) => {
   return (
     <div className="row justify-content-center">
       {props.jobs.map((job) => (
         <div className="col-lg-4 col-md-6 d-flex" key={job.id}>
-          <div className="portfolio-item">
+          <S.Item>
             <img src={job.image} alt="Delfos IM" />
             <div className="item-info media-body">
-              <h3>{job.name}</h3>
+              <S.Title>{job.name}</S.Title>
               <div className="my-3">
                 {job.tags.map((tag) => (
                   <span key={tag.name} className="badge badge-secondary">
@@ -27,7 +51,7 @@ const PortfolioList = (props) => {
                 </button>
               </div>
             </div>
-          </div>
+          </S.Item>
         </div>
       ))}
     </div>
