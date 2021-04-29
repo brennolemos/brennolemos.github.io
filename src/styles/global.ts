@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
+import theme from './themes/dark';
 
-export default createGlobalStyle`
+type MyProps = {
+  theme: typeof theme;
+};
+
+export default createGlobalStyle<MyProps>`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap');
 
