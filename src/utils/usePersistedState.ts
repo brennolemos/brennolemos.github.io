@@ -1,6 +1,17 @@
 import { useState, useEffect } from 'react';
 
-function usePersistedState(key, initialState) {
+type Theme = {
+  title: string;
+  colors: {
+    backgroundPrimary: string;
+    backgroundSecundary: string;
+    textPrimary: string;
+    textSecondary: string;
+    textContent: string;
+  };
+};
+
+function usePersistedState(key: string, initialState: Theme) {
   const [state, setState] = useState(() => {
     const storageValue = localStorage.getItem(key);
 
