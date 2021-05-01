@@ -3,126 +3,87 @@ import styled from 'styled-components';
 export const Header = styled.header`
   width: 100%;
   background: ${(props) => props.theme.colors.backgroundPrimary};
-  padding: 5px 15px;
+  padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
   position: relative;
   z-index: 1;
   transition: all 0.3s ease;
 
-  /* Side Nav */
-  .sidenav {
-    background: var(--branco);
-    padding: 30px 0;
-    flex: 1;
-    max-width: 240px;
-    width: 100%;
-    height: 100%;
-    box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);
-    position: fixed;
-  }
-
-  .menu {
-    margin: 30px 0;
-  }
-
-  .menu::before,
-  .menu::after {
-    content: '';
-    display: block;
-    height: 5px;
-    width: 150px;
-    background: #dce2e6;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
-
-  .menu::before {
-    margin-bottom: 15px;
-  }
-
-  .menu::after {
-    margin-top: 15px;
-  }
-
   .menu__link {
     display: block;
     color: ${(props) => props.theme.colors.textContent};
-    font-size: 18px;
+    font-size: 1rem;
     margin: 0 auto;
     padding: 1rem 0.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
-  }
 
-  .menu__link:hover {
-    color: #afbf30;
-  }
+    &:hover {
+      color: #afbf30;
+    }
 
-  .menu__link.active {
-    color: #afbf30;
-    font-weight: bold;
-  }
-
-  .sidenav img {
-    margin: 0 auto;
+    &.active {
+      color: #afbf30;
+      font-weight: bold;
+    }
   }
 
   .picture {
-    max-width: 60px;
+    max-width: 4rem;
   }
 
   .header__title {
     font-family: Dosis;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 2rem;
 
-    margin-left: 10px;
+    margin-left: 0.5rem;
     color: ${(props) => props.theme.colors.textSecondary};
     transition: all 0.3s ease;
   }
+
   .menu-mobile-btn {
     display: block;
     z-index: 300;
     color: #626d73;
-    width: 36px;
-    height: 24px;
-    border-top: 4px solid;
+    width: 2.25rem;
+    height: 1.5rem;
+    border-top: 0.25rem solid;
     border-radius: 2px;
     position: relative;
     cursor: pointer;
-    -webkit-backface-visibility: hidden;
-  }
 
-  .menu-mobile-btn::before {
-    content: '';
-    display: block;
-    height: 4px;
-    background: currentColor;
-    position: relative;
-    transition: transform 0.3s ease;
-    top: 6px;
-    border-radius: 2px;
-  }
+    &::before {
+      content: '';
+      display: block;
+      height: 0.25rem;
+      background: currentColor;
+      position: relative;
+      transition: transform 0.3s ease;
+      top: 0.375rem;
+      border-radius: 2px;
+    }
 
-  .menu-mobile-btn::after {
-    content: '';
-    display: block;
-    height: 4px;
-    background: currentColor;
-    position: relative;
-    transition: transform 0.3s ease;
-    top: 12px;
-    border-radius: 2px;
-  }
+    &::after {
+      content: '';
+      display: block;
+      height: 0.25rem;
+      background: currentColor;
+      position: relative;
+      transition: transform 0.3s ease;
+      top: 0.75rem;
+      border-radius: 2px;
+    }
 
-  .menu-mobile-btn.active {
-    border-top-color: transparent;
+    &.active {
+      border-top-color: transparent;
+    }
   }
 
   .menu-mobile-btn.active::before {
-    top: 6px;
+    top: 0.375rem;
     transform: rotate(135deg);
   }
 
@@ -135,23 +96,23 @@ export const Header = styled.header`
     display: none;
     position: absolute;
     background: var(--branco);
-    width: 150px;
+    width: 9.375rem;
     z-index: 200;
     right: 5px;
     top: 0;
-    padding: 40px 10px 10px 10px;
+    padding: 2.5rem 0.5rem 0.5rem 0.5rem;
     text-align: right;
-  }
 
-  .menu-mobile.active {
-    display: block;
-    animation: show-right 0.5s forwards;
-  }
+    &.active {
+      display: block;
+      animation: show-right 0.5s forwards;
+    }
 
-  .menu-mobile .menu__link {
-    padding: 10px 0;
-    text-align: center;
-    border-bottom: 1px solid #b9c1c5;
+    .menu__link {
+      padding: 0.5rem 0;
+      text-align: center;
+      border-bottom: 1px solid #b9c1c5;
+    }
   }
 
   .menu-mobile li:last-child .menu__link {
@@ -161,7 +122,7 @@ export const Header = styled.header`
   @keyframes show-right {
     from {
       opacity: 0;
-      transform: translate3d(-30px, 0, 0);
+      transform: translate3d(-2rem, 0, 0);
     }
     to {
       opacity: 1;
