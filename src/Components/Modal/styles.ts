@@ -5,14 +5,14 @@ export const Modal = styled.section`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 45px;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10001;
 
   @media (max-width: 767px) {
-    padding: 15px;
+    padding: 1rem;
   }
 
   &::before {
@@ -31,20 +31,20 @@ export const Container = styled.div`
   z-index: 1;
   background: linear-gradient(to right, transparent 200px, var(--branco) 200px);
   display: grid;
-  grid-gap: 45px;
-  padding: 45px 45px 45px 0;
+  grid-gap: 3rem;
+  padding: 3rem 3rem 3rem 0;
   animation: fadeIn 0.3s forwards;
 
   @media (max-width: 767px) {
-    grid-gap: 15px;
+    grid-gap: 1rem;
     background: var(--branco);
-    padding: 10px 0;
+    padding: 0.5rem 0;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translate3D(0, -60px, 0);
+      transform: translate3D(0, -4rem, 0);
     }
     to {
       opacity: 1;
@@ -59,8 +59,8 @@ export const Close = styled.button`
   border: none;
   outline: none;
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -0.5rem;
+  right: -0.5rem;
   background-color: transparent;
 
   i {
@@ -70,7 +70,6 @@ export const Close = styled.button`
 `;
 
 export const Image = styled.div`
-  /* margin-top: 45px; */
   grid-column: 1;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.2);
 
@@ -79,7 +78,7 @@ export const Image = styled.div`
   }
 
   img {
-    max-width: 500px;
+    max-width: 31.25rem;
     display: block;
 
     @media (max-width: 767px) {
@@ -90,25 +89,25 @@ export const Image = styled.div`
 
 export const Infos = styled.div`
   grid-column: 2;
-  max-width: 600px;
+  max-width: 37.5rem;
 
   @media (max-width: 767px) {
-    padding: 10px;
+    padding: 0.5rem;
     grid-column: 1;
   }
 `;
 
 export const Title = styled.h2`
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #2d3940;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 `;
 
 export const Content = styled.p`
   line-height: 1.4em;
-  font-size: 18px;
+  font-size: 1rem;
   color: #626d73;
-  margin-top: 30px;
+  margin-top: 2rem;
 `;
