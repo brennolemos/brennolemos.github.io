@@ -13,10 +13,10 @@ export const Wrapper = styled.div`
 
 export const Loading = styled.div`
   margin: auto;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
-  border: 10px solid rgba(255, 255, 255, 0.5);
+  border: 1rem solid rgba(255, 255, 255, 0.5);
   border-right-color: transparent;
   animation: loading 0.8s infinite;
 
