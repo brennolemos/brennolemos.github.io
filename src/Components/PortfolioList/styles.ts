@@ -4,11 +4,11 @@ export const Item = styled.div`
   background: #fff;
   box-shadow: 0px 1px 5px rgba(45, 57, 64, 0.2),
     0px 3px 4px rgba(45, 57, 64, 0.12), 0px 2px 4px rgba(45, 57, 64, 0.14);
-  border-radius: 10px;
-  margin-bottom: 30px;
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   overflow: hidden;
-  max-width: 370px;
+  max-width: 23.125rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -25,7 +25,6 @@ export const Item = styled.div`
     background-color: #dce2e6;
     color: #626d73;
     margin-right: 0.5rem;
-    /* // font-weight: 00; */
   }
 
   .badge-secondary:last-child {

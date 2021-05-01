@@ -94,8 +94,8 @@ body {
     background-color: var(--verde-escuro);
     border: 2px solid var(--verde-escuro);
     box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);
-    border-radius: 10px;
-    padding: 10px 35px;
+    border-radius: .25rem;
+    padding: .5rem 2rem;
     margin-right: 15px;
     transition: all 0.3s ease;
   }
@@ -113,8 +113,8 @@ body {
     text-transform: uppercase;
     color: #afbf30;
     border: 2px solid #afbf30;
-    border-radius: 10px;
-    padding: 10px 25px;
+    border-radius: .25rem;
+    padding: .5rem 2rem;
     margin-right: 15px;
     transition: all 0.3s ease;
   }
@@ -133,8 +133,8 @@ body {
     background: linear-gradient(101.31deg, #deeb52 0%, #afbf30 100%);
     box-shadow: 0px 1px 5px rgba(45, 57, 64, 0.2),
       0px 3px 4px rgba(45, 57, 64, 0.12), 0px 2px 4px rgba(45, 57, 64, 0.14);
-    border-radius: 10px;
-    padding: 10px 35px;
+      border-radius: .25rem;
+    padding: .5rem 2rem;
     margin-right: 15px;
     transition: all 0.3s ease;
   }
