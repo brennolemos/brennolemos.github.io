@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  padding: 10px 30px;
+  padding: 0.5rem 2rem;
 
   background: ${(props) => props.theme.colors.backgroundPrimary};
 
@@ -17,20 +17,19 @@ export const Footer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    max-width: 150px;
-    margin: 0 auto 30px auto;
+    max-width: 9.375rem;
+    margin: 0 auto 2rem auto;
   }
 
   .social,
   .redes-sociais a {
-    font-size: 24px;
-    /* color: #626d73; */
+    font-size: 1.5rem;
     &:hover {
       opacity: 0.8;
     }
   }
 
   .logo {
-    max-width: 50px;
+    max-width: 3.125rem;
   }
 `;
