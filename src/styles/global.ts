@@ -64,8 +64,6 @@ body {
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 0.05em;
-    /* text-transform: uppercase; */
-    /* color: var(--branco); */
     color: #2d3940;
     color: ${(props) => props.theme.colors.textSecondary};
 
@@ -77,7 +75,6 @@ body {
     display: block;
     width: 60px;
     height: 5px;
-    /* background: linear-gradient(94.76deg, #deeb52 0%, #afbf30 100%); */
     background: #cbdc3d;
     border-radius: 10px;
     margin-top: 5px;
@@ -160,13 +157,6 @@ body.interna {
   padding: 30px;
   background: #fff;
   background: ${(props) => props.theme.colors.backgroundSecundary};
-  /* background: linear-gradient(
-    135deg,
-    var(--azul-claro) 0%,
-    var(--azul-escuro) 100%
-  );
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite; */
 }
 
 .header-interna h1 {

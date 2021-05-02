@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Badge from '../Badge';
 import * as S from './styles';
 
 type PortfolioListProps = {
@@ -36,9 +38,7 @@ const PortfolioList = (props: PortfolioListProps) => {
               <S.Title>{job.name}</S.Title>
               <div className="my-3">
                 {job.tags.map((tag) => (
-                  <span key={tag.name} className="badge badge-secondary">
-                    {tag.name}
-                  </span>
+                  <Badge key={tag.name} text={tag.name} />
                 ))}
               </div>
 
