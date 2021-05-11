@@ -88,66 +88,26 @@ body {
   color: ${(props) => props.theme.colors.textSecondary};
 }
 
-
-  .btn-live {
+.btn {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     display: inline-block;
-    color: var(--branco);
-    background-color: var(--verde-escuro);
-    border: 2px solid var(--verde-escuro);
-    box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);
+    color: var(--white);
+    background-color: var(--blue-2);
+    border: 2px solid var(--blue-2);
     border-radius: .25rem;
     padding: .5rem 2rem;
-    margin-right: 15px;
+    margin-right: 1rem;
     transition: all 0.3s ease;
-  }
 
-  .btn-live:hover {
-    background-color: transparent;
-    color: #2d3940;
-    border-color: #2d3940;
-  }
+    &:hover {
+      background: transparent;
+      color: var(--blue-2);
+    }
+}
 
-  .btn-project {
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #afbf30;
-    border: 2px solid #afbf30;
-    border-radius: .25rem;
-    padding: .5rem 2rem;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-  }
-
-  .btn-project:hover {
-    border: 2px solid var(--azul-escuro);
-    color: var(--azul-escuro);
-  }
-
-  .btn-white {
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--branco);
-    background: linear-gradient(101.31deg, #deeb52 0%, #afbf30 100%);
-    box-shadow: 0px 1px 5px rgba(45, 57, 64, 0.2),
-      0px 3px 4px rgba(45, 57, 64, 0.12), 0px 2px 4px rgba(45, 57, 64, 0.14);
-      border-radius: .25rem;
-    padding: .5rem 2rem;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-  }
-
-  .btn-white:hover {
-    color: #afbf30;
-    background: var(--branco);
-  }
 
 /* Internas */
 body.interna {
@@ -176,13 +136,13 @@ body.interna {
 }
 
 .conteudo {
-  padding: 30px;
-  max-width: 1170px;
+  padding: 2rem;
+  max-width: 73.125rem;
   margin: 0 auto;
 
   h2 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-transform: uppercase;
     color: ${(props) => props.theme.colors.textSecondary};
   }
@@ -190,7 +150,7 @@ body.interna {
 
 
 .curriculo {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
 }

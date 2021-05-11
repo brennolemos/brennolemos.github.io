@@ -74,10 +74,7 @@ const Portfolio = () => {
                     </div>
                     <S.Text>{item.description}</S.Text>
 
-                    <button
-                      onClick={() => handleModal(item)}
-                      className="btn-live"
-                    >
+                    <button onClick={() => handleModal(item)} className="btn">
                       Ver Mais
                     </button>
                   </div>

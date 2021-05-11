@@ -45,7 +45,7 @@ const PortfolioList = (props: PortfolioListProps) => {
               <div className="text-center">
                 <button
                   onClick={() => props.onHandleModal(job)}
-                  className="btn-live"
+                  className="btn"
                 >
                   Ver Mais
                 </button>

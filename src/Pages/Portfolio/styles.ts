@@ -8,7 +8,7 @@ export const Subtitle = styled.h2`
     display: block;
     width: 60px;
     height: 5px;
-    background: linear-gradient(94.76deg, #deeb52 0%, #afbf30 100%);
+    background: var(--blue-2);
     border-radius: 10px;
     margin-top: 5px;
   }

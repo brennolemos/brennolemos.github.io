@@ -88,7 +88,7 @@ export default () => {
           )}
 
           <div className="text-center py-3">
-            <Link to="/portfolio" className="btn-live">
+            <Link to="/portfolio" className="btn">
               Ver Meus Trabalhos
             </Link>
           </div>
