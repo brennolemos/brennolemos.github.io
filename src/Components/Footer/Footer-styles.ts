@@ -2,15 +2,12 @@ import styled from 'styled-components';
 
 export const Footer = styled.footer`
   padding: 0.5rem 1rem;
-
-  background: ${(props) => props.theme.colors.backgroundPrimary};
-
+  background: var(--gray-2);
   box-shadow: 7px 5px 21px 0 rgba(93, 94, 99, 0.18);
-  border-top: 1px solid #c4c4c4;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${(props) => props.theme.colors.textPrimary};
+  color: var(--white);
   transition: all 0.3s ease;
 
   .socials {
@@ -24,8 +21,11 @@ export const Footer = styled.footer`
   .social,
   .redes-sociais a {
     font-size: 1.5rem;
+    transition: all 0.3s ease;
+
     &:hover {
       opacity: 0.8;
+      color: var(--blue-2);
     }
   }
 

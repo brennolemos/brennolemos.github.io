@@ -1,6 +1,7 @@
 import React from 'react';
+
 import logo from '../logo.svg';
-import * as S from './styles';
+import * as S from './Footer-styles';
 
 export default () => {
   return (

@@ -18,7 +18,7 @@ import Contact from './pages/Contact/Contact';
 import Portfolio from './pages/Portfolio/Portfolio';
 
 import Header from './components/Header';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer';
 
 const App = () => {
   const [theme, setTheme] = usePersistedState('theme', light);
