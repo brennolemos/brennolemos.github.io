@@ -46,7 +46,7 @@ a:hover {
   --gray-1: #14141c;
   --gray-2: #1e1e26;
   --gray-3: #282830;
-  
+
   --blue-1: #0068b3;
   --blue-2: #22a5e6;
   --green-1: #afbf30;
@@ -66,25 +66,28 @@ body {
 }
 
 .title-tag {
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    color: #2d3940;
-    color: ${(props) => props.theme.colors.textSecondary};
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  font-family: Dosis;
 
-    font-family: Dosis;
-  }
-
-  .title-tag::after {
+  &::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 5px;
-    background: #cbdc3d;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 30px;
+    width: 4rem;
+    height: .25rem;
+    border-radius: .5rem;
+    margin-top: .25rem;
+    margin-bottom: 2rem;
+    background: var(--blue-2);
   }
+}
+
+.title-tag--small {
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.textSecondary};
+}
+
 
   .btn-live {
     font-weight: bold;
@@ -148,7 +151,7 @@ body {
 
 /* Internas */
 body.interna {
-  background: ${(props) => props.theme.colors.backgroundPrimary};
+  background: ${(props) => props.theme.colors.backgroundSecundary};
 }
 
 .content.interna {
@@ -159,17 +162,17 @@ body.interna {
 }
 
 .header-interna {
-  padding: 30px;
-  background: #fff;
-  background: ${(props) => props.theme.colors.backgroundSecundary};
-}
+  padding: 2rem;
+  color: var(--white);
+  background: var(--gray-1);
 
-.header-interna h1 {
-  font-size: 36px;
-}
+  h1 {
+    font-size: 2rem;
 
-.header-interna h1::after {
-  margin-bottom: 0;
+    &::after {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .conteudo {

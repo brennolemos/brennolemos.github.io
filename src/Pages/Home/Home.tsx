@@ -73,10 +73,10 @@ export default () => {
       <S.Home>
         <Head title="" />
         <div className="content home animeUp">
-          <h1 className="title-tag">{content?.home.titulo}</h1>
+          <h1 className="title-tag title-tag--small">{content?.home.titulo}</h1>
           <p>{content?.home.descricao}</p>
 
-          <h2 className="title-tag">Trabalhos</h2>
+          <h2 className="title-tag title-tag--small">Trabalhos</h2>
 
           {content && content.portfolio.length ? (
             <PortfolioList
