@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 
-import * as S from './styles';
+import * as S from './Header-styles';
 import foto from '../foto.png';
 import Switch from '../Switch/Switch';
 

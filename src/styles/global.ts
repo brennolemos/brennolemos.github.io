@@ -42,11 +42,16 @@ a:hover {
 
 /* Cores */
 :root {
-  --branco: #fff;
-  --azul-claro: #22a5e6;
-  --azul-escuro: #0068b3;
-  --verde-claro: #deeb52;
-  --verde-escuro: #afbf30;
+  --white: #fff;
+  --gray-1: #14141c;
+  --gray-2: #1e1e26;
+  --gray-3: #282830;
+  
+  --blue-1: #0068b3;
+  --blue-2: #22a5e6;
+  --green-1: #afbf30;
+  --green-2: #deeb52;
+
 }
 
 body {

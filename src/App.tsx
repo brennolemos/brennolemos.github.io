@@ -17,7 +17,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Portfolio from './pages/Portfolio/Portfolio';
 
-import Header from './components/Header/Header';
+import Header from './components/Header';
 import Footer from './components/Footer/Footer';
 
 const App = () => {

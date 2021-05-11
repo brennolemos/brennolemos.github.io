@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   width: 100%;
-  background: ${(props) => props.theme.colors.backgroundPrimary};
+  background: var(--gray-2);
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
   position: relative;
@@ -11,7 +11,7 @@ export const Header = styled.header`
 
   .menu__link {
     display: block;
-    color: ${(props) => props.theme.colors.textContent};
+    color: var(--white);
     font-size: 1rem;
     margin: 0 auto;
     padding: 1rem 0.5rem;
@@ -19,11 +19,11 @@ export const Header = styled.header`
     cursor: pointer;
 
     &:hover {
-      color: #afbf30;
+      color: var(--blue-2);
     }
 
     &.active {
-      color: #afbf30;
+      color: var(--blue-2);
       font-weight: bold;
     }
   }
@@ -40,7 +40,7 @@ export const Header = styled.header`
     line-height: 2rem;
 
     margin-left: 0.5rem;
-    color: ${(props) => props.theme.colors.textSecondary};
+    color: var(--white);
     transition: all 0.3s ease;
   }
 
