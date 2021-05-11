@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Badge from '../Badge';
 import * as S from './styles';
 
 type ModalProps = {
@@ -37,9 +39,7 @@ const Modal = (props: ModalProps) => {
 
           <S.Title>{props.infos.name}</S.Title>
           {props.infos.tags.map((tag) => (
-            <span key={tag.name} className="badge badge-secondary">
-              {tag.name}
-            </span>
+            <Badge key={tag.name} text={tag.name} />
           ))}
           <S.Content>{props.infos.description}</S.Content>
         </S.Infos>

@@ -29,7 +29,7 @@ export const Modal = styled.section`
 export const Container = styled.div`
   position: relative;
   z-index: 1;
-  background: linear-gradient(to right, transparent 200px, var(--branco) 200px);
+  background: linear-gradient(to right, transparent 200px, var(--white) 200px);
   display: grid;
   grid-gap: 3rem;
   padding: 3rem 3rem 3rem 0;
@@ -37,7 +37,7 @@ export const Container = styled.div`
 
   @media (max-width: 767px) {
     grid-gap: 1rem;
-    background: var(--branco);
+    background: var(--white);
     padding: 0.5rem 0;
   }
 
@@ -64,7 +64,7 @@ export const Close = styled.button`
   background-color: transparent;
 
   i {
-    background: var(--branco);
+    background: var(--white);
     border-radius: 50%;
   }
 `;

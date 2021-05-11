@@ -5,7 +5,7 @@ type MyProps = {
   theme: typeof theme;
 };
 
-export default createGlobalStyle<MyProps>`
+const GlobalStyle = createGlobalStyle<MyProps>`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap');
 
@@ -156,7 +156,7 @@ body.interna {
 
 .content.interna {
   padding: 0 0 30px 0;
-  background: ${(props) => props.theme.colors.backgroundPrimary};
+  background: ${(props) => props.theme.colors.backgroundSecundary};
   color: ${(props) => props.theme.colors.textSecondary};
   flex: 1;
 }
@@ -179,15 +179,15 @@ body.interna {
   padding: 30px;
   max-width: 1170px;
   margin: 0 auto;
+
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: ${(props) => props.theme.colors.textSecondary};
+  }
 }
 
-.conteudo h2 {
-  font-weight: bold;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSecondary};
-  margin-left: 15px;
-}
 
 .curriculo {
   margin-bottom: 30px;
@@ -206,17 +206,7 @@ body.interna {
   margin-bottom: 15px;
 }
 
-.icon-subtitle {
-  background-color: #cbdc3d;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  color: #2d3940;
-}
+
 
 .animeUp {
   transform: translateY(-20px);
@@ -232,3 +222,5 @@ body.interna {
 }
 
 `;
+
+export default GlobalStyle;

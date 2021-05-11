@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Head from '../../components/Head';
-import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
+import Badge from '../../components/Badge';
+import Loading from '../../components/Loading/Loading';
 
 import * as S from './styles';
 
@@ -68,9 +69,7 @@ const Portfolio = () => {
 
                     <div className="my-3">
                       {item.tags.map((tag) => (
-                        <span key={tag.name} className="badge badge-secondary">
-                          {tag.name}
-                        </span>
+                        <Badge key={tag.name} text={tag.name} />
                       ))}
                     </div>
                     <S.Text>{item.description}</S.Text>

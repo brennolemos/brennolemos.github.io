@@ -20,16 +20,6 @@ export const Item = styled.div`
   .item-info {
     padding: 1rem;
   }
-
-  .badge-secondary {
-    background-color: #dce2e6;
-    color: #626d73;
-    margin-right: 0.5rem;
-  }
-
-  .badge-secondary:last-child {
-    margin-right: 0;
-  }
 `;
 
 export const Title = styled.h3`
