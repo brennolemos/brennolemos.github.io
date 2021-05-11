@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const IconContainer = styled.div`
-  background-color: #cbdc3d;
+  background-color: var(--blue-2);
   width: 120px;
   height: 120px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #2d3940;
+  color: var(--gray-3);
   margin-left: auto;
   margin-right: auto;
 `;
