@@ -2,55 +2,55 @@ import styled from 'styled-components';
 
 export const Timeline = styled.ul`
   margin: 0 auto;
-  padding: 15px;
+  padding: 1rem;
 `;
 
 export const Item = styled.li`
   position: relative;
-  padding: 5px 15px 15px 30px;
-  margin-left: 15px;
+  padding: 0.25rem 1rem 1rem 2rem;
+  margin-left: 1rem;
   border-left: 2px solid #626d73;
 `;
 
 export const Icon = styled.span`
   position: absolute;
-  top: 5px;
-  left: -15px;
-  background: #cbdc3d;
-  width: 30px;
-  height: 30px;
+  top: 0.25rem;
+  left: -1rem;
+  background: var(--blue-2);
+  width: 2rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   font-size: 20px;
-  color: #2d3940;
+  color: var(--gray-3);
 `;
 
 export const Period = styled.span`
   font-style: italic;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #95a0a6;
 
   &::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 5px;
-    background: linear-gradient(94.76deg, #deeb52 0%, #afbf30 100%);
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    width: 4rem;
+    height: 0.25rem;
+    background: var(--blue-2);
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
   }
 `;
 
 export const Title = styled.h3`
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: ${(props) => props.theme.colors.textContent};
-  margin-bottom: 5px;
-  max-width: 180px;
+  margin-bottom: 0.25rem;
+  max-width: 11.25rem;
 `;
 
 export const Place = styled(Period)`

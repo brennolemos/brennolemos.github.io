@@ -12,7 +12,7 @@ export const About = styled.section`
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--gray-3);
     margin-right: 1rem;
   }
 `;
