@@ -6,7 +6,7 @@ import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
 import Head from '../../components/Head';
 
-import * as S from './styles';
+import * as S from './Home-styles';
 
 type ContentProps = {
   home: {

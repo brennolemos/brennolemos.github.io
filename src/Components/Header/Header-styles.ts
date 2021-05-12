@@ -44,6 +44,12 @@ export const Header = styled.header`
     transition: all 0.3s ease;
   }
 
+  @media (max-width: 576px) {
+    .header__title {
+      display: none;
+    }
+  }
+
   .menu-mobile-btn {
     display: block;
     z-index: 300;

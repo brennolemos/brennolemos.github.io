@@ -12,7 +12,7 @@ import GlobalStyle from './styles/global';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
 
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Portfolio from './pages/Portfolio/Portfolio';

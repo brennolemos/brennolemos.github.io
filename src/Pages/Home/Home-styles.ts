@@ -7,9 +7,9 @@ export const Home = styled.section`
   }
 
   .content p {
-    font-size: 36px;
+    font-size: 2rem;
     color: ${(props) => props.theme.colors.textSecondary};
     line-height: 1.3em;
-    margin-bottom: 60px;
+    margin-bottom: 4rem;
   }
 `;
