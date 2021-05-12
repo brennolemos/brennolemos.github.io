@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 
 import * as S from './Header-styles';
@@ -11,8 +11,13 @@ interface Props {
 }
 
 export default ({ toggleTheme }: Props) => {
-  const [menuMobileIsActive, setMenuMobileIsActive] = useState(false);
-  const { title } = useContext(ThemeContext);
+  const [menuMobileIsActive, setMenuMobileIsActive] = React.useState(false);
+  const { title } = React.useContext(ThemeContext);
+
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    setMenuMobileIsActive(false);
+  }, [pathname]);
 
   const toggleMenuMobile = () => setMenuMobileIsActive(!menuMobileIsActive);
 
@@ -69,13 +74,13 @@ export default ({ toggleTheme }: Props) => {
             </ul>
             <Switch toggleTheme={toggleTheme} checked={title === 'dark'} />
           </div>
-          <div className="d-md-none d-block menu-mobile-container position-relative">
-            <div
+
+          <div className="d-md-none d-block menu-mobile-container">
+            <S.MenuBtn
+              className={(menuMobileIsActive && 'is-active') || ''}
               onClick={toggleMenuMobile}
-              className={`menu-mobile-btn ${
-                (menuMobileIsActive && 'active') || ''
-              }`}
-            ></div>
+            />
+
             <ul
               className={`menu-mobile navbar-nav ${
                 (menuMobileIsActive && 'active') || ''
@@ -88,6 +93,7 @@ export default ({ toggleTheme }: Props) => {
                   activeClassName="active"
                   to="/"
                 >
+                  <i className="fas fa-home d-inline-block mr-2"></i>
                   Home
                 </NavLink>
               </li>
@@ -97,6 +103,7 @@ export default ({ toggleTheme }: Props) => {
                   activeClassName="active"
                   to="/sobre"
                 >
+                  <i className="fas fa-address-card d-inline-block mr-2"></i>
                   Sobre
                 </NavLink>
               </li>
@@ -106,6 +113,7 @@ export default ({ toggleTheme }: Props) => {
                   activeClassName="active"
                   to="/portfolio"
                 >
+                  <i className="fas fa-tasks d-inline-block mr-2"></i>
                   Portfólio
                 </NavLink>
               </li>
@@ -115,6 +123,7 @@ export default ({ toggleTheme }: Props) => {
                   activeClassName="active"
                   to="/contato"
                 >
+                  <i className="fas fa-envelope d-inline-block mr-2"></i>
                   Contato
                 </NavLink>
               </li>

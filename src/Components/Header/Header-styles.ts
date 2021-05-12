@@ -8,6 +8,7 @@ export const Header = styled.header`
   position: relative;
   z-index: 1;
   transition: all 0.3s ease;
+  height: 6rem;
 
   .menu__link {
     display: block;
@@ -50,74 +51,46 @@ export const Header = styled.header`
     }
   }
 
-  .menu-mobile-btn {
-    display: block;
-    z-index: 300;
-    color: #626d73;
-    width: 2.25rem;
-    height: 1.5rem;
-    border-top: 0.25rem solid;
-    border-radius: 2px;
-    position: relative;
-    cursor: pointer;
-
-    &::before {
-      content: '';
-      display: block;
-      height: 0.25rem;
-      background: currentColor;
-      position: relative;
-      transition: transform 0.3s ease;
-      top: 0.375rem;
-      border-radius: 2px;
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      height: 0.25rem;
-      background: currentColor;
-      position: relative;
-      transition: transform 0.3s ease;
-      top: 0.75rem;
-      border-radius: 2px;
-    }
-
-    &.active {
-      border-top-color: transparent;
-    }
-  }
-
-  .menu-mobile-btn.active::before {
-    top: 0.375rem;
-    transform: rotate(135deg);
-  }
-
-  .menu-mobile-btn.active::after {
-    top: 2px;
-    transform: rotate(45deg);
-  }
-
   .menu-mobile {
-    display: none;
+    display: block;
     position: absolute;
-    background: var(--branco);
+    top: 6rem;
+    right: 0;
+    z-index: 2000;
+    padding: 0.5rem 1rem;
+    background: ${(props) => props.theme.colors.backgroundSecundary};
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    transform: translateX(-10px);
+    opacity: 0;
+    visibility: hidden;
     width: 9.375rem;
-    z-index: 200;
-    right: 5px;
-    top: 0;
-    padding: 2.5rem 0.5rem 0.5rem 0.5rem;
-    text-align: right;
+    transition: all 0.2s ease;
+    /* padding: 2.5rem 0.5rem 0.5rem 0.5rem; */
+    /* text-align: right; */
 
     &.active {
-      display: block;
-      animation: show-right 0.5s forwards;
+      /* display: block; */
+      transform: initial;
+      opacity: 1;
+      visibility: visible;
+      /* animation: show-right 0.5s forwards; */
     }
 
     .menu__link {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      color: ${(props) => props.theme.colors.textSecondary};
       padding: 0.5rem 0;
       text-align: center;
       border-bottom: 1px solid #b9c1c5;
+
+      &:hover,
+      &.active {
+        color: var(--blue-2);
+      }
     }
   }
 
@@ -133,6 +106,49 @@ export const Header = styled.header`
     to {
       opacity: 1;
       transform: translate3d(0, 0, 0);
+    }
+  }
+`;
+
+export const MenuBtn = styled.button`
+  background: var(--gray-3);
+  border-radius: 0.2rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: var(--white);
+
+  &::after {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    box-shadow: 0 6px currentColor, 0 -6px currentColor;
+    transition: all 0.2s ease;
+  }
+
+  &:hover,
+  &:focus,
+  &.is-active {
+    outline: none;
+    border-color: var(--blue-2);
+    color: var(--blue-2);
+  }
+
+  &.is-active {
+    &::after {
+      transform: rotate(90deg);
+      width: 0.25rem;
+      height: 0.25rem;
+      box-shadow: 0 8px currentColor, 0 -8px currentColor;
     }
   }
 `;
