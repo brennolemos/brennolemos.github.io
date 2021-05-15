@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as S from './styles';
+import * as S from './Skills-styles';
 
 type SkillsProps = {
   skills: Skill[];

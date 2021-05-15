@@ -3,7 +3,7 @@ import React from 'react';
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
 import Timeline from '../../components/Timeline/Timeline';
-import Skills from '../../components/Skills/Skills';
+import Skills from '../../components/Skills';
 
 import * as S from './styles';
 
