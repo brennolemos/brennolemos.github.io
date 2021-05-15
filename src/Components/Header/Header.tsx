@@ -3,7 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 
 import * as S from './Header-styles';
-import foto from '../foto.png';
+import foto from '../../assets/images/foto.png';
 import Switch from '../Switch/Switch';
 
 interface Props {
