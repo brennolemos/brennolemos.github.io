@@ -34,7 +34,7 @@ const App = () => {
         <main className="main-container container-fluid">
           <div className="row">
             <Header toggleTheme={toggleTheme} />
-            <div className="col-md px-0 position-static d-flex flex-column min-vh-100">
+            <div className="col-md px-0 position-static d-flex flex-column full-height">
               <Route path="/" component={Home} exact />
               <Route path="/portfolio" component={Portfolio} />
               <Route path="/sobre" component={About} />

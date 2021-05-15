@@ -57,12 +57,12 @@ a:hover {
 body {
   font-family: 'Montserrat', sans-serif;
   background: ${(props) => props.theme.colors.backgroundSecundary};
+  color: ${(props) => props.theme.colors.textSecondary};
   transition: all .3s ease;
-  color: ${(props) => props.theme.colors.textSecondary}
 }
 
 .full-height {
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
 }
 
 .title-tag {
@@ -112,12 +112,14 @@ body {
 /* Internas */
 body.interna {
   background: ${(props) => props.theme.colors.backgroundSecundary};
+  transition: all .3s ease;
 }
 
 .content.interna {
   padding: 0 0 30px 0;
   background: ${(props) => props.theme.colors.backgroundSecundary};
   color: ${(props) => props.theme.colors.textSecondary};
+  transition: all .3s ease;
   flex: 1;
 }
 
