@@ -6,6 +6,7 @@ import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
 import Head from '../../components/Head';
 
+import illustration from '../../components/illustration.svg';
 import * as S from './Home-styles';
 
 type ContentProps = {
@@ -73,11 +74,25 @@ export default () => {
       <S.Home>
         <Head title="" />
         <div className="content home animeUp">
-          <h1 className="title-tag title-tag--small">{content?.home.titulo}</h1>
-          <p>{content?.home.descricao}</p>
+          {/* <h2 className="title-tag title-tag--small">{content?.home.titulo}</h2> */}
+          <S.Intro>
+            <div>
+              <S.Title>Olá, eu sou Breno!</S.Title>
+              <S.Description>
+                Tenho 26 anos, moro em Fortaleza, sou engenheiro de formação,
+                mas desenvolvedor por vocação, e um apaixonado por
+                Desenvolvimento Web, além de fascinado pelo Ecossistema Digital.
+                Atualmente trabalho como Desenvolvedor Web e Front-end.
+              </S.Description>
+              <Link to="/sobre" className="btn">
+                Saiba Mais
+              </Link>
+            </div>
+            {/* <p>{content?.home.descricao}</p> */}
+            <S.Image src={illustration} alt="" />
+          </S.Intro>
 
           <h2 className="title-tag title-tag--small">Trabalhos</h2>
-
           {content && content.portfolio.length ? (
             <PortfolioList
               onHandleModal={handleModal}

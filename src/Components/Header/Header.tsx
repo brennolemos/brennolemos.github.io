@@ -24,7 +24,7 @@ export default ({ toggleTheme }: Props) => {
   return (
     <>
       <S.Header>
-        <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center navbar navbar-expand-lg">
+        <nav className="sidenav-mobile d-flex flex-wrap justify-content-between align-items-center navbar navbar-expand-md">
           <NavLink exact to="/">
             <div className="d-flex align-items-center">
               <img src={foto} className="picture" alt="Breno Lemos" />
