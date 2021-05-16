@@ -1,4 +1,5 @@
 import React from 'react';
+import { Person } from '@styled-icons/evaicons-solid';
 
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
@@ -86,7 +87,7 @@ export default () => {
             <article className="skills mt-4">
               <div className="d-flex align-items-center justify-content-center">
                 <div className="icon-subtitle">
-                  <i className="fas fa-user-cog"></i>
+                  <Person size={36} />
                 </div>
                 <h2>Skills</h2>
               </div>

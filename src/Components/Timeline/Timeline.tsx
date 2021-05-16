@@ -1,4 +1,5 @@
 import React from 'react';
+import { Book, Briefcase } from '@styled-icons/evaicons-solid';
 
 import * as S from './styles';
 
@@ -25,7 +26,11 @@ export default ({ infos }: TimelineProps) => {
         {infos.list.map((item) => (
           <S.Item key={item.id}>
             <S.Icon>
-              <i className={infos.icon}></i>
+              {infos.icon === 'book' ? (
+                <Book size={24} />
+              ) : (
+                <Briefcase size={24} />
+              )}
             </S.Icon>
             <div className="timeline__infos">
               <S.Period>{item.periodo}</S.Period>
