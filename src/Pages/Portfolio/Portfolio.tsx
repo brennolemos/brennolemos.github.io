@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Head from '../../components/Head';
-import Modal from '../../components/Modal/Modal';
-import Badge from '../../components/Badge';
-import Loading from '../../components/Loading/Loading';
+import Head from "../../components/Head";
+import Modal from "../../components/Modal/Modal";
+import Badge from "../../components/Badge";
+import Loading from "../../components/Loading/Loading";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 type Infos = {
   name: string;
@@ -24,7 +24,7 @@ const Portfolio = () => {
   const [modal, setModal] = React.useState<Infos | null>(null);
 
   const loadData = async () => {
-    const response = await fetch('/api/api.json');
+    const response = await fetch("/api/api.json");
     const data = await response.json();
 
     setContent(data.portfolio);
@@ -34,7 +34,7 @@ const Portfolio = () => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 

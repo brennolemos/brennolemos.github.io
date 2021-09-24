@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Home = styled.section`
   .content {
@@ -12,6 +12,7 @@ export const Intro = styled.div`
   grid-template-columns: 1fr 1fr;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  gap: 1rem;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
