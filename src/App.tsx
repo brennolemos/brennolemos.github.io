@@ -41,6 +41,7 @@ const App = () => {
             <Route path="/contato" component={Contact} />
             <Footer />
           </div>
+
           {/* </div> */}
         </main>
       </BrowserRouter>
