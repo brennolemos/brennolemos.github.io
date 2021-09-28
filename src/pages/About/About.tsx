@@ -1,12 +1,12 @@
-import React from 'react';
-import { Person } from '@styled-icons/evaicons-solid';
+import React from "react";
+import { Person } from "@styled-icons/evaicons-solid";
 
-import Head from '../../components/Head';
-import Loading from '../../components/Loading/Loading';
-import Timeline from '../../components/Timeline/Timeline';
-import Skills from '../../components/Skills';
+import Head from "../../components/Head";
+import Loading from "../../components/Loading/Loading";
+import Timeline from "../../components/Timeline/Timeline";
+import Skills from "../../components/Skills";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 type Content = {
   titulo: string;
@@ -39,7 +39,7 @@ export default () => {
   const [content, setContent] = React.useState<Content | null>(null);
 
   const loadData = async () => {
-    const response = await fetch('/api/api.json');
+    const response = await fetch("/api/api.json");
     const data = await response.json();
 
     setContent(data.sobre);

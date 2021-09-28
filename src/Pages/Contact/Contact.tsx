@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Head from '../../components/Head';
-import Loading from '../../components/Loading/Loading';
+import Head from "../../components/Head";
+import Loading from "../../components/Loading/Loading";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 type Content = {
   titulo: string;
@@ -20,7 +20,7 @@ const Contact = () => {
   const [content, setContent] = React.useState<Content | null>(null);
 
   const loadData = async () => {
-    const response = await fetch('/api/api.json');
+    const response = await fetch("/api/api.json");
     const data = await response.json();
 
     setContent(data.contato);
