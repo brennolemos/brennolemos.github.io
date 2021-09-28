@@ -1,5 +1,4 @@
 import React from 'react';
-import { Person } from '@styled-icons/evaicons-solid';
 
 import Head from '../../components/Head';
 import Loading from '../../components/Loading/Loading';
