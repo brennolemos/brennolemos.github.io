@@ -2,7 +2,7 @@
   "home": {
     "id": "home",
     "titulo": "Breno Lemos",
-    "descricao": "Olá, sou Breno Lemos, tenho 25 anos, moro em Fortaleza, sou Engenheiro de formação e um apaixonado por Desenvolvimento Web, além de fascinado pelo Ecossistema Digital. Atualmente trabalho como Desenvolvedor Web e Front-end."
+    "descricao": "Olá, sou Breno Lemos, tenho 26 anos, moro em Fortaleza, sou Engenheiro de formação e um apaixonado por Desenvolvimento Web, além de fascinado pelo Ecossistema Digital. Atualmente trabalho como Desenvolvedor Front-end e UI Engineer."
   },
   "contato": {
     "id": "contato",
@@ -38,10 +38,16 @@
       "icon": "briefcase",
       "list": [
         {
+          "id": "ac",
+          "titulo": "Avenue Code",
+          "ocupacao": "Desenvolvedor Front-End Pleno",
+          "periodo": "Atualmente"
+        },
+        {
           "id": "osf",
           "titulo": "OSF Digital",
           "ocupacao": "Desenvolvedor Front-End Pleno",
-          "periodo": "Atualmente"
+          "periodo": "2020-2021"
         },
         {
           "id": "cafaz",
@@ -60,12 +66,6 @@
           "titulo": "Delfos IM",
           "ocupacao": "Desenvolvedor Front-End (Estágio)",
           "periodo": "2017"
-        },
-        {
-          "id": "gdeste",
-          "titulo": "GDESTE",
-          "ocupacao": "Desenvolvedor Front-End (Bolsista)",
-          "periodo": "2015-2017"
         }
       ]
     },
