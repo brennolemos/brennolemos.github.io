@@ -62,7 +62,11 @@ const Portfolio = () => {
               <div key={item.name}>
                 <div className="row">
                   <div className="col-md-6">
-                    <img src={item.image} alt={item.name} />
+                    <img
+                      style={{ borderRadius: ".5rem" }}
+                      src={item.image}
+                      alt={item.name}
+                    />
                   </div>
                   <div className="col-md-6">
                     <S.Subtitle>{item.name}</S.Subtitle>

@@ -100,10 +100,24 @@
   },
   "portfolio": [
     {
+      "id": "nexttimer",
+      "name": "NextTimer",
+      "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
+      "image": "/api/nexttimer.png",
+      "imageXg": "/api/nexttimer.png",
+      "tags": [
+        { "name": "UX" },
+        { "name": "UI" },
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Styled Components" }
+      ]
+    },
+    {
       "id": "regulus",
       "name": "Regulus",
       "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
-      "image": "/api/regulus.jpg",
+      "image": "/api/regulus.png",
       "imageXg": "/api/regulus_xg.jpg",
       "tags": [
         { "name": "UX" },
@@ -114,15 +128,14 @@
         { "name": "WordPress" }
       ]
     },
+
     {
-      "id": "delfos",
-      "name": "Delfos IM",
-      "description": "Site desenvolvido utilizando WordPress para a Delfos IM, uma startup que utiliza Inteligência Artificial para predizer falhas em parques eólicos. Porjeto desenvolvido na época em que estagiei lá como Desenvolvedor Front-End.",
-      "image": "/api/delfos.jpg",
-      "imageXg": "/api/delfos_xg.jpg",
+      "id": "ouse-saber",
+      "name": "Ouse Saber",
+      "description": "Ecommerce desenvolvido utilizando Wordpress e Woocommerce para o Ouse Saber, empresa focada na venda de cursos para concursos públicos.",
+      "image": "/api/ouse-saber.png",
+      "imageXg": "/api/ouse-saber_xg.jpg",
       "tags": [
-        { "name": "UX" },
-        { "name": "UI" },
         { "name": "HTML" },
         { "name": "CSS" },
         { "name": "JavaScript" },
@@ -130,12 +143,14 @@
       ]
     },
     {
-      "id": "ouse-saber",
-      "name": "Ouse Saber",
-      "description": "Ecommerce desenvolvido utilizando Wordpress e Woocommerce para o Ouse Saber, empresa focada na venda de cursos para concursos públicos.",
-      "image": "/api/ouse-saber.jpg",
-      "imageXg": "/api/ouse-saber_xg.jpg",
+      "id": "delfos",
+      "name": "Delfos IM",
+      "description": "Site desenvolvido utilizando WordPress para a Delfos IM, uma startup que utiliza Inteligência Artificial para predizer falhas em parques eólicos. Porjeto desenvolvido na época em que estagiei lá como Desenvolvedor Front-End.",
+      "image": "/api/delfos.png",
+      "imageXg": "/api/delfos_xg.jpg",
       "tags": [
+        { "name": "UX" },
+        { "name": "UI" },
         { "name": "HTML" },
         { "name": "CSS" },
         { "name": "JavaScript" },

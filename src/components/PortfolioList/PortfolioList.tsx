@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import Badge from '../Badge';
-import * as S from './styles';
+import Badge from "../Badge";
+import * as S from "./styles";
 
 type PortfolioListProps = {
   jobs: Jobs[];
@@ -30,30 +30,34 @@ type Tags = {
 const PortfolioList = (props: PortfolioListProps) => {
   return (
     <div className="row justify-content-center">
-      {props.jobs.map((job) => (
-        <div className="col-lg-4 col-md-6 d-flex" key={job.id}>
-          <S.Item>
-            <img src={job.image} alt="Delfos IM" />
-            <div className="item-info media-body">
-              <S.Title>{job.name}</S.Title>
-              <div className="my-3">
-                {job.tags.map((tag) => (
-                  <Badge key={tag.name} text={tag.name} />
-                ))}
-              </div>
+      {props.jobs.map((job, index) => {
+        if (index < 3)
+          return (
+            <div className="col-lg-4 col-md-6 d-flex" key={job.id}>
+              <S.Item>
+                <img src={job.image} alt={job.name} />
+                <div className="item-info media-body">
+                  <S.Title>{job.name}</S.Title>
+                  <div className="my-3">
+                    {job.tags.map((tag) => (
+                      <Badge key={tag.name} text={tag.name} />
+                    ))}
+                  </div>
 
-              <div className="text-center">
-                <button
-                  onClick={() => props.onHandleModal(job)}
-                  className="btn"
-                >
-                  Ver Mais
-                </button>
-              </div>
+                  <div className="text-center">
+                    <button
+                      onClick={() => props.onHandleModal(job)}
+                      className="btn"
+                    >
+                      Ver Mais
+                    </button>
+                  </div>
+                </div>
+              </S.Item>
             </div>
-          </S.Item>
-        </div>
-      ))}
+          );
+        else return null;
+      })}
     </div>
   );
 };
