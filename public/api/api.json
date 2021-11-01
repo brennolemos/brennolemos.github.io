@@ -105,6 +105,8 @@
       "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
       "image": "/api/nexttimer.png",
       "imageXg": "/api/nexttimer.png",
+      "link": "https://nexttimer.com/",
+
       "tags": [
         { "name": "UX" },
         { "name": "UI" },
@@ -135,6 +137,7 @@
       "description": "Ecommerce desenvolvido utilizando Wordpress e Woocommerce para o Ouse Saber, empresa focada na venda de cursos para concursos públicos.",
       "image": "/api/ouse-saber.png",
       "imageXg": "/api/ouse-saber_xg.jpg",
+      "link": "https://ousesaber.com.br/",
       "tags": [
         { "name": "HTML" },
         { "name": "CSS" },

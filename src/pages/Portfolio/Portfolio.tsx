@@ -13,6 +13,7 @@ type Infos = {
   tags: Tags[];
   description?: string;
   imageXg?: string;
+  link?: string;
 };
 
 type Tags = {
@@ -78,9 +79,20 @@ const Portfolio = () => {
                     </div>
                     <S.Text>{item.description}</S.Text>
 
-                    <button onClick={() => handleModal(item)} className="btn">
-                      Ver Mais
-                    </button>
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn"
+                      >
+                        Ver Mais
+                      </a>
+                    ) : (
+                      <button onClick={() => handleModal(item)} className="btn">
+                        Ver Mais
+                      </button>
+                    )}
                   </div>
                 </div>
                 <div className="dropdown-divider my-5"></div>
