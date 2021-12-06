@@ -80,18 +80,12 @@ export default () => {
             {/* <h2 className="title-tag title-tag--small">{content?.home.titulo}</h2> */}
             <S.Intro>
               <div>
-                {t("Welcome to React")}
+                {t("test")}
 
-                <S.Title> Olá, eu sou Breno!</S.Title>
-                <S.Description>
-                  Tenho 26 anos, moro em Fortaleza, sou engenheiro de formação,
-                  mas desenvolvedor por vocação, e um apaixonado por
-                  Desenvolvimento Web, além de fascinado pelo Ecossistema
-                  Digital. Atualmente trabalho como Desenvolvedor Web e
-                  Front-end.
-                </S.Description>
+                <S.Title> {t("home.title")}</S.Title>
+                <S.Description>{t("home.description")}</S.Description>
                 <Link to="/sobre" className="btn">
-                  Saiba Mais
+                  {t("home.see_more")}
                 </Link>
               </div>
               {/* <p>{content?.home.descricao}</p> */}
@@ -100,7 +94,7 @@ export default () => {
 
             <div className="dropdown-divider my-5"></div>
 
-            <h2 className="title-tag title-tag--small">Trabalhos</h2>
+            <h2 className="title-tag title-tag--small">{t("home.work")}</h2>
             {content && content.portfolio.length ? (
               <PortfolioList
                 onHandleModal={handleModal}
@@ -112,7 +106,7 @@ export default () => {
 
             <div className="text-center py-3">
               <Link to="/portfolio" className="btn">
-                Ver Meus Trabalhos
+                {t("home.see_works")}
               </Link>
             </div>
           </div>

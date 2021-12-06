@@ -1,22 +1,15 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import ptBR from "./pt-br.json";
+import en from "./en.json";
 
 i18n.use(initReactI18next).init({
   resources: {
     en: {
-      translations: {
-        "To get started, edit <1>src/App.js</1> and save to reload.":
-          "To get started, edit <1>src/App.js</1> and save to reload.",
-        "Welcome to React": "Welcome to React and react-i18next",
-        welcome: "Hello <br/> <strong>World</strong>",
-      },
+      translations: en,
     },
     ptBR: {
-      translations: {
-        "To get started, edit <1>src/App.js</1> and save to reload.":
-          "Starte in dem du, <1>src/App.js</1> editierst und speicherst.",
-        "Welcome to React": "Bem-vindo ao React e react-i18next",
-      },
+      translations: ptBR,
     },
   },
   lng: "en", // if you're using a language detector, do not define the lng option
@@ -24,7 +17,7 @@ i18n.use(initReactI18next).init({
   ns: ["translations"],
   defaultNS: "translations",
 
-  keySeparator: false, // we use content as keys
+  //   keySeparator: false, // we use content as keys
 
   interpolation: {
     escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape

@@ -81,7 +81,7 @@ export default ({ toggleTheme }: Props) => {
               </li>
             </ul>
             <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
-            <div>
+            <div style={{ display: "flex", gap: 8, marginLeft: 32 }}>
               <img
                 src={BR}
                 style={{ maxWidth: 40, cursor: "pointer" }}
