@@ -1,10 +1,13 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { ThemeContext } from 'styled-components';
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { ThemeContext } from "styled-components";
+import { useTranslation } from "react-i18next";
 
-import * as S from './Header-styles';
-import foto from '../../assets/images/foto.png';
-import Switch from '../Switch/Switch';
+import * as S from "./Header-styles";
+import foto from "../../assets/images/foto.png";
+import BR from "../../assets/images/br.png";
+import US from "../../assets/images/us.png";
+import Switch from "../Switch/Switch";
 
 interface Props {
   toggleTheme: () => void;
@@ -13,6 +16,7 @@ interface Props {
 export default ({ toggleTheme }: Props) => {
   const [menuMobileIsActive, setMenuMobileIsActive] = React.useState(false);
   const { title } = React.useContext(ThemeContext);
+  const { i18n } = useTranslation();
 
   const { pathname } = useLocation();
   React.useEffect(() => {
@@ -20,6 +24,10 @@ export default ({ toggleTheme }: Props) => {
   }, [pathname]);
 
   const toggleMenuMobile = () => setMenuMobileIsActive(!menuMobileIsActive);
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <>
@@ -72,18 +80,32 @@ export default ({ toggleTheme }: Props) => {
                 </NavLink>
               </li>
             </ul>
-            <Switch toggleTheme={toggleTheme} checked={title === 'dark'} />
+            <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
+            <div>
+              <img
+                src={BR}
+                style={{ maxWidth: 40, cursor: "pointer" }}
+                onClick={() => changeLanguage("ptBR")}
+                alt="pt-BR"
+              />
+              <img
+                src={US}
+                style={{ maxWidth: 40, cursor: "pointer" }}
+                onClick={() => changeLanguage("en")}
+                alt="us"
+              />
+            </div>
           </div>
 
           <div className="d-md-none d-block menu-mobile-container">
             <S.MenuBtn
-              className={(menuMobileIsActive && 'is-active') || ''}
+              className={(menuMobileIsActive && "is-active") || ""}
               onClick={toggleMenuMobile}
             />
 
             <ul
               className={`menu-mobile navbar-nav ${
-                (menuMobileIsActive && 'active') || ''
+                (menuMobileIsActive && "active") || ""
               }`}
             >
               <li>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import PortfolioList from "../../components/PortfolioList/PortfolioList";
 import Loading from "../../components/Loading/Loading";
@@ -42,6 +43,7 @@ type Tags = {
 export default () => {
   const [content, setContent] = useState<ContentProps | null>(null);
   const [modal, setModal] = useState<ModalProps | null>(null);
+  const { t } = useTranslation();
 
   const loadData = async () => {
     const response = await fetch("/api/api.json");
@@ -78,7 +80,9 @@ export default () => {
             {/* <h2 className="title-tag title-tag--small">{content?.home.titulo}</h2> */}
             <S.Intro>
               <div>
-                <S.Title>Olá, eu sou Breno!</S.Title>
+                {t("Welcome to React")}
+
+                <S.Title> Olá, eu sou Breno!</S.Title>
                 <S.Description>
                   Tenho 26 anos, moro em Fortaleza, sou engenheiro de formação,
                   mas desenvolvedor por vocação, e um apaixonado por
