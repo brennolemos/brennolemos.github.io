@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Header = styled.header`
   width: 100%;
@@ -125,7 +125,7 @@ export const MenuBtn = styled.button`
   color: var(--white);
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 1.2rem;
     height: 2px;
@@ -150,5 +150,22 @@ export const MenuBtn = styled.button`
       height: 0.25rem;
       box-shadow: 0 8px currentColor, 0 -8px currentColor;
     }
+  }
+`;
+
+export const LanguagesContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 2rem;
+`;
+
+export const Language = styled.img<{ active?: boolean }>`
+  max-width: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: ${(props) => (props.active ? "grayscale(0)" : "grayscale(1)")};
+
+  &:hover {
+    filter: grayscale(0);
   }
 `;

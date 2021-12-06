@@ -1,8 +1,14 @@
 {
   "test": "english",
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
   "home": {
     "title": "Hi, I'm Breno!",
-    "description": "I'm 26 years old, based in Fortaleza - Brazil, sou engenheiro de formação, mas desenvolvedor por vocação, e um apaixonado por Desenvolvimento Web, além de fascinado pelo Ecossistema Digital. Atualmente trabalho como Desenvolvedor Front-end e UI Engineer.",
+    "description": "I'm 26 years old, based in Fortaleza - Brazil, graduated in engineering, a passionate about development and fascinated by the Digital Ecosystem. Currently working as a Front-End Developer and UI Engineer.",
     "work": "Work",
     "see_more": "See More",
     "see_works": "See my Work"

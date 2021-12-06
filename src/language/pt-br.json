@@ -1,5 +1,11 @@
 {
   "test": "portuguese",
+  "menu": {
+    "home": "Home",
+    "about": "Sobre",
+    "portfolio": "Portfólio",
+    "contact": "Contato"
+  },
   "home": {
     "title": "Olá, eu sou Breno!",
     "description": "Tenho 26 anos, moro em Fortaleza, sou engenheiro de formação, mas desenvolvedor por vocação, e um apaixonado por Desenvolvimento Web, além de fascinado pelo Ecossistema Digital. Atualmente trabalho como Desenvolvedor Front-end e UI Engineer.",
