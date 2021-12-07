@@ -3,18 +3,18 @@ import { NavLink, useLocation } from "react-router-dom";
 import { ThemeContext } from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import * as S from "./Header-styles";
-import foto from "../../assets/images/foto.png";
-import BR from "../../assets/images/br.png";
-import US from "../../assets/images/us.png";
+import foto from "src/assets/images/foto.png";
+import BR from "src/assets/images/br.png";
+import US from "src/assets/images/us.png";
 import Switch from "../Switch/Switch";
+import * as S from "./Header-styles";
 
 interface Props {
   toggleTheme: () => void;
 }
 
 export default ({ toggleTheme }: Props) => {
-  const selected = localStorage.getItem("i18nextLng") || "en";
+  const selectedLanguage = localStorage.getItem("i18nextLng") || "en";
   const [menuMobileIsActive, setMenuMobileIsActive] = React.useState(false);
   const { title } = React.useContext(ThemeContext);
   const { t, i18n } = useTranslation();
@@ -32,7 +32,7 @@ export default ({ toggleTheme }: Props) => {
   }, [pathname]);
 
   React.useEffect(() => {
-    changeLanguage(selected);
+    changeLanguage(selectedLanguage);
   }, []);
 
   return (
@@ -91,13 +91,13 @@ export default ({ toggleTheme }: Props) => {
               src={BR}
               onClick={() => changeLanguage("ptBR")}
               alt="pt-BR"
-              active={selected === "ptBR"}
+              active={selectedLanguage === "ptBR"}
             />
             <S.Language
               src={US}
               onClick={() => changeLanguage("en")}
               alt="us"
-              active={selected === "en"}
+              active={selectedLanguage === "en"}
             />
           </S.LanguagesContainer>
         </div>

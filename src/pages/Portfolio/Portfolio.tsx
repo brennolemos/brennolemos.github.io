@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import Head from "../../components/Head";
 import Modal from "../../components/Modal/Modal";
@@ -23,6 +24,7 @@ type Tags = {
 const Portfolio = () => {
   const [content, setContent] = React.useState<Infos[] | null>(null);
   const [modal, setModal] = React.useState<Infos | null>(null);
+  const { t } = useTranslation();
 
   const loadData = async () => {
     const response = await fetch("/api/api.json");
@@ -55,7 +57,7 @@ const Portfolio = () => {
       <Head title="Portfólio" />
       <section className="content interna portfolio animeUp">
         <header className="header-interna">
-          <h1 className="title-tag">Portfólio</h1>
+          <h1 className="title-tag">{t("portfolio.title")}</h1>
         </header>
         <div className="conteudo">
           {content ? (

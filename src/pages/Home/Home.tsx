@@ -80,8 +80,6 @@ export default () => {
             {/* <h2 className="title-tag title-tag--small">{content?.home.titulo}</h2> */}
             <S.Intro>
               <div>
-                {t("test")}
-
                 <S.Title> {t("home.title")}</S.Title>
                 <S.Description>{t("home.description")}</S.Description>
                 <Link to="/sobre" className="btn">

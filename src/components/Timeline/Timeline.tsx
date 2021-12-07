@@ -1,7 +1,7 @@
-import React from 'react';
-import { Book, Briefcase } from '@styled-icons/evaicons-solid';
+import React from "react";
+import { Book, Briefcase } from "@styled-icons/evaicons-solid";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 type Place = {
   id: string;
@@ -12,7 +12,7 @@ type Place = {
 
 type TimelineProps = {
   infos: {
-    titulo: string;
+    title: string;
     icon: string;
     list: Place[];
   };
@@ -21,12 +21,12 @@ type TimelineProps = {
 export default ({ infos }: TimelineProps) => {
   return (
     <>
-      <h2>{infos.titulo}</h2>
+      <h2>{infos.title}</h2>
       <S.Timeline>
         {infos.list.map((item) => (
           <S.Item key={item.id}>
             <S.Icon>
-              {infos.icon === 'book' ? (
+              {infos.icon === "book" ? (
                 <Book size={24} />
               ) : (
                 <Briefcase size={24} />

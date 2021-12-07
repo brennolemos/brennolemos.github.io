@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import Badge from "../Badge";
 import * as S from "./styles";
@@ -28,6 +29,8 @@ type Tags = {
 };
 
 const PortfolioList = (props: PortfolioListProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="row justify-content-center">
       {props.jobs.map((job, index) => {
@@ -49,7 +52,7 @@ const PortfolioList = (props: PortfolioListProps) => {
                       onClick={() => props.onHandleModal(job)}
                       className="btn"
                     >
-                      Ver Mais
+                      {t("home.see_more")}
                     </button>
                   </div>
                 </div>

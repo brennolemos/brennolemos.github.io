@@ -1,5 +1,4 @@
 {
-  "test": "english",
   "menu": {
     "home": "Home",
     "about": "About",
@@ -12,5 +11,148 @@
     "work": "Work",
     "see_more": "See More",
     "see_works": "See my Work"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "about": {
+    "id": "sobre",
+    "title": "About",
+    "path": "Path",
+    "descricao": [
+      "Trabalho como Desenvolvedor Web e Front End há alguns anos, depois de decidir mudar de área, já que antes eu atuava como Engenheiro de Telecomunicações. Há cada dia descubro e me fascino por assuntos novos nessa área que escolhi para atuar. Atualmente trabalho na OSF Digital, como Desenvolvedor Front-End Pleno.",
+      "Já trabalhei em diversos projetos de sites, de e-commerces e de apps, que você pode conferir no meu portfólio :D Em cada projeto tento me reinventar e me superar, proporcionando não apenas uma aplicação, mas uma verdadeira experiência alinhada com a expectativa e a necessidade do usuário.",
+      "Não apenas em meus projetos profissionais, mas tambem nos pessoais, tento aplicar um pouco do conhecimento adquirido da cultura oriental, pela qual sou fascinado desde criança. Por isso, muito inspirado no caminho do guerreiro samurai, procuro sempre o equilíbrio, a busca pela excelência, o respeito, a honra e a coragem."
+    ],
+    "experience": {
+      "title": "Work History",
+      "icon": "briefcase",
+      "list": [
+        {
+          "id": "ac",
+          "titulo": "Avenue Code",
+          "ocupacao": "UI Engineer Mid 1",
+          "periodo": "Currently"
+        },
+        {
+          "id": "osf",
+          "titulo": "OSF Digital",
+          "ocupacao": "Front-end Developer Mid 1",
+          "periodo": "2020-2021"
+        },
+        {
+          "id": "cafaz",
+          "titulo": "Cafaz",
+          "ocupacao": "Software Developer",
+          "periodo": "2019-2020"
+        },
+        {
+          "id": "being",
+          "titulo": "Being Marketing",
+          "ocupacao": "Front-End and WordPress Developer",
+          "periodo": "2017-2019"
+        },
+        {
+          "id": "delfos",
+          "titulo": "Delfos IM",
+          "ocupacao": "Front-end Developer Intern",
+          "periodo": "2017"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "icon": "book",
+      "list": [
+        {
+          "id": "ifce",
+          "titulo": "IFCE",
+          "ocupacao": "Telecomunication Engeneering",
+          "periodo": "2013-2018"
+        }
+      ]
+    },
+    "skills": [
+      { "id": "react", "name": "React", "icon": "fab fa-5x fa-react" },
+      { "id": "html5", "name": "HTML5", "icon": "fab fa-5x fa-html5" },
+      { "id": "css3", "name": "CSS3", "icon": "fab fa-5x fa-css3-alt" },
+      { "id": "js", "name": "JavaScript", "icon": "fab fa-5x fa-js-square" },
+      { "id": "vue", "name": "Vue.js", "icon": "fab fa-5x fa-vuejs" },
+      { "id": "sass", "name": "Sass", "icon": "fab fa-5x fa-sass" },
+      {
+        "id": "bootstrap",
+        "name": "Bootstrap",
+        "icon": "fab fa-5x fa-bootstrap"
+      },
+      { "id": "git", "name": "Git", "icon": "fab fa-5x fa-git-alt" },
+      { "id": "php", "name": "PHP", "icon": "fab fa-5x fa-php" },
+      { "id": "gulp", "name": "Gulp", "icon": "fab fa-5x fa-gulp" }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "list": [
+      {
+        "id": "nexttimer",
+        "name": "NextTimer",
+        "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
+        "image": "/api/nexttimer.png",
+        "imageXg": "/api/nexttimer.png",
+        "link": "https://nexttimer.com/",
+
+        "tags": [
+          { "name": "UX" },
+          { "name": "UI" },
+          { "name": "React" },
+          { "name": "TypeScript" },
+          { "name": "Styled Components" }
+        ]
+      },
+      {
+        "id": "regulus",
+        "name": "Regulus",
+        "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
+        "image": "/api/regulus.png",
+        "imageXg": "/api/regulus_xg.jpg",
+        "tags": [
+          { "name": "UX" },
+          { "name": "UI" },
+          { "name": "HTML" },
+          { "name": "CSS" },
+          { "name": "JavaScript" },
+          { "name": "WordPress" }
+        ]
+      },
+
+      {
+        "id": "ouse-saber",
+        "name": "Ouse Saber",
+        "description": "Ecommerce desenvolvido utilizando Wordpress e Woocommerce para o Ouse Saber, empresa focada na venda de cursos para concursos públicos.",
+        "image": "/api/ouse-saber.png",
+        "imageXg": "/api/ouse-saber_xg.jpg",
+        "link": "https://ousesaber.com.br/",
+        "tags": [
+          { "name": "HTML" },
+          { "name": "CSS" },
+          { "name": "JavaScript" },
+          { "name": "WordPress" }
+        ]
+      },
+      {
+        "id": "delfos",
+        "name": "Delfos IM",
+        "description": "Site desenvolvido utilizando WordPress para a Delfos IM, uma startup que utiliza Inteligência Artificial para predizer falhas em parques eólicos. Porjeto desenvolvido na época em que estagiei lá como Desenvolvedor Front-End.",
+        "image": "/api/delfos.png",
+        "imageXg": "/api/delfos_xg.jpg",
+        "tags": [
+          { "name": "UX" },
+          { "name": "UI" },
+          { "name": "HTML" },
+          { "name": "CSS" },
+          { "name": "JavaScript" },
+          { "name": "WordPress" }
+        ]
+      }
+    ]
   }
 }
