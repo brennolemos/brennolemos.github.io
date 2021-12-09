@@ -95,7 +95,7 @@
       {
         "id": "nexttimer",
         "name": "NextTimer",
-        "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
+        "description": "A simple and minimalist Pomodoro Timer app that works on desktop and mobile browser.",
         "image": "/api/nexttimer.png",
         "imageXg": "/api/nexttimer.png",
         "link": "https://nexttimer.com/",
@@ -111,7 +111,7 @@
       {
         "id": "regulus",
         "name": "Regulus",
-        "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
+        "description": "Website built with WordPress for the Regulus Tecnologia, a Software House focused onw websites and web apps development. It was a project ran by a friend and me at the time of the college and, currently, it's on hold.",
         "image": "/api/regulus.png",
         "imageXg": "/api/regulus_xg.jpg",
         "tags": [
@@ -127,7 +127,7 @@
       {
         "id": "ouse-saber",
         "name": "Ouse Saber",
-        "description": "Ecommerce desenvolvido utilizando Wordpress e Woocommerce para o Ouse Saber, empresa focada na venda de cursos para concursos públicos.",
+        "description": "Ecommerce built with Wordpress and Woocommerce for the Ouse Saber, company focused on course sales for public tenders.",
         "image": "/api/ouse-saber.png",
         "imageXg": "/api/ouse-saber_xg.jpg",
         "link": "https://ousesaber.com.br/",
@@ -141,7 +141,7 @@
       {
         "id": "delfos",
         "name": "Delfos IM",
-        "description": "Site desenvolvido utilizando WordPress para a Delfos IM, uma startup que utiliza Inteligência Artificial para predizer falhas em parques eólicos. Porjeto desenvolvido na época em que estagiei lá como Desenvolvedor Front-End.",
+        "description": "Website built with WordPress for the Delfos IM, a startup that uses artificial intelligence for the energy industry. This project was developed at the time I worked at there as a Front-End Developer.",
         "image": "/api/delfos.png",
         "imageXg": "/api/delfos_xg.jpg",
         "tags": [

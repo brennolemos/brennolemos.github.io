@@ -60,7 +60,14 @@ const PortfolioList = (props: PortfolioListProps) => {
                       </a>
                     ) : (
                       <button
-                        onClick={() => props.onHandleModal(job)}
+                        onClick={() =>
+                          props.onHandleModal({
+                            ...job,
+                            description: t(
+                              `portfolio.list.${index}.description`
+                            ),
+                          })
+                        }
                         className="btn"
                       >
                         {t("home.see_more")}

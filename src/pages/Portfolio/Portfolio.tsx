@@ -24,7 +24,7 @@ type Tags = {
 const Portfolio = () => {
   const [content, setContent] = React.useState<Infos[] | null>(null);
   const [modal, setModal] = React.useState<Infos | null>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const loadData = async () => {
     const response = await fetch("/api/api.json");
@@ -60,8 +60,10 @@ const Portfolio = () => {
           <h1 className="title-tag">{t("portfolio.title")}</h1>
         </header>
         <div className="conteudo">
+          {/* {t("portfolio.list", { returnObjects: true }).map()} */}
+
           {content ? (
-            content.map((item) => (
+            content.map((item, index) => (
               <div key={item.name}>
                 <div className="row">
                   <div className="col-md-6">
@@ -72,14 +74,14 @@ const Portfolio = () => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <S.Subtitle>{item.name}</S.Subtitle>
+                    <S.Subtitle>{t(`portfolio.list.${index}.name`)}</S.Subtitle>
 
                     <div className="my-3">
                       {item.tags.map((tag) => (
                         <Badge key={tag.name} text={tag.name} />
                       ))}
                     </div>
-                    <S.Text>{item.description}</S.Text>
+                    <S.Text>{t(`portfolio.list.${index}.description`)}</S.Text>
 
                     {item.link ? (
                       <a
@@ -91,7 +93,17 @@ const Portfolio = () => {
                         {t("home.see_more")}
                       </a>
                     ) : (
-                      <button onClick={() => handleModal(item)} className="btn">
+                      <button
+                        onClick={() =>
+                          handleModal({
+                            ...item,
+                            description: t(
+                              `portfolio.list.${index}.description`
+                            ),
+                          })
+                        }
+                        className="btn"
+                      >
                         {t("home.see_more")}
                       </button>
                     )}

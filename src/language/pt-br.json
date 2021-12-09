@@ -96,7 +96,7 @@
       {
         "id": "nexttimer",
         "name": "NextTimer",
-        "description": "Site desenvolvido utilizando WordPress para a Regulus Tecnologia, uma Software House com foco no desenvolvimento de sites e aplicativos. Um projeto desenvolvido por mim e um amigo da época da faculdade, que, por enquanto, está em stand by.",
+        "description": "Um simples e minimalista Pomodoro Timer app que funciona no desktop e no browser mobile.",
         "image": "/api/nexttimer.png",
         "imageXg": "/api/nexttimer.png",
         "link": "https://nexttimer.com/",
