@@ -88,11 +88,11 @@ const Portfolio = () => {
                         rel="noopener noreferrer"
                         className="btn"
                       >
-                        Ver Mais
+                        {t("home.see_more")}
                       </a>
                     ) : (
                       <button onClick={() => handleModal(item)} className="btn">
-                        Ver Mais
+                        {t("home.see_more")}
                       </button>
                     )}
                   </div>

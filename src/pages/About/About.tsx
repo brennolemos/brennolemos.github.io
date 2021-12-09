@@ -1,6 +1,6 @@
 import React from "react";
 import { Person } from "@styled-icons/evaicons-solid";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 import Head from "../../components/Head";
 import Loading from "../../components/Loading/Loading";
@@ -38,7 +38,7 @@ type Skills = {
 
 export default () => {
   const [content, setContent] = React.useState<Content | null>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const loadData = async () => {
     const response = await fetch("/api/api.json");
@@ -69,9 +69,16 @@ export default () => {
                   </div>
                   <h2>{t("about.path")}</h2>
                 </div>
-                {content.descricao.map((text: string, index: number) => (
+
+                <Trans>
+                  {i18n.t("about.description", {
+                    joinArrays: `<br/></br/><br/>`,
+                  })}
+                </Trans>
+
+                {/* {content.descricao.map((text: string, index: number) => (
                   <S.Text key={index}>{text}</S.Text>
-                ))}
+                ))} */}
               </article>
 
               <article className="curriculo col-lg-6">

@@ -22,6 +22,7 @@ type Jobs = {
   image: string;
   name: string;
   tags: Tags[];
+  link?: string;
 };
 
 type Tags = {
@@ -48,12 +49,23 @@ const PortfolioList = (props: PortfolioListProps) => {
                   </div>
 
                   <div className="text-center">
-                    <button
-                      onClick={() => props.onHandleModal(job)}
-                      className="btn"
-                    >
-                      {t("home.see_more")}
-                    </button>
+                    {job.link ? (
+                      <a
+                        href={job.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn"
+                      >
+                        {t("home.see_more")}
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => props.onHandleModal(job)}
+                        className="btn"
+                      >
+                        {t("home.see_more")}
+                      </button>
+                    )}
                   </div>
                 </div>
               </S.Item>

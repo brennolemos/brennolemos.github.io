@@ -19,10 +19,10 @@
     "id": "sobre",
     "title": "About",
     "path": "Path",
-    "descricao": [
-      "Trabalho como Desenvolvedor Web e Front End há alguns anos, depois de decidir mudar de área, já que antes eu atuava como Engenheiro de Telecomunicações. Há cada dia descubro e me fascino por assuntos novos nessa área que escolhi para atuar. Atualmente trabalho na OSF Digital, como Desenvolvedor Front-End Pleno.",
-      "Já trabalhei em diversos projetos de sites, de e-commerces e de apps, que você pode conferir no meu portfólio :D Em cada projeto tento me reinventar e me superar, proporcionando não apenas uma aplicação, mas uma verdadeira experiência alinhada com a expectativa e a necessidade do usuário.",
-      "Não apenas em meus projetos profissionais, mas tambem nos pessoais, tento aplicar um pouco do conhecimento adquirido da cultura oriental, pela qual sou fascinado desde criança. Por isso, muito inspirado no caminho do guerreiro samurai, procuro sempre o equilíbrio, a busca pela excelência, o respeito, a honra e a coragem."
+    "description": [
+      "I've been working as a Web and Front End developer for a few years, when I decided to migrate of area, since previously I worked as a Telecommunications engineer. Everyday I discover and get fascinated for new topics in this are I chosen to work in. Nowadays, I work at Avenue Code as UI Engineer.",
+      "I've worked in a bunch projects, such as websites, e-commerces and web apps, you can take a look in a few of them on my portfolio :D In each of these projects, I try to reinvent and overcome myself, building not only an application, but a true experience aligned with the user's expectations and needs.",
+      "Not only in my professional projects, but even in my personal ones, I try to apply a bit of the knowledge from the oriental culture, which I'm fascinated since I was a child. Therefore, just like in the samurai warrior path, I'm always seeking for balance, excelence, respect, honor and courage."
     ],
     "experience": {
       "title": "Work History",
