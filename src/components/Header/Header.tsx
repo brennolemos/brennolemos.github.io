@@ -46,7 +46,7 @@ export default ({ toggleTheme }: Props) => {
         </NavLink>
 
         <div className="d-flex align-items-center">
-          <ul className="navbar-nav d-md-flex d-none mr-3">
+          <ul className="navbar-nav d-lg-flex d-none mr-3">
             <li>
               <NavLink
                 className="menu__link"
@@ -85,24 +85,26 @@ export default ({ toggleTheme }: Props) => {
               </NavLink>
             </li>
           </ul>
-          <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
-          <S.LanguagesContainer>
-            <S.Language
-              src={BR}
-              onClick={() => changeLanguage("ptBR")}
-              alt="pt-BR"
-              active={selectedLanguage === "ptBR"}
-            />
-            <S.Language
-              src={US}
-              onClick={() => changeLanguage("en")}
-              alt="us"
-              active={selectedLanguage === "en"}
-            />
-          </S.LanguagesContainer>
+          <div className="d-lg-flex d-none">
+            <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
+            <S.LanguagesContainer>
+              <S.Language
+                src={BR}
+                onClick={() => changeLanguage("ptBR")}
+                alt="pt-BR"
+                active={selectedLanguage === "ptBR"}
+              />
+              <S.Language
+                src={US}
+                onClick={() => changeLanguage("en")}
+                alt="us"
+                active={selectedLanguage === "en"}
+              />
+            </S.LanguagesContainer>
+          </div>
         </div>
 
-        <div className="d-md-none d-block menu-mobile-container">
+        <div className="d-lg-none d-block menu-mobile-container">
           <S.MenuBtn
             className={(menuMobileIsActive && "is-active") || ""}
             onClick={toggleMenuMobile}
@@ -153,6 +155,25 @@ export default ({ toggleTheme }: Props) => {
                 <i className="fas fa-envelope d-inline-block mr-2"></i>
                 {t("menu.contact")}
               </NavLink>
+            </li>
+            <li className="text-center">
+              <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
+            </li>
+            <li>
+              <S.LanguagesContainer>
+                <S.Language
+                  src={BR}
+                  onClick={() => changeLanguage("ptBR")}
+                  alt="pt-BR"
+                  active={selectedLanguage === "ptBR"}
+                />
+                <S.Language
+                  src={US}
+                  onClick={() => changeLanguage("en")}
+                  alt="us"
+                  active={selectedLanguage === "en"}
+                />
+              </S.LanguagesContainer>
             </li>
           </ul>
         </div>

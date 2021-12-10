@@ -156,7 +156,16 @@ export const MenuBtn = styled.button`
 export const LanguagesContainer = styled.div`
   display: flex;
   gap: 0.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid #e9ecef;
+
+  @media (max-width: 991px) {
+    margin-left: auto;
+    padding-left: 0;
+    border-left: none;
+    justify-content: center;
+  }
 `;
 
 export const Language = styled.img<{ active?: boolean }>`
