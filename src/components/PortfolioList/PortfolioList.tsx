@@ -1,8 +1,9 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Panel } from 'rsuite';
 
-import Badge from "../Badge";
-import * as S from "./styles";
+import Badge from '../Badge';
+import * as S from './styles';
 
 type PortfolioListProps = {
   jobs: Jobs[];
@@ -37,45 +38,48 @@ const PortfolioList = (props: PortfolioListProps) => {
       {props.jobs.map((job, index) => {
         if (index < 3)
           return (
-            <div className="col-lg-4 col-md-6 d-flex" key={job.id}>
-              <S.Item>
+            <div className="col-lg-4 col-md-6 " key={job.id}>
+              <Panel shaded bodyFill>
                 <img src={job.image} alt={job.name} />
-                <div className="item-info media-body">
+
+                <Panel>
                   <S.Title>{job.name}</S.Title>
-                  <div className="my-3">
+                  <div className="mb-3">
                     {job.tags.map((tag) => (
                       <Badge key={tag.name} text={tag.name} />
                     ))}
                   </div>
 
-                  <div className="text-center">
-                    {job.link ? (
-                      <a
-                        href={job.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn"
-                      >
-                        {t("home.see_more")}
-                      </a>
-                    ) : (
-                      <button
-                        onClick={() =>
-                          props.onHandleModal({
-                            ...job,
-                            description: t(
-                              `portfolio.list.${index}.description`
-                            ),
-                          })
-                        }
-                        className="btn"
-                      >
-                        {t("home.see_more")}
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </S.Item>
+                  <p>
+                    <div className="text-center mt-3">
+                      {job.link ? (
+                        <a
+                          href={job.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn"
+                        >
+                          {t('home.see_more')}
+                        </a>
+                      ) : (
+                        <button
+                          onClick={() =>
+                            props.onHandleModal({
+                              ...job,
+                              description: t(
+                                `portfolio.list.${index}.description`,
+                              ),
+                            })
+                          }
+                          className="btn"
+                        >
+                          {t('home.see_more')}
+                        </button>
+                      )}
+                    </div>
+                  </p>
+                </Panel>
+              </Panel>
             </div>
           );
         else return null;

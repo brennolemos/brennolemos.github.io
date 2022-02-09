@@ -1,20 +1,20 @@
-import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { ThemeContext } from "styled-components";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { ThemeContext } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
-import foto from "src/assets/images/foto.png";
-import BR from "src/assets/images/br.png";
-import US from "src/assets/images/us.png";
-import Switch from "../Switch/Switch";
-import * as S from "./Header-styles";
+import foto from 'src/assets/images/foto.png';
+import BR from 'src/assets/images/br.png';
+import US from 'src/assets/images/us.png';
+import Switch from '../Switch/Switch';
+import * as S from './Header-styles';
 
 interface Props {
   toggleTheme: () => void;
 }
 
 export default ({ toggleTheme }: Props) => {
-  const selectedLanguage = localStorage.getItem("i18nextLng") || "en";
+  const selectedLanguage = localStorage.getItem('i18nextLng') || 'en';
   const [menuMobileIsActive, setMenuMobileIsActive] = React.useState(false);
   const { title } = React.useContext(ThemeContext);
   const { t, i18n } = useTranslation();
@@ -24,7 +24,7 @@ export default ({ toggleTheme }: Props) => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-    localStorage.setItem("i18nextLng", lng);
+    localStorage.setItem('i18nextLng', lng);
   };
 
   React.useEffect(() => {
@@ -54,7 +54,7 @@ export default ({ toggleTheme }: Props) => {
                 exact
                 to="/"
               >
-                {t("menu.home")}
+                {t('menu.home')}
               </NavLink>
             </li>
             <li>
@@ -63,7 +63,7 @@ export default ({ toggleTheme }: Props) => {
                 activeClassName="active"
                 to="/sobre"
               >
-                {t("menu.about")}
+                {t('menu.about')}
               </NavLink>
             </li>
             <li>
@@ -72,7 +72,7 @@ export default ({ toggleTheme }: Props) => {
                 activeClassName="active"
                 to="/portfolio"
               >
-                {t("menu.portfolio")}
+                {t('menu.portfolio')}
               </NavLink>
             </li>
             <li>
@@ -81,24 +81,24 @@ export default ({ toggleTheme }: Props) => {
                 activeClassName="active"
                 to="/contato"
               >
-                {t("menu.contact")}
+                {t('menu.contact')}
               </NavLink>
             </li>
           </ul>
           <div className="d-lg-flex d-none">
-            <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
+            <Switch toggleTheme={toggleTheme} checked={title === 'dark'} />
             <S.LanguagesContainer>
               <S.Language
                 src={BR}
-                onClick={() => changeLanguage("ptBR")}
+                onClick={() => changeLanguage('ptBR')}
                 alt="pt-BR"
-                active={selectedLanguage === "ptBR"}
+                active={selectedLanguage === 'ptBR'}
               />
               <S.Language
                 src={US}
-                onClick={() => changeLanguage("en")}
+                onClick={() => changeLanguage('en')}
                 alt="us"
-                active={selectedLanguage === "en"}
+                active={selectedLanguage === 'en'}
               />
             </S.LanguagesContainer>
           </div>
@@ -106,13 +106,13 @@ export default ({ toggleTheme }: Props) => {
 
         <div className="d-lg-none d-block menu-mobile-container">
           <S.MenuBtn
-            className={(menuMobileIsActive && "is-active") || ""}
+            className={(menuMobileIsActive && 'is-active') || ''}
             onClick={toggleMenuMobile}
           />
 
           <ul
             className={`menu-mobile navbar-nav ${
-              (menuMobileIsActive && "active") || ""
+              (menuMobileIsActive && 'active') || ''
             }`}
           >
             <li>
@@ -123,7 +123,7 @@ export default ({ toggleTheme }: Props) => {
                 to="/"
               >
                 <i className="fas fa-home d-inline-block mr-2"></i>
-                {t("menu.home")}
+                {t('menu.home')}
               </NavLink>
             </li>
             <li>
@@ -133,7 +133,7 @@ export default ({ toggleTheme }: Props) => {
                 to="/sobre"
               >
                 <i className="fas fa-address-card d-inline-block mr-2"></i>
-                {t("menu.about")}
+                {t('menu.about')}
               </NavLink>
             </li>
             <li>
@@ -143,7 +143,7 @@ export default ({ toggleTheme }: Props) => {
                 to="/portfolio"
               >
                 <i className="fas fa-tasks d-inline-block mr-2"></i>
-                {t("menu.portfolio")}
+                {t('menu.portfolio')}
               </NavLink>
             </li>
             <li>
@@ -153,25 +153,25 @@ export default ({ toggleTheme }: Props) => {
                 to="/contato"
               >
                 <i className="fas fa-envelope d-inline-block mr-2"></i>
-                {t("menu.contact")}
+                {t('menu.contact')}
               </NavLink>
             </li>
             <li className="text-center">
-              <Switch toggleTheme={toggleTheme} checked={title === "dark"} />
+              <Switch toggleTheme={toggleTheme} checked={title === 'dark'} />
             </li>
             <li>
               <S.LanguagesContainer>
                 <S.Language
                   src={BR}
-                  onClick={() => changeLanguage("ptBR")}
+                  onClick={() => changeLanguage('ptBR')}
                   alt="pt-BR"
-                  active={selectedLanguage === "ptBR"}
+                  active={selectedLanguage === 'ptBR'}
                 />
                 <S.Language
                   src={US}
-                  onClick={() => changeLanguage("en")}
+                  onClick={() => changeLanguage('en')}
                   alt="us"
-                  active={selectedLanguage === "en"}
+                  active={selectedLanguage === 'en'}
                 />
               </S.LanguagesContainer>
             </li>
