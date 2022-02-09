@@ -29,22 +29,10 @@
       "icon": "briefcase",
       "list": [
         {
-          "id": "ac",
-          "titulo": "Avenue Code",
-          "ocupacao": "UI Engineer Mid 1",
-          "periodo": "Currently"
-        },
-        {
-          "id": "osf",
-          "titulo": "OSF Digital",
-          "ocupacao": "Front-end Developer Mid 1",
-          "periodo": "2020-2021"
-        },
-        {
-          "id": "cafaz",
-          "titulo": "Cafaz",
-          "ocupacao": "Software Developer",
-          "periodo": "2019-2020"
+          "id": "delfos",
+          "titulo": "Delfos IM",
+          "ocupacao": "Front-end Developer Intern",
+          "periodo": "2017"
         },
         {
           "id": "being",
@@ -53,10 +41,22 @@
           "periodo": "2017-2019"
         },
         {
-          "id": "delfos",
-          "titulo": "Delfos IM",
-          "ocupacao": "Front-end Developer Intern",
-          "periodo": "2017"
+          "id": "cafaz",
+          "titulo": "Cafaz",
+          "ocupacao": "Software Developer",
+          "periodo": "2019-2020"
+        },
+        {
+          "id": "osf",
+          "titulo": "OSF Digital",
+          "ocupacao": "Front-end Developer Mid 1",
+          "periodo": "2020-2021"
+        },
+        {
+          "id": "ac",
+          "titulo": "Avenue Code",
+          "ocupacao": "UI Engineer Mid 1",
+          "periodo": "Currently"
         }
       ]
     },

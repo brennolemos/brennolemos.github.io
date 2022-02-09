@@ -49,7 +49,8 @@ export const Title = styled.h3`
   font-weight: normal;
   font-size: 1.125rem;
   color: ${(props) => props.theme.colors.textContent};
-  margin-bottom: 0.25rem;
+  /* margin-bottom: 0.25rem; */
+  line-height: 1.1;
   max-width: 11.25rem;
 `;
 

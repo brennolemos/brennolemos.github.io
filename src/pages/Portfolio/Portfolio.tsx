@@ -1,12 +1,13 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Divider } from 'rsuite';
 
-import Head from "../../components/Head";
-import Modal from "../../components/Modal/Modal";
-import Badge from "../../components/Badge";
-import Loading from "../../components/Loading/Loading";
+import Head from '../../components/Head';
+import Modal from '../../components/Modal/Modal';
+import Badge from '../../components/Badge';
+import Loading from '../../components/Loading/Loading';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 type Infos = {
   name: string;
@@ -27,7 +28,7 @@ const Portfolio = () => {
   const { t, i18n } = useTranslation();
 
   const loadData = async () => {
-    const response = await fetch("/api/api.json");
+    const response = await fetch('/api/api.json');
     const data = await response.json();
 
     setContent(data.portfolio);
@@ -37,7 +38,7 @@ const Portfolio = () => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -57,7 +58,7 @@ const Portfolio = () => {
       <Head title="Portfólio" />
       <section className="content interna portfolio animeUp">
         <header className="header-interna">
-          <h1 className="title-tag">{t("portfolio.title")}</h1>
+          <h1 className="title-tag">{t('portfolio.title')}</h1>
         </header>
         <div className="conteudo">
           {/* {t("portfolio.list", { returnObjects: true }).map()} */}
@@ -68,7 +69,7 @@ const Portfolio = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <img
-                      style={{ borderRadius: ".5rem" }}
+                      style={{ borderRadius: '.5rem' }}
                       src={item.image}
                       alt={item.name}
                     />
@@ -90,7 +91,7 @@ const Portfolio = () => {
                         rel="noopener noreferrer"
                         className="btn"
                       >
-                        {t("home.see_more")}
+                        {t('home.see_more')}
                       </a>
                     ) : (
                       <button
@@ -98,18 +99,19 @@ const Portfolio = () => {
                           handleModal({
                             ...item,
                             description: t(
-                              `portfolio.list.${index}.description`
+                              `portfolio.list.${index}.description`,
                             ),
                           })
                         }
                         className="btn"
                       >
-                        {t("home.see_more")}
+                        {t('home.see_more')}
                       </button>
                     )}
                   </div>
                 </div>
-                <div className="dropdown-divider my-5"></div>
+
+                <Divider />
               </div>
             ))
           ) : (
