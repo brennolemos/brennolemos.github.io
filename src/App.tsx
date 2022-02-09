@@ -1,30 +1,32 @@
-import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import usePersistedState from "./utils/usePersistedState";
+import usePersistedState from './utils/usePersistedState';
 
-import GlobalStyle from "./styles/global";
-import light from "./styles/themes/light";
-import dark from "./styles/themes/dark";
+import GlobalStyle from './styles/global';
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import 'rsuite/dist/rsuite.min.css';
 
 const App = () => {
-  const [theme, setTheme] = usePersistedState("theme", light);
+  const [theme, setTheme] = usePersistedState('theme', light);
 
   const toggleTheme = () => {
-    setTheme(theme.title === "light" ? dark : light);
+    setTheme(theme.title === 'light' ? dark : light);
   };
 
   return (

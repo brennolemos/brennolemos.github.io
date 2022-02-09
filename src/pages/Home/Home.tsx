@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-import PortfolioList from "../../components/PortfolioList/PortfolioList";
-import Loading from "../../components/Loading/Loading";
-import Modal from "../../components/Modal/Modal";
-import Head from "../../components/Head";
+import PortfolioList from '../../components/PortfolioList/PortfolioList';
+import Loading from '../../components/Loading/Loading';
+import Modal from '../../components/Modal/Modal';
+import Head from '../../components/Head';
 
-import illustration from "../../assets/images/illustration.svg";
-import * as S from "./Home-styles";
+import illustration from '../../assets/images/illustration.svg';
+import * as S from './Home-styles';
 
 type ContentProps = {
   home: {
@@ -46,7 +46,7 @@ export default () => {
   const { t } = useTranslation();
 
   const loadData = async () => {
-    const response = await fetch("/api/api.json");
+    const response = await fetch('/api/api.json');
     const data = await response.json();
 
     setContent(data);
@@ -60,7 +60,7 @@ export default () => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -80,10 +80,10 @@ export default () => {
             {/* <h2 className="title-tag title-tag--small">{content?.home.titulo}</h2> */}
             <S.Intro>
               <div>
-                <S.Title> {t("home.title")}</S.Title>
-                <S.Description>{t("home.description")}</S.Description>
+                <S.Title> {t('home.title')}</S.Title>
+                <S.Description>{t('home.description')}</S.Description>
                 <Link to="/sobre" className="btn">
-                  {t("home.see_more")}
+                  {t('home.see_more')}
                 </Link>
               </div>
               {/* <p>{content?.home.descricao}</p> */}
@@ -92,7 +92,7 @@ export default () => {
 
             <div className="dropdown-divider my-5"></div>
 
-            <h2 className="title-tag title-tag--small">{t("home.work")}</h2>
+            <h2 className="title-tag title-tag--small">{t('home.work')}</h2>
             {content && content.portfolio.length ? (
               <PortfolioList
                 onHandleModal={handleModal}
@@ -104,7 +104,7 @@ export default () => {
 
             <div className="text-center py-3">
               <Link to="/portfolio" className="btn">
-                {t("home.see_works")}
+                {t('home.see_works')}
               </Link>
             </div>
           </div>
