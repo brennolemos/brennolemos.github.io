@@ -21,7 +21,7 @@ type TimelineProps = {
 export default ({ infos }: TimelineProps) => {
   return (
     <>
-      <h2>{infos.title}</h2>
+      <S.Subtitle>{infos.title}</S.Subtitle>
 
       <Timeline endless>
         {infos.list.map((item) => (
