@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Panel } from 'rsuite';
+import { Tag, TagGroup } from 'rsuite';
+
 
 import Badge from '../Badge';
 import * as S from './styles';
@@ -44,11 +46,11 @@ const PortfolioList = (props: PortfolioListProps) => {
 
                 <Panel>
                   <S.Title>{job.name}</S.Title>
-                  <div className="mb-3">
+                  <TagGroup className="mb-3">
                     {job.tags.map((tag) => (
-                      <Badge key={tag.name} text={tag.name} />
+                      <Tag key={tag.name} size="sm">{tag.name}</Tag>
                     ))}
-                  </div>
+                  </TagGroup>
 
                   <p>
                     <div className="text-center mt-3">
