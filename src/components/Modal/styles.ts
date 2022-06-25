@@ -69,22 +69,8 @@ export const Close = styled.button`
   }
 `;
 
-export const Image = styled.div`
-  grid-column: 1;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 767px) {
-    grid-row: 2;
-  }
-
-  img {
-    max-width: 31.25rem;
-    display: block;
-
-    @media (max-width: 767px) {
-      max-width: 100%;
-    }
-  }
+export const Image = styled.img`
+ margin-bottom: 1rem
 `;
 
 export const Infos = styled.div`
@@ -100,14 +86,15 @@ export const Infos = styled.div`
 export const Title = styled.h2`
   font-weight: bold;
   font-size: 1.5rem;
-  text-transform: uppercase;
-  color: #2d3940;
-  margin-bottom: 1rem;
+  /* text-transform: uppercase; */
+  /* color: #2d3940; */
+  /* margin-bottom: 1rem; */
 `;
 
-export const Content = styled.p`
-  line-height: 1.4em;
-  font-size: 1rem;
-  color: #626d73;
-  margin-top: 2rem;
+export const Content = styled.div`
+  /* line-height: 1.4em;
+  font-size: 1rem; */
+  /* color: #626d73; */
+  /* margin-top: 2rem; */
+  padding: 1rem
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { CustomProvider } from 'rsuite';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
@@ -30,24 +31,26 @@ const App = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <GlobalStyle />
-        <main className="main-container">
-          {/* <div className="row"> */}
-          <Header toggleTheme={toggleTheme} />
-          <div className="col-md px-0 position-static d-flex flex-column full-height">
-            <Route path="/" component={Home} exact />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/sobre" component={About} />
-            <Route path="/contato" component={Contact} />
-            <Footer />
-          </div>
+    <CustomProvider theme={theme.title === 'light' ? 'light' : 'dark'}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <GlobalStyle />
+          <main className="main-container">
+            {/* <div className="row"> */}
+            <Header toggleTheme={toggleTheme} />
+            <div className="col-md px-0 position-static d-flex flex-column full-height">
+              <Route path="/" component={Home} exact />
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/sobre" component={About} />
+              <Route path="/contato" component={Contact} />
+              <Footer />
+            </div>
 
-          {/* </div> */}
-        </main>
-      </BrowserRouter>
-    </ThemeProvider>
+            {/* </div> */}
+          </main>
+        </BrowserRouter>
+      </ThemeProvider>
+    </CustomProvider>
   );
 };
 

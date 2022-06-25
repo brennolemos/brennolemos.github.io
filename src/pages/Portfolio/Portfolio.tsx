@@ -25,6 +25,10 @@ type Tags = {
 const Portfolio = () => {
   const [content, setContent] = React.useState<Infos[] | null>(null);
   const [modal, setModal] = React.useState<Infos | null>(null);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
   const { t, i18n } = useTranslation();
 
   const loadData = async () => {
@@ -53,8 +57,9 @@ const Portfolio = () => {
   return (
     <>
       {modal ? (
-        <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
+        <Modal open={open} infos={modal} handleClose={handleClose} setModal={setModal} closeModal={closeModal} />
       ) : null}
+
       <Head title="Portfólio" />
       <section className="content interna portfolio animeUp">
         <header className="header-interna">
@@ -95,13 +100,15 @@ const Portfolio = () => {
                       </a>
                     ) : (
                       <button
-                        onClick={() =>
+                        onClick={() => {
                           handleModal({
                             ...item,
                             description: t(
                               `portfolio.list.${index}.description`,
                             ),
                           })
+                          handleOpen()
+                        }
                         }
                         className="btn"
                       >

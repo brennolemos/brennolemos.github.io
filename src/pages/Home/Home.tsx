@@ -43,6 +43,10 @@ type Tags = {
 export default () => {
   const [content, setContent] = useState<ContentProps | null>(null);
   const [modal, setModal] = useState<ModalProps | null>(null);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
   const { t } = useTranslation();
 
   const loadData = async () => {
@@ -71,7 +75,7 @@ export default () => {
   return (
     <>
       {modal ? (
-        <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
+        <Modal open={open} handleClose={handleClose} infos={modal} setModal={setModal} closeModal={closeModal} />
       ) : null}
       <div className="container">
         <S.Home>
