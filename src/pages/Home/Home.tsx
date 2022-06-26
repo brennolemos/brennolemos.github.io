@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Loader } from 'rsuite';
 
-import PortfolioList from '../../components/PortfolioList/PortfolioList';
-import Modal from '../../components/Modal/Modal';
-import Head from '../../components/Head';
+import PortfolioList from 'src/components/PortfolioList/PortfolioList';
+import Modal from 'src/components/Modal/Modal';
+import Head from 'src/components/Head';
 
-import illustration from '../../assets/images/illustration.svg';
-import * as S from './Home-styles';
+import illustration from 'src/assets/images/illustration.svg';
+import * as S from './Home.styled';
 
 type ContentProps = {
   home: {

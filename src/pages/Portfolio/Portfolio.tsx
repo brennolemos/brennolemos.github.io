@@ -2,11 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Divider, Loader } from 'rsuite';
 
-import Head from '../../components/Head';
-import Modal from '../../components/Modal/Modal';
-import Badge from '../../components/Badge';
+import Head from 'src/components/Head';
+import Modal from 'src/components/Modal/Modal';
+import Badge from 'src/components/Badge';
 
-import * as S from './styles';
+import * as S from './Portfolio.styled';
 
 type Infos = {
   name: string;
