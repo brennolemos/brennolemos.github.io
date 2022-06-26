@@ -29,12 +29,6 @@
       "icon": "briefcase",
       "list": [
         {
-          "id": "delfos",
-          "titulo": "Delfos IM",
-          "ocupacao": "Front-end Developer Intern",
-          "periodo": "2017"
-        },
-        {
           "id": "being",
           "titulo": "Being Marketing",
           "ocupacao": "Front-End and WordPress Developer",
@@ -56,6 +50,12 @@
           "id": "ac",
           "titulo": "Avenue Code",
           "ocupacao": "UI Engineer Mid 1",
+          "periodo": "2021-2022"
+        },
+        {
+          "id": "bc",
+          "titulo": "Blue Coding",
+          "ocupacao": "Front-end Software Engineer",
           "periodo": "Currently"
         }
       ]
@@ -154,5 +154,8 @@
         ]
       }
     ]
+  },
+  "general": {
+    "loading": "Loading"
   }
 }

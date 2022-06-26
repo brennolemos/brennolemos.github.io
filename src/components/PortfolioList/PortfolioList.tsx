@@ -1,10 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Panel } from 'rsuite';
-import { Tag, TagGroup } from 'rsuite';
+import { Panel, Tag, TagGroup } from 'rsuite';
 
-
-import Badge from '../Badge';
 import * as S from './styles';
 
 type PortfolioListProps = {
@@ -40,7 +37,7 @@ const PortfolioList = (props: PortfolioListProps) => {
       {props.jobs.map((job, index) => {
         if (index < 3)
           return (
-            <div className="col-lg-4 col-md-6 " key={job.id}>
+            <div className="col-lg-4 col-md-6 d-flex" key={job.id}>
               <Panel shaded bodyFill>
                 <img src={job.image} alt={job.name} />
 

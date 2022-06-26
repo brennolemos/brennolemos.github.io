@@ -1,10 +1,9 @@
 import React from 'react';
 import { Person } from '@styled-icons/evaicons-solid';
 import { useTranslation, Trans } from 'react-i18next';
-import { Container, Grid, Row, Col } from 'rsuite';
+import { Container, Grid, Row, Col, Loader } from 'rsuite';
 
 import Head from '../../components/Head';
-import Loading from '../../components/Loading/Loading';
 import Timeline from '../../components/Timeline/Timeline';
 import Skills from '../../components/Skills';
 
@@ -115,7 +114,7 @@ export default () => {
             </article>
           </Container>
         ) : (
-          <Loading />
+          <Loader size="md" center backdrop content={`${t('general.loading')}...`} />
         )}
       </div>
     </S.About>

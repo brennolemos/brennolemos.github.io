@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Loader } from 'rsuite';
 
 import PortfolioList from '../../components/PortfolioList/PortfolioList';
-import Loading from '../../components/Loading/Loading';
 import Modal from '../../components/Modal/Modal';
 import Head from '../../components/Head';
 
@@ -103,7 +103,7 @@ export default () => {
                 jobs={content.portfolio}
               />
             ) : (
-              <Loading />
+              <Loader size="md" center backdrop content={t('general.loading')} />
             )}
 
             <div className="text-center py-3">

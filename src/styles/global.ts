@@ -86,6 +86,7 @@ body {
 .title-tag--small {
   font-size: 14px;
   color: ${(props) => props.theme.colors.textSecondary};
+  line-height: 2;
 }
 
 .btn {

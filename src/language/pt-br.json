@@ -30,16 +30,10 @@
       "icon": "briefcase",
       "list": [
         {
-          "id": "ac",
-          "titulo": "Avenue Code",
-          "ocupacao": "Desenvolvedor Front-End Pleno",
-          "periodo": "Atualmente"
-        },
-        {
-          "id": "osf",
-          "titulo": "OSF Digital",
-          "ocupacao": "Desenvolvedor Front-End Pleno",
-          "periodo": "2020-2021"
+          "id": "being",
+          "titulo": "Being Marketing",
+          "ocupacao": "Desenvolvedor Front-End",
+          "periodo": "2017-2019"
         },
         {
           "id": "cafaz",
@@ -48,16 +42,22 @@
           "periodo": "2019-2020"
         },
         {
-          "id": "being",
-          "titulo": "Being Marketing",
-          "ocupacao": "Desenvolvedor Front-End",
-          "periodo": "2017-2019"
+          "id": "osf",
+          "titulo": "OSF Digital",
+          "ocupacao": "Desenvolvedor Front-End Pleno",
+          "periodo": "2020-2021"
         },
         {
-          "id": "delfos",
-          "titulo": "Delfos IM",
-          "ocupacao": "Desenvolvedor Front-End (Estágio)",
-          "periodo": "2017"
+          "id": "ac",
+          "titulo": "Avenue Code",
+          "ocupacao": "Desenvolvedor Front-End Pleno",
+          "periodo": "2021-2022"
+        },
+        {
+          "id": "bc",
+          "titulo": "Blue Coding",
+          "ocupacao": "Front-end Software Engineer",
+          "periodo": "Atualmente"
         }
       ]
     },
@@ -155,5 +155,8 @@
         ]
       }
     ]
+  },
+  "general": {
+    "loading": "Carregando"
   }
 }

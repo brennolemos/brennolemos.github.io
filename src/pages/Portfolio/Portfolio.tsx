@@ -1,11 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Divider } from 'rsuite';
+import { Divider, Loader } from 'rsuite';
 
 import Head from '../../components/Head';
 import Modal from '../../components/Modal/Modal';
 import Badge from '../../components/Badge';
-import Loading from '../../components/Loading/Loading';
 
 import * as S from './styles';
 
@@ -81,7 +80,7 @@ const Portfolio = () => {
                   </div>
                   <div className="col-md-6">
                     <S.Subtitle>{t(`portfolio.list.${index}.name`)}</S.Subtitle>
-
+                    t('general.loading')
                     <div className="my-3">
                       {item.tags.map((tag) => (
                         <Badge key={tag.name} text={tag.name} />
@@ -122,7 +121,7 @@ const Portfolio = () => {
               </div>
             ))
           ) : (
-            <Loading />
+            <Loader size="md" center backdrop content={t('general.loading')} />
           )}
         </div>
       </section>
