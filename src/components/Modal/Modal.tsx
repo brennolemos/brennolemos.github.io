@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal as RModal } from 'rsuite';
+import { Modal as RModal, Divider } from 'rsuite';
 
 import * as S from './styles'
 import Badge from '../Badge';
@@ -37,6 +37,8 @@ const Modal = (props: ModalProps) => {
         {props.infos.tags.map((tag) => (
           <Badge key={tag.name} text={tag.name} />
         ))}
+
+        <Divider />
 
         <p>{props.infos.description}</p>
       </RModal.Body>
