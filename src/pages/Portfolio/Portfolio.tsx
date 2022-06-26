@@ -80,7 +80,6 @@ const Portfolio = () => {
                   </div>
                   <div className="col-md-6">
                     <S.Subtitle>{t(`portfolio.list.${index}.name`)}</S.Subtitle>
-                    t('general.loading')
                     <div className="my-3">
                       {item.tags.map((tag) => (
                         <Badge key={tag.name} text={tag.name} />
