@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Loader } from 'rsuite';
 
 
-import Head from "../../components/Head";
+import Head from "src/components/Head";
 
-import * as S from "./styles";
+import * as S from "./Contact.styled";
 
 type Content = {
   titulo: string;
