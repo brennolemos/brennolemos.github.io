@@ -3,11 +3,11 @@ import { Person } from '@styled-icons/evaicons-solid';
 import { useTranslation, Trans } from 'react-i18next';
 import { Container, Grid, Row, Col, Loader } from 'rsuite';
 
-import Head from '../../components/Head';
-import Timeline from '../../components/Timeline/Timeline';
-import Skills from '../../components/Skills';
+import Head from 'src/components/Head';
+import Timeline from 'src/components/Timeline/Timeline';
+import Skills from 'src/components/Skills';
 
-import * as S from './styles';
+import * as S from './About.styled';
 
 type Content = {
   titulo: string;
