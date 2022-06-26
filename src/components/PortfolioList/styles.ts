@@ -24,8 +24,9 @@ export const Item = styled.div`
 
 export const Title = styled.h3`
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: #2d3940;
+  /* color: #2d3940; */
+  color: ${(props) => props.theme.colors.textSecondary};
 `;

@@ -1,15 +1,22 @@
 import styled from 'styled-components';
 
+export const Subtitle = styled.h2`
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.textSecondary};
+`;
+
 export const Timeline = styled.ul`
   margin: 0 auto;
-  padding: 1rem;
+  /* padding: 1rem; */
 `;
 
 export const Item = styled.li`
   position: relative;
-  padding: 0.25rem 1rem 1rem 2rem;
-  margin-left: 1rem;
-  border-left: 2px solid #626d73;
+  /* padding: 0.25rem 1rem 1rem 2rem; */
+  /* margin-left: 1rem;
+  border-left: 2px solid #626d73; */
 `;
 
 export const Icon = styled.span`
@@ -49,8 +56,9 @@ export const Title = styled.h3`
   font-weight: normal;
   font-size: 1.125rem;
   color: ${(props) => props.theme.colors.textContent};
-  margin-bottom: 0.25rem;
-  max-width: 11.25rem;
+  /* margin-bottom: 0.25rem; */
+  line-height: 1.1;
+  /* max-width: 11.25rem; */
 `;
 
 export const Place = styled(Period)`

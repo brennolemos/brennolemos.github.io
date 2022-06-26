@@ -1,12 +1,12 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Divider, Loader } from 'rsuite';
 
-import Head from "../../components/Head";
-import Modal from "../../components/Modal/Modal";
-import Badge from "../../components/Badge";
-import Loading from "../../components/Loading/Loading";
+import Head from '../../components/Head';
+import Modal from '../../components/Modal/Modal';
+import Badge from '../../components/Badge';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 type Infos = {
   name: string;
@@ -24,10 +24,14 @@ type Tags = {
 const Portfolio = () => {
   const [content, setContent] = React.useState<Infos[] | null>(null);
   const [modal, setModal] = React.useState<Infos | null>(null);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
   const { t, i18n } = useTranslation();
 
   const loadData = async () => {
-    const response = await fetch("/api/api.json");
+    const response = await fetch('/api/api.json');
     const data = await response.json();
 
     setContent(data.portfolio);
@@ -37,7 +41,7 @@ const Portfolio = () => {
     setModal(modalInfos);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -52,12 +56,13 @@ const Portfolio = () => {
   return (
     <>
       {modal ? (
-        <Modal infos={modal} setModal={setModal} closeModal={closeModal} />
+        <Modal open={open} infos={modal} handleClose={handleClose} setModal={setModal} closeModal={closeModal} />
       ) : null}
+
       <Head title="Portfólio" />
       <section className="content interna portfolio animeUp">
         <header className="header-interna">
-          <h1 className="title-tag">{t("portfolio.title")}</h1>
+          <h1 className="title-tag">{t('portfolio.title')}</h1>
         </header>
         <div className="conteudo">
           {/* {t("portfolio.list", { returnObjects: true }).map()} */}
@@ -68,14 +73,14 @@ const Portfolio = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <img
-                      style={{ borderRadius: ".5rem" }}
+                      style={{ borderRadius: '.5rem' }}
                       src={item.image}
                       alt={item.name}
                     />
                   </div>
                   <div className="col-md-6">
                     <S.Subtitle>{t(`portfolio.list.${index}.name`)}</S.Subtitle>
-
+                    t('general.loading')
                     <div className="my-3">
                       {item.tags.map((tag) => (
                         <Badge key={tag.name} text={tag.name} />
@@ -90,30 +95,33 @@ const Portfolio = () => {
                         rel="noopener noreferrer"
                         className="btn"
                       >
-                        {t("home.see_more")}
+                        {t('home.see_more')}
                       </a>
                     ) : (
                       <button
-                        onClick={() =>
+                        onClick={() => {
                           handleModal({
                             ...item,
                             description: t(
-                              `portfolio.list.${index}.description`
+                              `portfolio.list.${index}.description`,
                             ),
                           })
+                          handleOpen()
+                        }
                         }
                         className="btn"
                       >
-                        {t("home.see_more")}
+                        {t('home.see_more')}
                       </button>
                     )}
                   </div>
                 </div>
-                <div className="dropdown-divider my-5"></div>
+
+                <Divider />
               </div>
             ))
           ) : (
-            <Loading />
+            <Loader size="md" center backdrop content={t('general.loading')} />
           )}
         </div>
       </section>

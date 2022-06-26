@@ -1,13 +1,13 @@
-import React from "react";
-import { Person } from "@styled-icons/evaicons-solid";
-import { useTranslation, Trans } from "react-i18next";
+import React from 'react';
+import { Person } from '@styled-icons/evaicons-solid';
+import { useTranslation, Trans } from 'react-i18next';
+import { Container, Grid, Row, Col, Loader } from 'rsuite';
 
-import Head from "../../components/Head";
-import Loading from "../../components/Loading/Loading";
-import Timeline from "../../components/Timeline/Timeline";
-import Skills from "../../components/Skills";
+import Head from '../../components/Head';
+import Timeline from '../../components/Timeline/Timeline';
+import Skills from '../../components/Skills';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 type Content = {
   titulo: string;
@@ -41,7 +41,7 @@ export default () => {
   const { t, i18n } = useTranslation();
 
   const loadData = async () => {
-    const response = await fetch("/api/api.json");
+    const response = await fetch('/api/api.json');
     const data = await response.json();
 
     setContent(data.sobre);
@@ -56,59 +56,65 @@ export default () => {
       <div className="content interna animeUp">
         <Head title="Sobre" />
         <header className="header-interna">
-          <h1 className="title-tag">{t("about.title")}</h1>
+          <h1 className="title-tag">{t('about.title')}</h1>
         </header>
 
         {content ? (
-          <div className="conteudo">
-            <div className="row">
-              <article className="sobre col-lg-6">
-                <div className="d-flex">
-                  <div className="icon-subtitle">
-                    <i className="fas fa-road"></i>
-                  </div>
-                  <h2>{t("about.path")}</h2>
-                </div>
+          <Container style={{ margin: '2rem 0' }}>
+            <Grid>
+              <Row>
+                <Col md={12}>
+                  <article className="sobre">
+                    <div className="d-flex">
+                      <div className="icon-subtitle">
+                        <i className="fas fa-road"></i>
+                      </div>
+                      <S.Subtitle>{t('about.path')}</S.Subtitle>
+                    </div>
 
-                <Trans>
-                  {i18n.t("about.description", {
-                    joinArrays: `<br/></br/><br/>`,
-                  })}
-                </Trans>
+                    <Trans>
+                      <S.Text>
+                        {i18n.t('about.description', {
+                          joinArrays: `<br/></br/><br/>`,
+                        })}
+                      </S.Text>
+                    </Trans>
+                  </article>
+                </Col>
 
-                {/* {content.descricao.map((text: string, index: number) => (
-                  <S.Text key={index}>{text}</S.Text>
-                ))} */}
-              </article>
+                <Col md={6}>
+                  <Timeline
+                    infos={t('about.experience', { returnObjects: true })}
+                  />
+                </Col>
 
-              <article className="curriculo col-lg-6">
-                <div className="row">
-                  <div className="col-md-6">
-                    <Timeline
-                      infos={t("about.experience", { returnObjects: true })}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <Timeline
-                      infos={t("about.education", { returnObjects: true })}
-                    />
-                  </div>
-                </div>
-              </article>
-            </div>
+                <Col md={6}>
+                  <Timeline
+                    infos={t('about.education', { returnObjects: true })}
+                  />
+                </Col>
+              </Row>
+            </Grid>
 
             <article className="skills mt-4">
-              <div className="d-flex align-items-center justify-content-center">
-                <div className="icon-subtitle">
-                  <Person size={36} />
-                </div>
-                <h2>Skills</h2>
-              </div>
-              <Skills skills={content.skills} />
+              <Grid>
+                <Row>
+                  <Col md={24}>
+                    <div className="d-flex align-items-center justify-content-center">
+                      <div className="icon-subtitle">
+                        <Person size={36} />
+                      </div>
+                      <S.Subtitle>Skills</S.Subtitle>
+                    </div>
+
+                    <Skills skills={content.skills} />
+                  </Col>
+                </Row>
+              </Grid>
             </article>
-          </div>
+          </Container>
         ) : (
-          <Loading />
+          <Loader size="md" center backdrop content={`${t('general.loading')}...`} />
         )}
       </div>
     </S.About>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Grid, Row, Col } from 'rsuite';
 
 import * as S from './Skills-styles';
 
@@ -13,15 +14,17 @@ type Skill = {
 
 const Skills = ({ skills }: SkillsProps) => {
   return (
-    <div className="row my-4">
-      {skills.map((skill) => (
-        <div key={skill.id} className="col-md-3 mb-4">
-          <S.IconContainer>
-            <i className={skill.icon}></i>
-          </S.IconContainer>
-        </div>
-      ))}
-    </div>
+    <Grid className="my-4">
+      <Row gutter={16}>
+        {skills.map((skill) => (
+          <Col key={skill.id} xs={12} md={8} lg={6} className=" mb-4">
+            <S.IconContainer>
+              <i className={skill.icon}></i>
+            </S.IconContainer>
+          </Col>
+        ))}
+      </Row>
+    </Grid>
   );
 };
 

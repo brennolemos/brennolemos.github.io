@@ -29,16 +29,10 @@
       "icon": "briefcase",
       "list": [
         {
-          "id": "ac",
-          "titulo": "Avenue Code",
-          "ocupacao": "UI Engineer Mid 1",
-          "periodo": "Currently"
-        },
-        {
-          "id": "osf",
-          "titulo": "OSF Digital",
-          "ocupacao": "Front-end Developer Mid 1",
-          "periodo": "2020-2021"
+          "id": "being",
+          "titulo": "Being Marketing",
+          "ocupacao": "Front-End and WordPress Developer",
+          "periodo": "2017-2019"
         },
         {
           "id": "cafaz",
@@ -47,16 +41,22 @@
           "periodo": "2019-2020"
         },
         {
-          "id": "being",
-          "titulo": "Being Marketing",
-          "ocupacao": "Front-End and WordPress Developer",
-          "periodo": "2017-2019"
+          "id": "osf",
+          "titulo": "OSF Digital",
+          "ocupacao": "Front-end Developer Mid 1",
+          "periodo": "2020-2021"
         },
         {
-          "id": "delfos",
-          "titulo": "Delfos IM",
-          "ocupacao": "Front-end Developer Intern",
-          "periodo": "2017"
+          "id": "ac",
+          "titulo": "Avenue Code",
+          "ocupacao": "UI Engineer Mid 1",
+          "periodo": "2021-2022"
+        },
+        {
+          "id": "bc",
+          "titulo": "Blue Coding",
+          "ocupacao": "Front-end Software Engineer",
+          "periodo": "Currently"
         }
       ]
     },
@@ -154,5 +154,8 @@
         ]
       }
     ]
+  },
+  "general": {
+    "loading": "Loading"
   }
 }

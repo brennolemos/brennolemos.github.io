@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Loader } from 'rsuite';
+
 
 import Head from "../../components/Head";
-import Loading from "../../components/Loading/Loading";
 
 import * as S from "./styles";
 
@@ -49,7 +50,7 @@ const Contact = () => {
                 </S.Item>
               ))
             ) : (
-              <Loading />
+              <Loader size="md" center backdrop content={`${t('general.loading')}...`} />
             )}
           </div>
         </div>

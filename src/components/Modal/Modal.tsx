@@ -1,12 +1,15 @@
 import React from 'react';
+import { Modal as RModal, Divider } from 'rsuite';
 
+import * as S from './styles'
 import Badge from '../Badge';
-import * as S from './styles';
 
 type ModalProps = {
   infos: ModalInfos;
   setModal: (modalinfos: ModalInfos | null) => void;
   closeModal: (event: MouseEvent) => void;
+  open: boolean;
+  handleClose: () => void
 };
 
 type ModalInfos = {
@@ -23,28 +26,23 @@ type Tags = {
 
 const Modal = (props: ModalProps) => {
   return (
-    <S.Modal onClick={() => props.closeModal}>
-      <S.Container>
-        <S.Image>
-          <img src={props.infos.imageXg} alt="" />
-        </S.Image>
-        <S.Infos>
-          <S.Close
-            onClick={() => {
-              props.setModal(null);
-            }}
-          >
-            <i className="far fa-2x fa-times-circle"></i>
-          </S.Close>
+    <RModal overflow open={props.open} onClose={props.handleClose}>
+      <RModal.Header>
+        <RModal.Title as={S.Title}>{props.infos.name}</RModal.Title>
+      </RModal.Header>
 
-          <S.Title>{props.infos.name}</S.Title>
-          {props.infos.tags.map((tag) => (
-            <Badge key={tag.name} text={tag.name} />
-          ))}
-          <S.Content>{props.infos.description}</S.Content>
-        </S.Infos>
-      </S.Container>
-    </S.Modal>
+      <RModal.Body as={S.Content}>
+          <S.Image src={props.infos.imageXg} alt="" />
+
+        {props.infos.tags.map((tag) => (
+          <Badge key={tag.name} text={tag.name} />
+        ))}
+
+        <Divider />
+
+        <p>{props.infos.description}</p>
+      </RModal.Body>
+    </RModal >
   );
 };
 

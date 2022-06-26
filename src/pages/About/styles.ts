@@ -17,9 +17,16 @@ export const About = styled.section`
   }
 `;
 
+export const Subtitle = styled.h2`
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.textSecondary};
+`;
+
 export const Text = styled.p`
   line-height: 1.4em;
-  font-size: 18px;
+  font-size: 1rem;
   color: ${({ theme }) => theme.colors.textContent};
   margin-bottom: 30px;
   max-width: 520px;
